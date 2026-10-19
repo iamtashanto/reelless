@@ -1,0 +1,57 @@
+---
+title: "Accessibility Service disclosure"
+h1: "How Reelless uses the Accessibility Service"
+intro: "Reelless asks for one sensitive Android permission: the Accessibility Service. This page explains exactly why, what it can see, what it does, and what it never collects. It is the same disclosure shown in the app before you grant the permission."
+updated: 2026-10-18
+---
+
+<Callout>
+
+**Summary.** Reelless uses the Accessibility Service **only** to recognize short-video screens (such as Reels, Shorts and Spotlight) inside apps you choose, and to respond by **pressing back** or **covering** that part of the screen. All processing happens **on your device**. Reelless does **not** collect, store or share any screen content or personal data obtained through this permission.
+
+</Callout>
+
+## Why Reelless needs this permission
+
+Reelless's core purpose is to help you stop watching endless short-video feeds while still using the rest of the apps that contain them. Android does not offer any other way for an app to know that a short-video player has opened inside another app, or to close it. The Accessibility Service is the only Android API that provides this capability, which is why Reelless cannot work without it.
+
+Reelless is a digital wellbeing tool that **you** install and configure for yourself. It does not perform any action you did not set up.
+
+## What Reelless can see
+
+When the Accessibility Service is on, Android allows Reelless to receive information about what is displayed by apps. Reelless restricts itself as follows:
+
+- **Only apps you choose.** Reelless registers only for the apps you select to protect (for example YouTube or Instagram) and supported mobile browsers you enable. It ignores all other apps.
+- **Structure, not content.** To recognize a short-video screen, Reelless looks at the arrangement of on-screen elements — for example, "a full-screen vertical video player is showing" or "a horizontal row of short videos is in the feed".
+- **Your filter words, if you use them.** If you turn on keyword and topic filters, the text of posts shown in protected apps is compared on your device with the words you chose, so matching posts can be covered.
+
+## What Reelless does on your screen
+
+When it recognizes a screen you've asked it to block, Reelless performs one of these actions:
+
+1. **Back** — the same as you pressing Android's back button, to leave the short-video player or tab.
+2. **Cover** — it draws a calm panel over a short-video shelf or a filtered post, so you can keep scrolling past it.
+3. **Close for the day** — when a daily limit or allowance you set has run out, it returns you to the home screen.
+
+Reelless never taps other buttons, never types, never likes, comments, posts or sends messages, never changes settings in other apps, and never interacts with ads.
+
+## What Reelless never does
+
+- It **does not collect, store, log or transmit** screen content, screenshots, recordings, messages, posts, or anything you type.
+- It **does not** read or store passwords, payment information or other sensitive data.
+- It **does not** share any data obtained through the Accessibility Service with us or with third parties.
+- It **does not** use the Accessibility Service for advertising, analytics, profiling, or any purpose other than the one described here.
+- It **does not** block, hide or interact with ads in other apps.
+
+The only things Reelless stores are your own settings and on-device usage statistics (such as time spent in short-form video), which never leave your phone. See our [privacy policy](/privacy).
+
+## Your control
+
+- Reelless shows this disclosure and asks for your consent **before** you are taken to Android's settings.
+- You can turn the Accessibility Service off at any time in **Settings → Accessibility → Reelless**. Reelless stops working immediately.
+- You can choose exactly which apps are protected and which features are active.
+- If you enable **Strict mode**, changing your own rules requires a waiting period or a PIN you set — this is an opt-in feature to help you keep commitments, and it never prevents you from turning the permission off in Android's settings.
+
+## Questions
+
+If you have any questions about how Reelless uses the Accessibility Service, please [contact us](/contact). You can also read a less formal explanation on our [How it works](/how-it-works) page.

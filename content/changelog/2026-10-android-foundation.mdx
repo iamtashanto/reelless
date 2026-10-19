@@ -1,0 +1,14 @@
+---
+title: "Android: the foundation is in place"
+date: 2026-10-15
+summary: "Accessibility Service, rules engine, action executor and onboarding."
+---
+
+The groundwork of the Android app is done. None of it is visible yet, but everything else is built on top of it:
+
+- **Accessibility Service skeleton** — listens only to the apps you choose to protect, with debounced events so it stays light on battery.
+- **Rules engine** — a versioned, signed rule format, so detection can adapt when apps change their layouts without collecting anything from your phone.
+- **Action executor and overlays** — the pieces that press back or draw a calm cover over a Reels shelf, with safeguards against loops.
+- **Onboarding** — a step-by-step setup that explains the Accessibility permission in plain language *before* asking for it, plus phone-specific battery tips.
+
+**Next:** detection rules for each platform (YouTube, Facebook, Instagram, TikTok, Snapchat and more), then controls and stats.

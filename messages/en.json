@@ -1,0 +1,1172 @@
+{
+  "meta": {
+    "siteName": "Reelless",
+    "defaultTitle": "Reelless — Keep the apps. Lose the scroll.",
+    "defaultDescription": "Reelless blocks Reels, Shorts and endless feeds inside the apps you already use — so you can still message friends, search YouTube and post photos.",
+    "home": {
+      "title": "Reelless — Block Reels & Shorts, keep your apps",
+      "description": "Block Reels, Shorts and endless feeds inside YouTube, Instagram, Facebook and more — while messages, search and posting keep working. On-device, no ads."
+    },
+    "features": {
+      "title": "Features — Block, control and measure short video",
+      "description": "Every Reelless feature: auto-exit Shorts and Reels, YouTube search-only mode, Facebook friends-first, keyword filters, time limits, schedules and on-device stats."
+    },
+    "howItWorks": {
+      "title": "How Reelless works — Accessibility Service, explained",
+      "description": "A plain-language look at how Reelless uses Android’s Accessibility Service to spot short-video screens, what it reads, what it never reads, and how to set it up."
+    },
+    "platforms": {
+      "title": "Supported apps — YouTube, Instagram, TikTok and more",
+      "description": "What Reelless blocks in YouTube, Facebook, Instagram, TikTok, Snapchat, X, Reddit, LinkedIn, Pinterest and mobile browsers — app by app."
+    },
+    "pricing": {
+      "title": "Pricing — Free, Pro and Family plans",
+      "description": "Reelless plans: Free with basic blocking on two apps, Pro with every feature (monthly, yearly or lifetime), and Family coming later. Prices announced at launch."
+    },
+    "download": {
+      "title": "Download Reelless for Android — Early access",
+      "description": "Reelless for Android is in development. Join early access to get it first. Requires Android 8.0 or newer."
+    },
+    "faq": {
+      "title": "FAQ — Questions about Reelless, answered",
+      "description": "Answers about Reelless: privacy, supported apps, pricing, battery, Android settings, and why it can’t work inside iPhone apps."
+    },
+    "about": {
+      "title": "About Reelless — Why it exists",
+      "description": "Why Reelless exists and who builds it. A small, independent app made to give people their time back without asking them to quit the apps they need."
+    },
+    "contact": {
+      "title": "Contact — Get in touch with Reelless",
+      "description": "Questions, feedback, press or partnership ideas? Send a message to the Reelless team."
+    },
+    "changelog": {
+      "title": "Changelog — Reelless, built in public",
+      "description": "Progress updates on Reelless as it’s built: what shipped, what changed, and what’s next."
+    },
+    "guides": {
+      "title": "Guides — Cut short-form video without quitting apps",
+      "description": "Practical, honest guides on stopping YouTube Shorts, Instagram Reels and Facebook Reels, and building calmer phone habits."
+    },
+    "privacy": {
+      "title": "Privacy Policy — Reelless",
+      "description": "How Reelless handles data: everything stays on your device, no screen content is collected, no ads, no analytics SDKs in the app."
+    },
+    "terms": {
+      "title": "Terms of Service — Reelless",
+      "description": "The terms that apply when you use the Reelless app and website."
+    },
+    "accessibility": {
+      "title": "Accessibility Service disclosure — Reelless",
+      "description": "Exactly how and why Reelless uses Android’s Accessibility Service, what it can see, what it does, and what it never collects."
+    },
+    "cookies": {
+      "title": "Cookies — Reelless uses none",
+      "description": "The Reelless website uses no tracking cookies. Analytics, when enabled, are cookieless and anonymous."
+    },
+    "waitlistConfirm": {
+      "title": "Confirm your email — Reelless",
+      "description": "Confirm your email to join Reelless early access."
+    },
+    "waitlistThanks": {
+      "title": "You’re on the list — Reelless",
+      "description": "Thanks for joining Reelless early access."
+    },
+    "notFound": {
+      "title": "Page not found — Reelless",
+      "description": "This page doesn’t exist."
+    }
+  },
+  "nav": {
+    "skip": "Skip to content",
+    "home": "Reelless home",
+    "features": "Features",
+    "howItWorks": "How it works",
+    "platforms": "Platforms",
+    "pricing": "Pricing",
+    "guides": "Guides",
+    "faq": "FAQ",
+    "cta": "Join early access",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "menu": "Menu",
+    "primary": "Primary",
+    "theme": "Theme",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "themeSystem": "System",
+    "toggleTheme": "Switch color theme",
+    "language": "Language",
+    "changeLanguage": "Change language"
+  },
+  "footer": {
+    "tagline": "Keep the apps. Lose the scroll.",
+    "product": "Product",
+    "resources": "Resources",
+    "legal": "Legal",
+    "company": "Company",
+    "download": "Download",
+    "changelog": "Changelog",
+    "about": "About",
+    "contact": "Contact",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "accessibility": "Accessibility Service disclosure",
+    "cookies": "Cookies",
+    "social": "Social",
+    "disclaimer": "Reelless is not affiliated with, endorsed by, or sponsored by Google, Meta, ByteDance, Snap, X Corp., Reddit, LinkedIn or Pinterest. All trademarks belong to their owners.",
+    "copyright": "© {year} Reelless. All rights reserved.",
+    "credit": "Designed & developed by",
+    "opensNewTab": "(opens in a new tab)"
+  },
+  "common": {
+    "beta": "Beta",
+    "free": "Free",
+    "pro": "Pro",
+    "family": "Family",
+    "comingLater": "Coming later",
+    "example": "Example",
+    "exampleData": "Example data — not real users",
+    "learnMore": "Learn more",
+    "readMore": "Read more",
+    "seeAll": "See all",
+    "backHome": "Back to home",
+    "joinEarlyAccess": "Join early access",
+    "seeHowItWorks": "See how it works",
+    "seeAllFeatures": "See all features",
+    "seePricing": "See pricing",
+    "seeAllFaq": "Read the full FAQ",
+    "seeAllPlatforms": "See every supported app",
+    "readPrivacy": "Read the privacy policy",
+    "onThisPage": "On this page",
+    "lastUpdated": "Last updated {date}",
+    "reviewNotice": "Draft — to be reviewed with a lawyer before launch.",
+    "translationFallback": "This page isn’t available in your language yet, so you’re reading the English version.",
+    "yes": "Yes",
+    "no": "No",
+    "partly": "Partly",
+    "included": "Included",
+    "notIncluded": "Not included",
+    "relatedGuides": "Related guides",
+    "keepReading": "Keep reading"
+  },
+  "waitlist": {
+    "title": "Get Reelless first",
+    "subtitle": "Join early access. We’ll email you once when the Android app is ready — no spam, no sharing your address.",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "you@example.com",
+    "platformsLabel": "Which apps pull you in most? (optional)",
+    "submit": "Join early access",
+    "submitting": "Joining…",
+    "privacyNote": "By joining you agree to receive a confirmation email and one launch email. Unsubscribe anytime. See our <link>privacy policy</link>.",
+    "honeypot": "Leave this field empty",
+    "count": "{count, number} people are already on the list.",
+    "errors": {
+      "email": "Please enter a valid email address.",
+      "rateLimited": "Too many attempts. Please wait a minute and try again.",
+      "captcha": "Please complete the verification and try again.",
+      "server": "Something went wrong on our side. Please try again in a moment."
+    },
+    "success": {
+      "title": "Check your inbox",
+      "body": "We sent a confirmation link to {email}. Click it to secure your spot."
+    },
+    "already": "You’re already on the list — thank you! If you never confirmed, we just resent the email."
+  },
+  "confirm": {
+    "eyebrow": "Almost there",
+    "title": "Confirm your email",
+    "body": "One click and you’re on the Reelless early access list.",
+    "button": "Confirm my email",
+    "confirming": "Confirming…",
+    "invalidTitle": "This link doesn’t work",
+    "invalidBody": "The confirmation link is missing, already used, or expired. You can join again — it only takes a second.",
+    "joinAgain": "Join the waitlist"
+  },
+  "thanks": {
+    "eyebrow": "You’re in",
+    "title": "You’re on the list",
+    "body": "Thanks for confirming. We’ll email you when Reelless is ready to install. Until then, here are a few things you can do today.",
+    "readGuides": "Read a guide",
+    "seeChangelog": "Follow the build"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Say hello",
+    "intro": "Questions, feedback, bug reports from early testers, press or partnership ideas — every message is read by a human.",
+    "emailDirect": "Prefer email? Write to <link>{email}</link>.",
+    "name": "Your name",
+    "email": "Email",
+    "topic": "Topic",
+    "topics": {
+      "general": "General question",
+      "feedback": "Feedback or idea",
+      "press": "Press",
+      "partnership": "Partnership",
+      "other": "Something else"
+    },
+    "message": "Message",
+    "submit": "Send message",
+    "submitting": "Sending…",
+    "success": "Thanks — your message is on its way. We usually reply within a few days.",
+    "errors": {
+      "name": "Please tell us your name.",
+      "email": "Please enter a valid email address.",
+      "message": "Please write at least 10 characters.",
+      "rateLimited": "Too many messages. Please wait a minute.",
+      "captcha": "Please complete the verification and try again.",
+      "server": "We couldn’t send your message. Please email us directly."
+    },
+    "honeypot": "Leave this field empty"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Android app · Early access",
+      "title": "Keep the apps. Lose the scroll.",
+      "subtitle": "Reelless blocks Reels, Shorts and endless feeds inside the apps you already use — so you can still message friends, search YouTube and post photos, without getting pulled into hours of scrolling.",
+      "primary": "Join early access",
+      "secondary": "See how it works",
+      "trust": {
+        "onDevice": "On-device",
+        "noAds": "No ads",
+        "languages": "Works in every language"
+      },
+      "phoneLabel": "Animation: an endless stream of short videos is stopped by the Reelless shield and replaced with a calm screen showing a search bar and a message from a friend.",
+      "calmSearch": "Search",
+      "calmMessage": "Are we still on for Saturday?",
+      "calmFriend": "Maya",
+      "calmStatus": "Short videos blocked"
+    },
+    "problem": {
+      "eyebrow": "The problem",
+      "title": "You open the app for one thing. An hour disappears.",
+      "body1": "You needed to reply to a friend, look up a recipe, or post a photo. Then a short video started playing, and the next one, and the next. That’s not a lack of willpower — these feeds are designed to never end.",
+      "body2": "Deleting the apps doesn’t work either. Your friends, your groups, your work and your learning live there. You don’t want less of your apps. You want less of the feed.",
+      "endless": "Endless feed",
+      "intentional": "Intentional",
+      "endlessCaption": "Built to keep you watching",
+      "intentionalCaption": "You open it, you do the thing, you leave",
+      "splitLabel": "Comparison: on the left, cards of short videos speed up endlessly; on the right, a single calm card with a checkmark."
+    },
+    "how": {
+      "eyebrow": "How it works",
+      "title": "Three steps. Then forget it’s there.",
+      "subtitle": "No new habits to learn. Reelless works quietly inside the apps you already use.",
+      "stepLabel": "Step {n}",
+      "steps": {
+        "choose": {
+          "title": "Choose your apps",
+          "body": "Pick which apps to protect and what to block in each — Shorts, Reels, Spotlight, suggested posts."
+        },
+        "protect": {
+          "title": "Turn on protection",
+          "body": "Allow Reelless in Android’s Accessibility settings. We walk you through it, and explain exactly what that permission is used for."
+        },
+        "use": {
+          "title": "Use your apps normally",
+          "body": "Message, search, post and browse like always. When a short video appears, Reelless closes or covers it — instantly."
+        }
+      }
+    },
+    "pillars": {
+      "eyebrow": "What it does",
+      "title": "Block the feed. Control the rest. See the difference.",
+      "subtitle": "Three kinds of tools, all running on your phone.",
+      "tabsLabel": "Feature groups",
+      "block": {
+        "tab": "Block",
+        "title": "Short videos, gone — the app still works",
+        "body": "The short-video player exits on its own, Reels shelves in your feed get covered, and the Reels and Shorts tabs simply won’t open.",
+        "points": [
+          "Player exits automatically",
+          "Reels shelves covered in feeds",
+          "Reels & Shorts tabs blocked",
+          "“One and done”: watch the one a friend sent, not the next"
+        ]
+      },
+      "control": {
+        "tab": "Control",
+        "title": "Use apps on your terms",
+        "body": "Turn YouTube into a search engine, keep Facebook to friends, filter topics you’re tired of, and set limits that actually stick.",
+        "points": [
+          "YouTube Search-only mode",
+          "Facebook Friends-first",
+          "Keyword & topic filters, on-device",
+          "Time limits, schedules and Strict mode"
+        ]
+      },
+      "measure": {
+        "tab": "Measure",
+        "title": "See the time you got back",
+        "body": "Private stats on your phone: time per app, short-form time per platform, how many reels you didn’t watch, and the time that saved.",
+        "points": [
+          "Time spent on short-form, per platform",
+          "Estimated reels and shorts watched",
+          "Time saved and streaks",
+          "Weekly report and hourly heatmap"
+        ]
+      },
+      "cards": {
+        "shelf": {
+          "title": "Shelves covered",
+          "body": "Reels rows in your feed get a calm cover. Keep scrolling the posts you came for.",
+          "label": "Animation: a row of short videos in a feed is covered by a calm panel.",
+          "hidden": "Short videos hidden"
+        },
+        "searchOnly": {
+          "title": "Search-only YouTube",
+          "body": "No home feed, no recommendations. Just a search bar.",
+          "label": "Animation: a grid of recommended video tiles fades away, leaving only a search bar."
+        },
+        "friendsFirst": {
+          "title": "Friends-first Facebook",
+          "body": "Suggested posts slide out. Your friends stay.",
+          "label": "Animation: suggested posts slide out of a feed while a post from a friend remains.",
+          "suggested": "Suggested for you",
+          "friend": "From a friend"
+        },
+        "keywords": {
+          "title": "Keyword filters",
+          "body": "Pick topics you’re done with. Matching posts get blurred and folded away.",
+          "label": "Animation: a post tagged with a filtered topic gets blurred and collapsed.",
+          "tag": "#spoilers"
+        },
+        "limits": {
+          "title": "Daily allowance",
+          "body": "10 minutes of Shorts a day, then the door closes.",
+          "label": "Animation: a ring timer fills up to a daily limit.",
+          "left": "min left"
+        },
+        "stats": {
+          "title": "Honest stats",
+          "body": "Your week, counted on your phone.",
+          "label": "Animation: bar chart of example short-form minutes per day growing from zero."
+        }
+      }
+    },
+    "platforms": {
+      "eyebrow": "Platforms",
+      "title": "Works where the scroll happens",
+      "subtitle": "Native Android apps and mobile browsers. Beta platforms are supported but still being tuned.",
+      "browsersTitle": "Mobile browsers too",
+      "browsersBody": "Open a short-video site in your browser? Same rules apply."
+    },
+    "language": {
+      "eyebrow": "Every language",
+      "title": "Works in your language — whatever it is",
+      "body": "Reelless doesn’t depend on the words on your screen. It recognizes the layout of short-video screens, so it works the same in English, Bengali, Arabic, Hindi, Spanish or any other app language.",
+      "rtl": "Right-to-left languages like Arabic and Urdu are fully supported.",
+      "orbLabel": "Illustration: the word for short videos in several languages orbiting a globe."
+    },
+    "stats": {
+      "eyebrow": "Measure",
+      "title": "A week with Reelless",
+      "subtitle": "Your dashboard lives on your phone. Nothing is uploaded.",
+      "timeSaved": "Time saved",
+      "reelsAvoided": "Reels avoided",
+      "streak": "Day streak",
+      "shortForm": "Short-form minutes per day",
+      "byPlatform": "By app",
+      "heatmap": "When you reach for the scroll",
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "hours": "h",
+      "minutes": "min"
+    },
+    "privacy": {
+      "eyebrow": "Privacy first",
+      "title": "Stays on your device",
+      "body": "To recognize a short-video screen, Reelless has to look at the screen. So we built it to do that on your phone, and nowhere else.",
+      "promises": [
+        {
+          "title": "On-device only",
+          "body": "Every check happens on your phone. Nothing about your screen is uploaded."
+        },
+        {
+          "title": "No content collected",
+          "body": "No screen content is stored or sent. Not messages, not posts, not what you watch."
+        },
+        {
+          "title": "No ads, no trackers",
+          "body": "The app has no ads and no analytics SDKs. Your attention isn’t our product."
+        },
+        {
+          "title": "Narrow permission",
+          "body": "Accessibility is used only to spot short-video screens and press back or cover them."
+        }
+      ],
+      "animLabel": "Animation: data particles try to leave a locked phone and bounce back inside."
+    },
+    "compare": {
+      "eyebrow": "Compare",
+      "title": "Why not just…?",
+      "subtitle": "Every option has trade-offs. Here’s an honest look.",
+      "caption": "Comparison of Reelless with other ways to cut short-form video",
+      "columns": {
+        "feature": "What you get",
+        "reelless": "Reelless",
+        "delete": "Deleting the app",
+        "screenTime": "Screen time limits",
+        "extensions": "Browser extensions"
+      },
+      "rows": {
+        "keepMessaging": "Keep messaging, search and posting",
+        "blocksShortForm": "Blocks only the short-video feed",
+        "nativeApps": "Works inside phone apps",
+        "noWillpower": "Doesn’t rely on willpower in the moment",
+        "flexible": "Per-app control, schedules and allowances",
+        "cost": "Cost"
+      },
+      "cells": {
+        "free": "Free",
+        "freePro": "Free & Pro",
+        "lockedOut": "Locks the whole app",
+        "desktopOnly": "Mostly desktop",
+        "timeOnly": "Time only",
+        "varies": "Varies"
+      }
+    },
+    "pricing": {
+      "eyebrow": "Pricing",
+      "title": "Start free. Upgrade if it helps.",
+      "subtitle": "Planned pricing — final prices at launch."
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Good questions"
+    },
+    "final": {
+      "title": "Get your evenings back.",
+      "body": "Join early access and be first to try Reelless on Android."
+    }
+  },
+  "features": {
+    "eyebrow": "Features",
+    "title": "Everything Reelless does",
+    "intro": "Three groups of tools — Block, Control, Measure — plus what’s planned next. Plan labels show where each feature is expected to land; they may change before launch.",
+    "jumpTo": "Jump to",
+    "howItHelps": "How it helps",
+    "groups": {
+      "block": {
+        "title": "Block",
+        "intro": "Stop short videos the moment they appear, without breaking the rest of the app."
+      },
+      "control": {
+        "title": "Control",
+        "intro": "Shape how each app behaves, when you can use it, and for how long."
+      },
+      "measure": {
+        "title": "Measure",
+        "intro": "Private stats that show where your time goes — and how much you got back."
+      },
+      "later": {
+        "title": "Coming later",
+        "intro": "Planned features we’re working toward. No dates yet — follow the changelog."
+      }
+    },
+    "items": {
+      "autoExit": {
+        "title": "Short-video player exits automatically",
+        "body": "When a Shorts, Reels or Spotlight player opens — from a tab, a notification or a link — Reelless presses back for you in a fraction of a second.",
+        "helps": "The first video never gets the chance to hook you, which is the one that matters."
+      },
+      "shelves": {
+        "title": "Reels shelves get covered",
+        "body": "Rows of short videos mixed into your home feed are covered with a calm panel, so you can keep scrolling the posts you actually came for.",
+        "helps": "You still see friends’ posts and updates without the autoplaying row tempting you."
+      },
+      "tabs": {
+        "title": "Reels and Shorts tabs can’t be opened",
+        "body": "Tapping the short-video tab does nothing — you stay where you were.",
+        "helps": "Removes the habit loop of thumb-to-tab, even on autopilot."
+      },
+      "oneAndDone": {
+        "title": "One and done",
+        "body": "A friend sends you a reel? Watch that one. When you swipe for the next, Reelless closes the player.",
+        "helps": "You stay part of the conversation without falling into the feed behind it."
+      },
+      "anyLanguage": {
+        "title": "Works in every app language",
+        "body": "Detection is based on screen structure, not words, so it works in any language — including right-to-left scripts.",
+        "helps": "No settings to change if your phone isn’t in English."
+      },
+      "browsers": {
+        "title": "Works in mobile browsers",
+        "body": "Short-video pages in Chrome, Samsung Internet, Firefox, Brave, Edge and Opera get the same treatment as the apps.",
+        "helps": "Closes the loophole of opening the website instead of the app."
+      },
+      "searchOnly": {
+        "title": "YouTube Search-only mode",
+        "body": "Hides the home feed and recommendations. You get a search bar, your subscriptions if you want them, and the video you searched for.",
+        "helps": "YouTube becomes a tool you use on purpose, like a search engine, instead of a feed that uses you."
+      },
+      "friendsFirst": {
+        "title": "Facebook Friends-first",
+        "body": "Hides “Suggested for you” posts and suggested reels, so your feed is mostly people and groups you chose.",
+        "helps": "Keeps Facebook for what it’s good at — friends, family, groups and events."
+      },
+      "keywords": {
+        "title": "Keyword & topic filters",
+        "body": "Choose topics you’re tired of — politics, spoilers, gossip, crypto hype, gambling, clickbait — or add your own words. Matching posts are blurred and folded away. All matching happens on your phone.",
+        "helps": "Protects your mood and your attention from content you’ve already decided you don’t want."
+      },
+      "dailyLimits": {
+        "title": "Daily time limits per app",
+        "body": "Give each app a daily budget. When it’s used up, Reelless gently closes the app for the rest of the day.",
+        "helps": "Turns “just five minutes” into a real five minutes."
+      },
+      "allowance": {
+        "title": "Daily short-form allowance",
+        "body": "Not ready to quit short videos completely? Allow yourself, say, 10 minutes of Shorts a day. After that, the player closes.",
+        "helps": "A middle path that respects that some short videos are fun — in moderation."
+      },
+      "openLimits": {
+        "title": "Open limits",
+        "body": "Limit how many times a day you can open an app, independent of how long you stay.",
+        "helps": "Breaks the reflex of checking an app dozens of times a day."
+      },
+      "schedules": {
+        "title": "Schedules",
+        "body": "Create Work, Study and Bedtime schedules with stricter rules that switch on automatically.",
+        "helps": "Your phone matches your day — focused when you need it, relaxed when you don’t."
+      },
+      "pause": {
+        "title": "Pause before open",
+        "body": "Opening a protected app shows a short breathing moment first. Continue if you meant it, or close if you didn’t.",
+        "helps": "A few seconds is often enough to turn an impulse into a choice."
+      },
+      "deepFocus": {
+        "title": "Deep Focus sessions",
+        "body": "Start a timed session that blocks the apps you choose entirely until it ends.",
+        "helps": "For exams, deadlines and deep work, when even a quick check is too much."
+      },
+      "strict": {
+        "title": "Strict mode",
+        "body": "Changes to your rules require a waiting period or a PIN, so you can’t switch them off in a weak moment.",
+        "helps": "Your calm, planning self gets to make the rules — not your 1 a.m. self."
+      },
+      "timePerApp": {
+        "title": "Time per app",
+        "body": "See how long you spend in each protected app, day by day.",
+        "helps": "Awareness is the first step — most people underestimate their time."
+      },
+      "shortFormTime": {
+        "title": "Short-form time per platform",
+        "body": "Separates time spent watching short videos from time spent messaging or searching.",
+        "helps": "Shows where the problem actually is, without blaming the whole app."
+      },
+      "reelsCount": {
+        "title": "Estimated reels and shorts watched",
+        "body": "An estimate of how many short videos you watched, based on swipes in the player.",
+        "helps": "A number that’s hard to argue with — and satisfying to watch shrink."
+      },
+      "blocks": {
+        "title": "Blocks and time saved",
+        "body": "How many times Reelless stepped in, and an estimate of the time that saved you.",
+        "helps": "See the benefit, not just the restriction."
+      },
+      "heatmap": {
+        "title": "Hourly heatmap",
+        "body": "Find the hours you reach for the scroll most — late nights, lunch breaks, right after waking up.",
+        "helps": "Lets you set schedules where they’ll make the biggest difference."
+      },
+      "weekly": {
+        "title": "Weekly report and streaks",
+        "body": "A short weekly summary on your phone, plus streaks for days under your limits.",
+        "helps": "Small wins, noticed, keep a new habit going."
+      },
+      "partner": {
+        "title": "Accountability partner",
+        "body": "Optionally share a weekly summary with someone you trust, who gets notified if you turn protection off."
+      },
+      "family": {
+        "title": "Family / parental mode",
+        "body": "Manage short-video rules for your family’s devices with care and transparency."
+      },
+      "extension": {
+        "title": "Browser extension with sync",
+        "body": "Bring the same rules to desktop browsers, synced with your phone."
+      },
+      "smartFilter": {
+        "title": "On-device smart topic filter",
+        "body": "A small on-device model that recognizes topics beyond exact keywords — still without sending anything anywhere."
+      }
+    }
+  },
+  "howItWorks": {
+    "eyebrow": "How it works",
+    "title": "How Reelless works, in plain language",
+    "intro": "Reelless uses one Android permission — the Accessibility Service — to notice when a short-video screen opens, and to press back or cover it. Here is exactly what that means.",
+    "toc": {
+      "what": "What the Accessibility Service is",
+      "reads": "What Reelless reads — and what it doesn’t",
+      "actions": "What Reelless does on your screen",
+      "setup": "Setting it up",
+      "battery": "Keeping it running on your phone",
+      "iphone": "Why not iPhone?"
+    },
+    "what": {
+      "title": "What the Accessibility Service is",
+      "p1": "Android lets certain apps observe the structure of what’s on screen — buttons, labels, lists — and act on it. It was built for screen readers and assistive tools, and it’s also used by password managers, automation apps and digital wellbeing tools like Reelless.",
+      "p2": "It’s a powerful permission, so Android makes you turn it on yourself in Settings, and shows a clear warning. We think you should know exactly what we do with it before you do."
+    },
+    "reads": {
+      "title": "What Reelless reads — and what it doesn’t",
+      "intro": "Reelless only listens to the apps you’ve chosen to protect. Inside those apps, it looks for the layout signature of a short-video screen: the full-screen vertical player, the Reels shelf, the Shorts tab.",
+      "doesTitle": "Reelless looks at",
+      "does": [
+        "Which protected app is in the foreground",
+        "The structure of the current screen (for example, “a vertical video player is open”)",
+        "Your own filter keywords, matched against post text on your phone, if you turn filters on"
+      ],
+      "doesntTitle": "Reelless never",
+      "doesnt": [
+        "Reads or stores your messages",
+        "Records your screen or takes screenshots",
+        "Sends screen content anywhere — not to us, not to anyone",
+        "Looks at apps you didn’t choose to protect",
+        "Collects passwords, payment details or anything you type"
+      ]
+    },
+    "actions": {
+      "title": "What Reelless does on your screen",
+      "p1": "When it recognizes a short-video screen, Reelless takes one of two simple actions: it presses the back button for you (the same as you tapping back), or it draws a calm panel over a Reels shelf so you can keep scrolling past it.",
+      "p2": "It never taps anything else, never posts, never likes, and never changes settings in other apps. It also doesn’t touch ads — Reelless is not an ad blocker."
+    },
+    "setup": {
+      "title": "Setting it up",
+      "intro": "Setup takes about a minute. The app guides you through each step.",
+      "steps": [
+        {
+          "title": "Install Reelless and choose your apps",
+          "body": "Pick which apps to protect, and what to block in each one."
+        },
+        {
+          "title": "Read the permission explanation",
+          "body": "Before sending you to Settings, Reelless shows a plain-language summary of what the permission is used for — the same as this page."
+        },
+        {
+          "title": "Turn on Reelless in Accessibility settings",
+          "body": "Android opens Settings → Accessibility → Installed apps → Reelless. Switch it on and confirm. On some phones this is under “Downloaded apps” or “Installed services”."
+        },
+        {
+          "title": "Allow restricted settings if asked",
+          "body": "On Android 13 and newer, apps installed outside the Play Store may need “Allow restricted settings” first (App info → ⋮ menu). Play Store installs normally don’t."
+        },
+        {
+          "title": "Use your apps normally",
+          "body": "Open YouTube or Instagram and try opening Shorts or Reels. Reelless should step in immediately."
+        }
+      ],
+      "illustrationLabel": "Illustration of a generic phone settings screen with an accessibility toggle switched on."
+    },
+    "battery": {
+      "title": "Keeping it running on your phone",
+      "intro": "Some phone makers aggressively stop background services to save battery. If Reelless stops working after a while, these settings usually fix it:",
+      "tips": [
+        {
+          "brand": "Samsung",
+          "tip": "Settings → Battery → Background usage limits → make sure Reelless isn’t in “Sleeping apps” or “Deep sleeping apps”."
+        },
+        {
+          "brand": "Xiaomi, Redmi, POCO",
+          "tip": "Turn on Autostart for Reelless and set Battery saver to “No restrictions” in the app’s settings."
+        },
+        {
+          "brand": "OPPO, realme, OnePlus",
+          "tip": "App info → Battery → allow background activity and turn off “Optimize battery use”."
+        },
+        {
+          "brand": "vivo, iQOO",
+          "tip": "Allow background power consumption and Autostart for Reelless in i Manager or Settings → Battery."
+        },
+        {
+          "brand": "Huawei, Honor",
+          "tip": "Battery → App launch → set Reelless to “Manage manually” and enable all three switches."
+        },
+        {
+          "brand": "Any phone",
+          "tip": "Settings → Apps → Reelless → Battery → “Unrestricted”. Reelless itself uses very little battery — it only wakes up when a protected app changes screens."
+        }
+      ]
+    },
+    "iphone": {
+      "title": "Why not iPhone?",
+      "p1": "Apple doesn’t allow any app to observe or act inside other apps on iPhone. Screen Time can limit how long you use an app, but nothing can remove the Reels tab while leaving the rest of Instagram working. That’s an iOS rule, not something we can engineer around.",
+      "p2": "We’re exploring a Safari extension for short-video websites on iPhone. If that ships, we’ll announce it in the changelog."
+    }
+  },
+  "platformsPage": {
+    "eyebrow": "Platforms",
+    "title": "What Reelless blocks, app by app",
+    "intro": "Every app hides its short videos differently. Here’s what Reelless handles in each — in plain words, with no logos, because we’re not affiliated with any of them.",
+    "blocks": "What’s blocked",
+    "keeps": "What still works",
+    "guide": "Detailed guide",
+    "browsersTitle": "Mobile browsers",
+    "browsersIntro": "Short-video pages opened in these browsers are handled the same way as the apps:",
+    "betaNote": "Beta means the platform is supported but we’re still tuning detection across app versions."
+  },
+  "platformData": {
+    "youtube": {
+      "name": "YouTube",
+      "blocks": [
+        "Shorts player",
+        "Shorts shelf in Home and Subscriptions",
+        "Shorts tab",
+        "Home feed recommendations (Search-only mode)"
+      ],
+      "keeps": [
+        "Search",
+        "Subscriptions",
+        "Watching long videos",
+        "Comments and playlists"
+      ]
+    },
+    "facebook": {
+      "name": "Facebook",
+      "note": "Includes Facebook Lite",
+      "blocks": [
+        "Reels player",
+        "Reels rows in News Feed",
+        "Video / Reels tab",
+        "Suggested posts and reels (Friends-first)"
+      ],
+      "keeps": [
+        "Friends’ posts",
+        "Groups and events",
+        "Marketplace",
+        "Messenger links"
+      ]
+    },
+    "instagram": {
+      "name": "Instagram",
+      "blocks": [
+        "Reels player",
+        "Reels tab",
+        "Explore grid",
+        "Suggested reels in feed"
+      ],
+      "keeps": [
+        "Direct messages",
+        "Stories",
+        "Your feed",
+        "Posting photos and stories"
+      ]
+    },
+    "tiktok": {
+      "name": "TikTok",
+      "blocks": [
+        "For You feed",
+        "Following video feed",
+        "Swipe-to-next in shared videos (One and done)"
+      ],
+      "keeps": [
+        "Messages",
+        "Watching a video someone sent you",
+        "Your profile"
+      ]
+    },
+    "snapchat": {
+      "name": "Snapchat",
+      "blocks": [
+        "Spotlight",
+        "Discover stories feed"
+      ],
+      "keeps": [
+        "Snaps and chat",
+        "Friends’ stories",
+        "Camera",
+        "Map"
+      ]
+    },
+    "x": {
+      "name": "X",
+      "beta": true,
+      "blocks": [
+        "Vertical video feed",
+        "Autoplaying video timeline"
+      ],
+      "keeps": [
+        "Following timeline",
+        "Posts and replies",
+        "Messages"
+      ]
+    },
+    "reddit": {
+      "name": "Reddit",
+      "beta": true,
+      "blocks": [
+        "Full-screen vertical video player",
+        "Swipe-to-next video"
+      ],
+      "keeps": [
+        "Communities",
+        "Posts and comments",
+        "Search"
+      ]
+    },
+    "linkedin": {
+      "name": "LinkedIn",
+      "beta": true,
+      "blocks": [
+        "Video feed",
+        "Short-video player"
+      ],
+      "keeps": [
+        "Feed posts",
+        "Jobs",
+        "Messaging"
+      ]
+    },
+    "pinterest": {
+      "name": "Pinterest",
+      "beta": true,
+      "blocks": [
+        "Full-screen idea / video player",
+        "Swipe-to-next video"
+      ],
+      "keeps": [
+        "Search",
+        "Boards and pins",
+        "Saving ideas"
+      ]
+    }
+  },
+  "browsers": [
+    "Chrome",
+    "Samsung Internet",
+    "Firefox",
+    "Brave",
+    "Edge",
+    "Opera"
+  ],
+  "pricing": {
+    "eyebrow": "Pricing",
+    "title": "Simple plans, honest prices",
+    "intro": "Reelless will have a free plan that’s genuinely useful, and a Pro plan for everything else. Final prices will be announced at launch — no surprise pricing, no dark patterns.",
+    "planned": "Planned pricing — final prices at launch",
+    "priceTba": "Announced at launch",
+    "perks": "Includes",
+    "mostPopular": "Recommended",
+    "billingOptions": "Monthly, yearly or lifetime",
+    "plans": {
+      "free": {
+        "name": "Free",
+        "price": "Free",
+        "description": "For trying Reelless on the apps that bother you most.",
+        "features": [
+          "Block short video on 2 apps",
+          "Auto-exit player, covered shelves, blocked tabs",
+          "Works in every language",
+          "Pause before open",
+          "7-day stats"
+        ],
+        "cta": "Join early access"
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "Every feature, every supported app.",
+        "features": [
+          "All supported apps and browsers",
+          "One and done",
+          "YouTube Search-only & Facebook Friends-first",
+          "Keyword and topic filters",
+          "Time limits, allowances, open limits",
+          "Schedules, Deep Focus and Strict mode",
+          "Full stats history, heatmap, weekly report"
+        ],
+        "cta": "Join early access"
+      },
+      "family": {
+        "name": "Family",
+        "description": "Pro for the whole household, with family controls.",
+        "features": [
+          "Everything in Pro",
+          "Multiple devices",
+          "Family / parental mode"
+        ],
+        "cta": "Coming later"
+      }
+    },
+    "compareTitle": "Compare plans",
+    "compareCaption": "Feature comparison of the Free, Pro and Family plans",
+    "lifetimeTitle": "A lifetime option",
+    "lifetimeBody": "Not a fan of subscriptions? Pro will also be available as a one-time lifetime purchase.",
+    "faqTitle": "Billing questions",
+    "faq": [
+      {
+        "q": "How will I pay?",
+        "a": "All purchases go through Google Play billing, using the payment method on your Google account. We never see your card details."
+      },
+      {
+        "q": "Can I cancel anytime?",
+        "a": "Yes. Cancel in the Play Store under Payments & subscriptions → Subscriptions. You keep Pro until the end of the period you paid for."
+      },
+      {
+        "q": "Will there be a free trial?",
+        "a": "We plan to offer a free trial of Pro at launch. Details will be on this page when prices are announced."
+      },
+      {
+        "q": "Do early-access members get anything?",
+        "a": "Early-access members will be the first to know about launch pricing. We won’t promise discounts we haven’t finalized."
+      },
+      {
+        "q": "What happens if I stop paying?",
+        "a": "You drop back to the Free plan. Your settings stay on your phone, and Pro-only features pause until you resubscribe."
+      }
+    ]
+  },
+  "download": {
+    "eyebrow": "Download",
+    "title": "Reelless for Android",
+    "statusTitle": "Current status: early access",
+    "statusBody": "The Android app is in active development and testing. It isn’t on Google Play yet. Join the waitlist and we’ll email you the moment it’s ready.",
+    "liveTitle": "Available on Google Play",
+    "liveBody": "Install Reelless from Google Play and set it up in about a minute.",
+    "playBadgeAlt": "Get it on Google Play",
+    "notOnPlay": "Not on Play yet? Join the waitlist.",
+    "requirementsTitle": "System requirements",
+    "requirements": [
+      "Android 8.0 (Oreo) or newer",
+      "About 15 MB of free storage",
+      "Permission to use the Accessibility Service (explained during setup)",
+      "No account required"
+    ],
+    "iphoneTitle": "On iPhone?",
+    "iphoneBody": "Apple doesn’t allow apps to act inside other apps on iPhone, so Reelless can’t work in native iPhone apps. We’re exploring a Safari option for short-video websites.",
+    "extensionTitle": "Browser extension",
+    "extensionBody": "A desktop browser extension is planned. Join the waitlist to hear when it’s ready."
+  },
+  "faqPage": {
+    "eyebrow": "FAQ",
+    "title": "Frequently asked questions",
+    "intro": "Can’t find your answer? Contact us — a real person will reply.",
+    "contactCta": "Ask a question",
+    "groups": {
+      "general": "General",
+      "privacy": "Privacy",
+      "platforms": "Platforms",
+      "pricing": "Pricing",
+      "technical": "Technical",
+      "iphone": "iPhone"
+    }
+  },
+  "faq": {
+    "general": {
+      "what": {
+        "q": "What is Reelless?",
+        "a": "Reelless is an Android app that blocks Reels, Shorts and other short-video feeds inside social apps, while the rest of each app keeps working. You can still message friends, search YouTube and post photos — you just don’t get pulled into the endless scroll."
+      },
+      "available": {
+        "q": "Is Reelless available yet?",
+        "a": "Not yet. The Android app is in development. Join early access and we’ll email you when it’s ready to install."
+      },
+      "whyNotDelete": {
+        "q": "Why not just delete the apps?",
+        "a": "Because most of us need them — for friends, family groups, work, school and learning. Deleting the app throws away the useful parts along with the feed. Reelless removes only the part designed to keep you scrolling."
+      },
+      "adblock": {
+        "q": "Does Reelless block ads?",
+        "a": "No. Reelless is not an ad blocker and does not hide or block ads inside other apps. It only deals with short-video screens and feeds."
+      },
+      "control": {
+        "q": "Can I still watch a reel a friend sends me?",
+        "a": "Yes. With “One and done”, you can watch the specific reel or short someone shared with you. When you swipe to the next one, Reelless closes the player."
+      }
+    },
+    "privacy": {
+      "dataCollected": {
+        "q": "What data does Reelless collect?",
+        "a": "None about your screen. Recognition happens on your phone; no screen content is collected, stored or sent. Your stats are stored locally on your device. The app contains no ads and no analytics SDKs."
+      },
+      "accessibility": {
+        "q": "Why does Reelless need the Accessibility Service?",
+        "a": "It’s the only Android feature that lets an app recognize when a short-video screen opens inside another app and press back or cover it. Reelless uses it only for that. The full explanation is on our Accessibility Service disclosure page."
+      },
+      "messages": {
+        "q": "Can Reelless read my messages?",
+        "a": "Reelless doesn’t read, store or send your messages. It only looks for the structure of short-video screens in the apps you choose to protect."
+      },
+      "account": {
+        "q": "Do I need an account?",
+        "a": "No. Reelless works without an account. If we add optional features like an accountability partner later, they’ll be opt-in."
+      }
+    },
+    "platforms": {
+      "which": {
+        "q": "Which apps does Reelless support?",
+        "a": "YouTube (Shorts), Facebook (Reels, including Facebook Lite), Instagram (Reels and Explore), TikTok, Snapchat (Spotlight), and in beta X, Reddit, LinkedIn and Pinterest. It also works in mobile browsers like Chrome, Samsung Internet, Firefox, Brave, Edge and Opera."
+      },
+      "beta": {
+        "q": "What does “Beta” mean for a platform?",
+        "a": "It’s supported, but we’re still tuning detection across app versions and layouts. It may occasionally miss a screen. Feedback from early users helps us improve it fastest."
+      },
+      "updates": {
+        "q": "What happens when an app updates its design?",
+        "a": "Apps change their layouts often. Reelless downloads small, signed rule updates so it can adapt without a full app update. Rule updates contain detection rules only — no data about you goes the other way."
+      },
+      "languages": {
+        "q": "Does it work if my phone isn’t in English?",
+        "a": "Yes. Reelless recognizes screen structure rather than words, so it works in any app language, including right-to-left languages like Arabic and Urdu."
+      }
+    },
+    "pricing": {
+      "free": {
+        "q": "Is Reelless free?",
+        "a": "There will be a free plan with basic blocking on two apps and 7 days of stats. Pro unlocks every feature and every app. Prices will be announced at launch."
+      },
+      "lifetime": {
+        "q": "Is there a lifetime option?",
+        "a": "Yes, Pro is planned as monthly, yearly, or a one-time lifetime purchase, all through Google Play."
+      },
+      "cancel": {
+        "q": "How do I cancel?",
+        "a": "In the Google Play Store, under Payments & subscriptions → Subscriptions. You keep Pro until the end of the billing period."
+      }
+    },
+    "technical": {
+      "battery": {
+        "q": "Will it drain my battery?",
+        "a": "Reelless is designed to be light. It only wakes up when a protected app changes screens, and does a quick on-device check. It doesn’t run a VPN or scan your screen continuously."
+      },
+      "android": {
+        "q": "Which Android versions are supported?",
+        "a": "Android 8.0 (Oreo) and newer."
+      },
+      "stops": {
+        "q": "Reelless stopped working after a while. Why?",
+        "a": "Some phone makers stop background services to save battery. Setting Reelless’s battery usage to “Unrestricted” usually fixes it. Our How it works page has tips for Samsung, Xiaomi, OPPO, vivo, Huawei and others."
+      },
+      "vpn": {
+        "q": "Does Reelless use a VPN?",
+        "a": "No. Reelless doesn’t route or inspect your internet traffic. It works entirely through the Accessibility Service on your device."
+      },
+      "turnOff": {
+        "q": "Can I turn it off quickly if I need to?",
+        "a": "Yes — unless you’ve turned on Strict mode, which deliberately adds a waiting period or PIN so you can’t switch it off on impulse."
+      }
+    },
+    "iphone": {
+      "ios": {
+        "q": "Is there an iPhone version?",
+        "a": "Not for native apps. Apple doesn’t allow apps to see or act inside other apps on iPhone, so no app can remove Reels from Instagram while keeping the rest. We’re exploring a Safari extension for short-video websites."
+      },
+      "screenTime": {
+        "q": "What can I do on iPhone today?",
+        "a": "iOS Screen Time can set time limits for whole apps, and some apps have settings to reduce recommendations. Our guides cover what each app allows."
+      }
+    }
+  },
+  "landing": {
+    "whatWeBlock": "What Reelless blocks",
+    "setupTitle": "How to set it up",
+    "faqTitle": "Questions",
+    "ctaTitle": "Try Reelless early",
+    "ctaBody": "Join early access and be first to install Reelless on Android.",
+    "learnMoreTitle": "Learn more",
+    "features": "All features",
+    "howItWorks": "How it works",
+    "download": "Download"
+  },
+  "guides": {
+    "eyebrow": "Guides",
+    "title": "Guides",
+    "intro": "Honest, practical guides on cutting short-form video without giving up the apps you need.",
+    "all": "All",
+    "categories": {
+      "how-to": "How-to",
+      "habits": "Habits",
+      "research": "Research"
+    },
+    "readingTime": "{minutes} min read",
+    "updated": "Updated {date}",
+    "published": "Published {date}",
+    "toc": "Contents",
+    "share": "Share",
+    "shareX": "Share on X",
+    "shareFacebook": "Share on Facebook",
+    "shareLinkedIn": "Share on LinkedIn",
+    "shareWhatsApp": "Share on WhatsApp",
+    "copyLink": "Copy link",
+    "copied": "Link copied",
+    "authorBy": "Written by",
+    "authorBio": "TA Shanto designs and builds Reelless. He writes about attention, habits and building calmer software.",
+    "authorSite": "Visit tashanto.com",
+    "related": "Related guides",
+    "breadcrumbHome": "Home",
+    "empty": "No guides in this category yet.",
+    "searchPlaceholder": "Search guides",
+    "breadcrumbGuides": "Guides",
+    "breadcrumb": "Breadcrumb"
+  },
+  "changelog": {
+    "eyebrow": "Built in public",
+    "title": "Changelog",
+    "intro": "What we’re building, as we build it. No vanity metrics — just progress.",
+    "rss": "Follow along"
+  },
+  "builtInPublic": {
+    "eyebrow": "Built in public",
+    "title": "Made by one person, out in the open",
+    "body": "No inflated user counts or made-up reviews here. Reelless is an independent app, and every step of the build is posted on the changelog.",
+    "cta": "Read the changelog"
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "Why Reelless exists",
+    "lead": "Social apps are where our friends, families and communities live. Short-video feeds turned them into something else. Reelless is an attempt to get the useful part back.",
+    "storyTitle": "The story",
+    "todo": "TODO: Personal story — replace this placeholder before launch.",
+    "storyP1": "[TODO — write your own story here: the moment you noticed how much time short videos were taking, what you tried first, and why none of it worked.]",
+    "storyP2": "[TODO — why you decided to build Reelless instead, and what you hope it does for the people who use it.]",
+    "principlesTitle": "What we believe",
+    "principles": [
+      {
+        "title": "You’re not weak",
+        "body": "These feeds are engineered to be endless. Needing help to stop isn’t a character flaw."
+      },
+      {
+        "title": "Keep what’s useful",
+        "body": "Messaging, search, groups and learning are good. We remove only the bottomless part."
+      },
+      {
+        "title": "Privacy is the product",
+        "body": "A tool that sees your screen must earn trust. Everything stays on your device."
+      },
+      {
+        "title": "Honest by default",
+        "body": "No fake reviews, no fake urgency, no dark patterns — on the site or in the app."
+      }
+    ],
+    "builtBy": "Built by",
+    "builtByBody": "Reelless is designed and developed by TA Shanto, an independent product designer and engineer.",
+    "contactTitle": "Get in touch"
+  },
+  "notFound": {
+    "eyebrow": "404",
+    "title": "This page scrolled away",
+    "body": "We couldn’t find what you were looking for. Unlike a feed, though, this page has an end — here are some places to go instead.",
+    "links": "Popular pages"
+  },
+  "error": {
+    "eyebrow": "Error",
+    "title": "Something went wrong",
+    "body": "An unexpected error happened on our side. Try again, or head back home.",
+    "retry": "Try again"
+  },
+  "email": {
+    "confirmSubject": "Confirm your spot on the Reelless waitlist",
+    "confirmHeading": "One click to confirm",
+    "confirmBody": "Thanks for joining Reelless early access. Please confirm your email so we know it’s really you.",
+    "confirmButton": "Confirm my email",
+    "confirmIgnore": "Didn’t sign up? Just ignore this email — you won’t hear from us again.",
+    "contactSubject": "New message from the Reelless website: {topic}"
+  }
+}

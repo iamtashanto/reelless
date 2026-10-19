@@ -1,0 +1,24 @@
+// Reelless website database. Only the waitlist lives here.
+
+generator client {
+  provider = "prisma-client"
+  output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model WaitlistEntry {
+  id           String    @id @default(cuid())
+  email        String    @unique
+  locale       String    @default("en")
+  platforms    String[]
+  source       String    @default("website")
+  createdAt    DateTime  @default(now())
+  confirmedAt  DateTime?
+  /// Random token sent in the double opt-in email. Cleared once confirmed.
+  confirmToken String?   @unique
+
+  @@index([createdAt])
+}
