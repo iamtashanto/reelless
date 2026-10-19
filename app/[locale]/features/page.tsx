@@ -20,6 +20,8 @@ export default async function FeaturesPage() {
       <Badge tone="calm">{common("free")}</Badge>
     ) : plan === "pro" ? (
       <Badge tone="accent">{common("pro")}</Badge>
+    ) : plan === "chrome" ? (
+      <Badge tone="neutral">{common("chrome")}</Badge>
     ) : (
       <Badge tone="outline">{common("comingLater")}</Badge>
     );
@@ -32,7 +34,7 @@ export default async function FeaturesPage() {
             <a
               key={g}
               href={`#${g}`}
-              className="inline-flex min-h-11 items-center rounded-full border border-border-strong bg-surface px-4 text-sm font-medium hover:border-fg/40"
+              className="border-border-strong bg-surface hover:border-fg/40 inline-flex min-h-11 items-center rounded-full border px-4 text-sm font-medium"
             >
               {t(`groups.${g}.title`)}
             </a>
@@ -54,14 +56,14 @@ export default async function FeaturesPage() {
                 <h2 id={`${group}-title`} className="text-h2">
                   {t(`groups.${group}.title`)}
                 </h2>
-                <p className="mt-4 text-lead text-muted">{t(`groups.${group}.intro`)}</p>
+                <p className="text-lead text-muted mt-4">{t(`groups.${group}.intro`)}</p>
               </div>
               <ul className="grid gap-4 md:grid-cols-2">
                 {items.map((f) => (
                   <li
                     key={f.id}
                     id={f.id}
-                    className="flex scroll-mt-24 flex-col rounded-2xl border border-border bg-surface p-6 shadow-card"
+                    className="border-border bg-surface shadow-card flex scroll-mt-24 flex-col rounded-2xl border p-6"
                   >
                     {f.anim ? (
                       <div className="mb-5">
@@ -69,18 +71,22 @@ export default async function FeaturesPage() {
                       </div>
                     ) : null}
                     <div className="flex items-start gap-4">
-                      <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-accent-soft text-accent-text">
+                      <span className="bg-accent-soft text-accent-text grid size-11 shrink-0 place-items-center rounded-xl">
                         <f.Icon className="size-5" />
                       </span>
                       <div className="flex-1">
                         <div className="flex flex-wrap items-center gap-2">
-                          <h3 className="font-sans text-lg font-semibold tracking-normal">{t(`items.${f.id}.title`)}</h3>
+                          <h3 className="font-sans text-lg font-semibold tracking-normal">
+                            {t(`items.${f.id}.title`)}
+                          </h3>
                           {planBadge(f.plan)}
                         </div>
-                        <p className="mt-2 text-muted">{t(`items.${f.id}.body`)}</p>
+                        <p className="text-muted mt-2">{t(`items.${f.id}.body`)}</p>
                         {f.group !== "later" ? (
-                          <p className="mt-4 border-s-2 border-calm ps-3 text-sm">
-                            <span className="font-semibold text-calm-text">{t("howItHelps")}: </span>
+                          <p className="border-calm mt-4 border-s-2 ps-3 text-sm">
+                            <span className="text-calm-text font-semibold">
+                              {t("howItHelps")}:{" "}
+                            </span>
                             {t(`items.${f.id}.helps`)}
                           </p>
                         ) : null}

@@ -12,7 +12,9 @@ import {
   HeartHandIcon,
   HourglassIcon,
   KeyIcon,
+  LoopIcon,
   LayersIcon,
+  MonitorIcon,
   PlayIcon,
   SearchIcon,
   ShieldIcon,
@@ -24,7 +26,7 @@ import {
 } from "@/components/icons";
 
 export type FeatureGroup = "block" | "control" | "measure" | "later";
-export type Plan = "free" | "pro" | "later";
+export type Plan = "free" | "pro" | "later" | "chrome";
 export type FeatureAnim = "shelf" | "friendsFirst" | "searchOnly" | "keywords" | "limits" | "stats";
 
 export type Feature = {
@@ -43,6 +45,7 @@ export const features: Feature[] = [
   { id: "oneAndDone", group: "block", plan: "pro", Icon: PlayIcon },
   { id: "anyLanguage", group: "block", plan: "free", Icon: GlobeIcon },
   { id: "browsers", group: "block", plan: "free", Icon: BrowserIcon },
+  { id: "chromeExtension", group: "block", plan: "chrome", Icon: MonitorIcon },
   { id: "searchOnly", group: "control", plan: "pro", Icon: SearchIcon, anim: "searchOnly" },
   { id: "friendsFirst", group: "control", plan: "pro", Icon: UsersIcon, anim: "friendsFirst" },
   { id: "keywords", group: "control", plan: "pro", Icon: FilterIcon, anim: "keywords" },
@@ -61,9 +64,8 @@ export const features: Feature[] = [
   { id: "weekly", group: "measure", plan: "pro", Icon: FlameIcon },
   { id: "partner", group: "later", plan: "later", Icon: HeartHandIcon },
   { id: "family", group: "later", plan: "later", Icon: UsersIcon },
-  { id: "extension", group: "later", plan: "later", Icon: BrowserIcon },
+  { id: "extension", group: "later", plan: "later", Icon: LoopIcon },
   { id: "smartFilter", group: "later", plan: "later", Icon: SparkIcon },
 ];
 
 export const featureGroups: FeatureGroup[] = ["block", "control", "measure", "later"];
-

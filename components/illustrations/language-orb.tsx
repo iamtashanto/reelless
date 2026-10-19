@@ -21,9 +21,9 @@ export function LanguageOrb({ label }: { label: string }) {
       role="img"
       aria-label={label}
       data-paused={!active}
-      className="relative mx-auto aspect-square w-full max-w-[420px] [container-type:inline-size]"
+      className="[container-type:inline-size] relative mx-auto aspect-square w-full max-w-[420px]"
     >
-      <svg aria-hidden viewBox="0 0 200 200" className="absolute inset-[18%] text-fg/30">
+      <svg aria-hidden viewBox="0 0 200 200" className="text-fg/30 absolute inset-[18%]">
         <g fill="none" stroke="currentColor" strokeWidth="0.9">
           <circle cx="100" cy="100" r="80" />
           <ellipse cx="100" cy="100" rx="32" ry="80" />
@@ -38,11 +38,11 @@ export function LanguageOrb({ label }: { label: string }) {
           </radialGradient>
         </defs>
       </svg>
-      <div aria-hidden className="absolute inset-[6%] rounded-full border border-dashed border-border-strong" />
-      <ul
+      <div
         aria-hidden
-        className="absolute inset-0 motion-safe:animate-[orbit_36s_linear_infinite]"
-      >
+        className="border-border-strong absolute inset-[6%] rounded-full border border-dashed"
+      />
+      <ul aria-hidden className="absolute inset-0 motion-safe:animate-[orbit_36s_linear_infinite]">
         {WORDS.map((w, i) => {
           const angle = (i / WORDS.length) * 360;
           return (
@@ -55,7 +55,7 @@ export function LanguageOrb({ label }: { label: string }) {
                 <span
                   lang={w.lang}
                   dir="auto"
-                  className={`block -translate-1/2 rounded-full border border-border bg-surface px-3.5 py-1.5 text-sm font-semibold whitespace-nowrap shadow-card ${i % 2 ? "text-accent-text" : ""}`}
+                  className={`border-border bg-surface shadow-card block -translate-1/2 rounded-full border px-3.5 py-1.5 text-sm font-semibold whitespace-nowrap ${i % 2 ? "text-accent-text" : ""}`}
                 >
                   {w.text}
                 </span>

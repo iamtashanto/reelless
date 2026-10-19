@@ -76,7 +76,9 @@ export function buildMetadata({
       siteName: siteConfig.name,
       locale: ogLocales[locale as Locale] ?? "en_US",
       images: [{ url: image, width: 1200, height: 630, alt: title }],
-      ...(type === "article" ? { publishedTime, modifiedTime, authors: [siteConfig.developer.url] } : {}),
+      ...(type === "article"
+        ? { publishedTime, modifiedTime, authors: [siteConfig.developer.url] }
+        : {}),
     },
     twitter: {
       card: "summary_large_image",
@@ -84,6 +86,8 @@ export function buildMetadata({
       description,
       images: [image],
     },
-    robots: noIndex ? { index: false, follow: true } : { index: true, follow: true },
+    // The `ar` RTL preview locale is a dev-only check and must never be indexed.
+    robots:
+      noIndex || locale === "ar" ? { index: false, follow: true } : { index: true, follow: true },
   };
 }

@@ -50,5 +50,9 @@ export function createRateLimiter({
   };
 }
 
-export const waitlistLimiter = createRateLimiter({ prefix: "waitlist", limit: 5, windowMs: 60_000 });
+export const waitlistLimiter = createRateLimiter({
+  prefix: "waitlist",
+  limit: 5,
+  windowMs: 60_000,
+});
 export const contactLimiter = createRateLimiter({ prefix: "contact", limit: 3, windowMs: 60_000 });

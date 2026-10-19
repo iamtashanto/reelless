@@ -11,8 +11,7 @@ const base =
 const variants: Record<Variant, string> = {
   primary:
     "bg-accent text-accent-ink shadow-[0_6px_24px_-8px_var(--accent)] hover:shadow-[0_10px_32px_-8px_var(--accent)] hover:brightness-105",
-  secondary:
-    "border border-border-strong bg-surface text-fg hover:border-fg/40 hover:bg-surface-2",
+  secondary: "border border-border-strong bg-surface text-fg hover:border-fg/40 hover:bg-surface-2",
   ghost: "text-fg hover:bg-surface-2",
 };
 
@@ -39,7 +38,13 @@ export function ButtonLink({ variant, size, className, href, ...props }: ButtonL
     const { prefetch: _prefetch, locale: _locale, ...rest } = props;
     void _prefetch;
     void _locale;
-    return <a href={href} className={buttonClasses(variant, size, className)} {...(rest as ComponentProps<"a">)} />;
+    return (
+      <a
+        href={href}
+        className={buttonClasses(variant, size, className)}
+        {...(rest as ComponentProps<"a">)}
+      />
+    );
   }
   return <Link href={href} className={buttonClasses(variant, size, className)} {...props} />;
 }

@@ -15,13 +15,16 @@ export function PageHero({
   className?: string;
 }) {
   return (
-    <section className={cn("grain relative overflow-hidden border-b border-border", className)}>
+    <section className={cn("grain border-border relative overflow-hidden border-b", className)}>
       <div aria-hidden className="bg-grid absolute inset-0 -z-20 opacity-50" />
-      <div aria-hidden className="absolute -top-40 start-1/2 -z-10 h-80 w-[40rem] -translate-x-1/2 rounded-full bg-accent/10 blur-3xl rtl:translate-x-1/2" />
+      <div
+        aria-hidden
+        className="bg-accent/10 absolute start-1/2 -top-40 -z-10 h-80 w-[40rem] -translate-x-1/2 rounded-full blur-3xl rtl:translate-x-1/2"
+      />
       <div className="container-page pt-14 pb-14 md:pt-20 md:pb-20">
         {eyebrow ? <Eyebrow>{eyebrow}</Eyebrow> : null}
-        <h1 className="max-w-4xl text-h1">{title}</h1>
-        {intro ? <div className="mt-6 max-w-3xl text-lead text-muted">{intro}</div> : null}
+        <h1 className="text-h1 max-w-4xl">{title}</h1>
+        {intro ? <div className="text-lead text-muted mt-6 max-w-3xl">{intro}</div> : null}
         {children}
       </div>
     </section>
@@ -31,7 +34,10 @@ export function PageHero({
 export function TranslationNotice({ text }: { text: string }) {
   return (
     <div className="container-page pt-6">
-      <p role="note" className="rounded-xl border border-border bg-surface-2 px-4 py-3 text-sm text-muted">
+      <p
+        role="note"
+        className="border-border bg-surface-2 text-muted rounded-xl border px-4 py-3 text-sm"
+      >
         {text}
       </p>
     </div>

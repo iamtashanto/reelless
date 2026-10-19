@@ -14,7 +14,12 @@ function makeAnchor(locale: string) {
         </NextLink>
       );
     }
-    if (href.startsWith("#")) return <a href={href} {...props}>{children}</a>;
+    if (href.startsWith("#"))
+      return (
+        <a href={href} {...props}>
+          {children}
+        </a>
+      );
     return (
       <a href={href} target="_blank" rel="noopener noreferrer" {...props}>
         {children}
@@ -25,7 +30,7 @@ function makeAnchor(locale: string) {
 
 function Callout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="not-prose rounded-2xl border border-calm/40 bg-calm-soft px-5 py-4 text-[0.98rem] [&>p+p]:mt-2">
+    <div className="not-prose border-calm/40 bg-calm-soft rounded-2xl border px-5 py-4 text-[0.98rem] [&>p+p]:mt-2">
       {children}
     </div>
   );
@@ -34,7 +39,6 @@ function Callout({ children }: { children: React.ReactNode }) {
 function Table(props: React.ComponentProps<"table">) {
   return <table {...props} />;
 }
-
 
 /** Renders MDX from /content. Cached: the same source always produces the same tree. */
 export async function Mdx({ source, locale }: { source: string; locale: string }) {

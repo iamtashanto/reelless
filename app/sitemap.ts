@@ -3,10 +3,28 @@ import { guideSlugs, getGuide } from "@/lib/content";
 import { absolute, languageAlternates, localizedPath } from "@/lib/seo";
 
 const STATIC = [
-  "/", "/features", "/how-it-works", "/platforms", "/pricing", "/download", "/faq", "/about", "/contact",
-  "/changelog", "/guides", "/privacy", "/terms", "/accessibility-disclosure", "/cookies",
-  "/block-youtube-shorts", "/block-instagram-reels", "/block-facebook-reels", "/block-tiktok",
-  "/block-snapchat-spotlight", "/youtube-without-recommendations", "/facebook-without-suggested-posts",
+  "/",
+  "/features",
+  "/how-it-works",
+  "/platforms",
+  "/pricing",
+  "/download",
+  "/faq",
+  "/about",
+  "/contact",
+  "/changelog",
+  "/guides",
+  "/privacy",
+  "/terms",
+  "/accessibility-disclosure",
+  "/cookies",
+  "/block-youtube-shorts",
+  "/block-instagram-reels",
+  "/block-facebook-reels",
+  "/block-tiktok",
+  "/block-snapchat-spotlight",
+  "/youtube-without-recommendations",
+  "/facebook-without-suggested-posts",
 ];
 const LOCALES = ["en", "bn"];
 
@@ -25,7 +43,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   for (const slug of await guideSlugs()) {
     const guide = await getGuide(slug, "en");
     // Guides exist in English only for now; bn falls back, so only en is listed.
-    entries.push({ url: absolute(localizedPath("en", `/guides/${slug}`)), lastModified: guide?.updated, changeFrequency: "monthly", priority: 0.7 });
+    entries.push({
+      url: absolute(localizedPath("en", `/guides/${slug}`)),
+      lastModified: guide?.updated,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    });
   }
   return entries;
 }

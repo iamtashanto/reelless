@@ -14,9 +14,11 @@ export default async function AboutPage() {
       <PageHero eyebrow={t("eyebrow")} title={t("title")} intro={t("lead")} />
       <div className="container-page grid gap-14 py-14 md:py-20 lg:grid-cols-12">
         <section aria-labelledby="story" className="lg:col-span-7">
-          <h2 id="story" className="text-h2">{t("storyTitle")}</h2>
+          <h2 id="story" className="text-h2">
+            {t("storyTitle")}
+          </h2>
           {/* TODO(TA Shanto): replace the placeholder story below before launch. */}
-          <p className="mt-6 rounded-xl border border-dashed border-accent/60 bg-accent-soft px-4 py-3 text-sm font-medium text-accent-text">
+          <p className="border-accent/60 bg-accent-soft text-accent-text mt-6 rounded-xl border border-dashed px-4 py-3 text-sm font-medium">
             {t("todo")}
           </p>
           <div className="prose-reelless mt-6">
@@ -25,23 +27,38 @@ export default async function AboutPage() {
           </div>
         </section>
         <aside className="lg:col-span-5">
-          <div className="rounded-3xl border border-border bg-surface p-6 shadow-card sm:p-8">
-            <p className="text-sm font-semibold text-muted">{t("builtBy")}</p>
-            <p className="mt-2 font-display text-2xl font-bold">
-              <a href={siteConfig.developer.url} target="_blank" rel="noopener" className="inline-flex items-center gap-1 hover:text-accent-text">
+          <div className="border-border bg-surface shadow-card rounded-3xl border p-6 sm:p-8">
+            <p className="text-muted text-sm font-semibold">{t("builtBy")}</p>
+            <p className="font-display mt-2 text-2xl font-bold">
+              <a
+                href={siteConfig.developer.url}
+                target="_blank"
+                rel="noopener"
+                className="hover:text-accent-text inline-flex items-center gap-1"
+              >
                 {siteConfig.developer.name}
                 <ArrowUpRightIcon className="size-5" />
               </a>
             </p>
-            <p className="mt-3 text-muted">{t("builtByBody")}</p>
-            <a href={siteConfig.developer.url} target="_blank" rel="noopener" className="mt-4 inline-flex min-h-11 items-center font-medium text-accent-text underline underline-offset-2">
+            <p className="text-muted mt-3">{t("builtByBody")}</p>
+            <a
+              href={siteConfig.developer.url}
+              target="_blank"
+              rel="noopener"
+              className="text-accent-text mt-4 inline-flex min-h-11 items-center font-medium underline underline-offset-2"
+            >
               tashanto.com
             </a>
-            <hr className="my-6 border-border" />
-            <h2 className="font-sans text-base font-semibold tracking-normal">{t("contactTitle")}</h2>
-            <p className="mt-2 flex items-center gap-2 text-muted">
+            <hr className="border-border my-6" />
+            <h2 className="font-sans text-base font-semibold tracking-normal">
+              {t("contactTitle")}
+            </h2>
+            <p className="text-muted mt-2 flex items-center gap-2">
               <MailIcon className="size-4" />
-              <a href={`mailto:${siteConfig.contactEmail}`} className="underline underline-offset-2 hover:text-fg">
+              <a
+                href={`mailto:${siteConfig.contactEmail}`}
+                className="hover:text-fg underline underline-offset-2"
+              >
                 {siteConfig.contactEmail}
               </a>
             </p>
@@ -50,12 +67,14 @@ export default async function AboutPage() {
       </div>
       <section aria-labelledby="principles" className="bg-bg-elev py-14 md:py-20">
         <div className="container-page">
-          <h2 id="principles" className="mb-10 text-h2">{t("principlesTitle")}</h2>
+          <h2 id="principles" className="text-h2 mb-10">
+            {t("principlesTitle")}
+          </h2>
           <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {principles.map((p) => (
-              <li key={p.title} className="rounded-2xl border border-border bg-surface p-6">
+              <li key={p.title} className="border-border bg-surface rounded-2xl border p-6">
                 <h3 className="font-sans text-lg font-semibold tracking-normal">{p.title}</h3>
-                <p className="mt-2 text-muted">{p.body}</p>
+                <p className="text-muted mt-2">{p.body}</p>
               </li>
             ))}
           </ul>

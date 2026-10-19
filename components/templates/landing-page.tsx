@@ -41,7 +41,11 @@ export async function LandingPage({ slug }: { slug: string }) {
   return (
     <>
       {doc.fallback ? <TranslationNotice text={common("translationFallback")} /> : null}
-      <PageHero eyebrow={platform ? pd(`${platform.id}.name`) : undefined} title={doc.h1 ?? doc.title} intro={doc.intro} />
+      <PageHero
+        eyebrow={platform ? pd(`${platform.id}.name`) : undefined}
+        title={doc.h1 ?? doc.title}
+        intro={doc.intro}
+      />
 
       <div className="container-page grid gap-12 py-14 md:py-20 lg:grid-cols-12">
         <article className="prose-reelless lg:col-span-8" lang={doc.locale}>
@@ -50,9 +54,9 @@ export async function LandingPage({ slug }: { slug: string }) {
 
         <aside className="space-y-4 lg:col-span-4">
           {platform ? (
-            <div className="rounded-2xl border border-border bg-surface p-6 shadow-card lg:sticky lg:top-24">
+            <div className="border-border bg-surface shadow-card rounded-2xl border p-6 lg:sticky lg:top-24">
               <div className="flex items-center gap-3">
-                <span className="grid size-11 place-items-center rounded-xl bg-accent-soft text-accent-text">
+                <span className="bg-accent-soft text-accent-text grid size-11 place-items-center rounded-xl">
                   <platform.Icon className="size-5" />
                 </span>
                 <p className="font-display text-lg font-semibold">{t("whatWeBlock")}</p>
@@ -60,14 +64,14 @@ export async function LandingPage({ slug }: { slug: string }) {
               <ul className="mt-4 space-y-2.5">
                 {(pd.raw(`${platform.id}.blocks`) as string[]).map((b) => (
                   <li key={b} className="flex gap-2.5 text-[0.95rem]">
-                    <CheckIcon className="mt-1 size-4 shrink-0 text-calm-text" strokeWidth={2.5} />
+                    <CheckIcon className="text-calm-text mt-1 size-4 shrink-0" strokeWidth={2.5} />
                     {b}
                   </li>
                 ))}
               </ul>
               <Link
                 href="/#waitlist"
-                className="mt-6 flex min-h-11 items-center justify-center gap-2 rounded-full bg-accent px-5 font-medium text-accent-ink"
+                className="bg-accent text-accent-ink mt-6 flex min-h-11 items-center justify-center gap-2 rounded-full px-5 font-medium"
               >
                 {common("joinEarlyAccess")}
               </Link>
@@ -79,7 +83,7 @@ export async function LandingPage({ slug }: { slug: string }) {
       {doc.faq?.length ? (
         <section aria-labelledby="landing-faq" className="bg-bg-elev py-16 md:py-20">
           <div className="container-page max-w-4xl">
-            <h2 id="landing-faq" className="mb-8 text-h2">
+            <h2 id="landing-faq" className="text-h2 mb-8">
               {t("faqTitle")}
             </h2>
             <Accordion
@@ -92,7 +96,7 @@ export async function LandingPage({ slug }: { slug: string }) {
 
       <section aria-labelledby="landing-more" className="py-16 md:py-20">
         <div className="container-page">
-          <h2 id="landing-more" className="mb-8 text-h3">
+          <h2 id="landing-more" className="text-h3 mb-8">
             {t("learnMoreTitle")}
           </h2>
           <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
@@ -105,10 +109,10 @@ export async function LandingPage({ slug }: { slug: string }) {
               <li key={l.href}>
                 <Link
                   href={l.href}
-                  className="group flex h-full min-h-14 items-center justify-between gap-3 rounded-2xl border border-border bg-surface p-4 text-[0.95rem] font-medium hover:border-border-strong"
+                  className="group border-border bg-surface hover:border-border-strong flex h-full min-h-14 items-center justify-between gap-3 rounded-2xl border p-4 text-[0.95rem] font-medium"
                 >
                   {l.label}
-                  <ArrowRightIcon className="size-4 shrink-0 text-muted transition-transform group-hover:translate-x-0.5" />
+                  <ArrowRightIcon className="text-muted size-4 shrink-0 transition-transform group-hover:translate-x-0.5" />
                 </Link>
               </li>
             ))}

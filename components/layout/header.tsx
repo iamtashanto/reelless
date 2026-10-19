@@ -14,9 +14,13 @@ export async function Header() {
   const items = mainNav.map((item) => ({ href: item.href, label: t(item.key) }));
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border/60 bg-bg/75 backdrop-blur-xl backdrop-saturate-150 supports-[not(backdrop-filter:blur(1px))]:bg-bg">
+    <header className="border-border/60 bg-bg/75 supports-[not(backdrop-filter:blur(1px))]:bg-bg sticky top-0 z-40 border-b backdrop-blur-xl backdrop-saturate-150">
       <nav aria-label={t("primary")} className="container-page flex h-16 items-center gap-2">
-        <Link href="/" className="me-auto inline-flex min-h-11 items-center gap-2 rounded-lg lg:me-4" aria-label={t("home")}>
+        <Link
+          href="/"
+          className="me-auto inline-flex min-h-11 items-center gap-2 rounded-lg lg:me-4"
+          aria-label={t("home")}
+        >
           <LogoMark className="size-7" />
           <span className="font-display text-lg font-bold tracking-tight">Reelless</span>
         </Link>

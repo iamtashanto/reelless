@@ -24,7 +24,8 @@ export function GuidesBrowser({
   const visible = useMemo(() => {
     const q = query.trim().toLowerCase();
     return items.filter(
-      (i) => (category === "all" || i.category === category) && (!q || i.text.toLowerCase().includes(q)),
+      (i) =>
+        (category === "all" || i.category === category) && (!q || i.text.toLowerCase().includes(q)),
     );
   }, [items, query, category]);
 
@@ -40,7 +41,9 @@ export function GuidesBrowser({
               onClick={() => setCategory(c.id)}
               className={cn(
                 "min-h-11 rounded-full border px-4 text-sm font-medium transition-colors",
-                category === c.id ? "border-fg bg-fg text-bg" : "border-border-strong bg-surface text-muted hover:text-fg",
+                category === c.id
+                  ? "border-fg bg-fg text-bg"
+                  : "border-border-strong bg-surface text-muted hover:text-fg",
               )}
             >
               {c.label}
@@ -49,13 +52,13 @@ export function GuidesBrowser({
         </div>
         <label className="relative block md:w-72">
           <span className="sr-only">{labels.search}</span>
-          <SearchIcon className="pointer-events-none absolute start-4 top-1/2 size-4 -translate-y-1/2 text-muted" />
+          <SearchIcon className="text-muted pointer-events-none absolute start-4 top-1/2 size-4 -translate-y-1/2" />
           <input
             type="search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={labels.search}
-            className="block min-h-11 w-full rounded-full border border-border-strong bg-surface ps-10 pe-4 text-sm focus:border-accent focus:outline-none"
+            className="border-border-strong bg-surface focus:border-accent block min-h-11 w-full rounded-full border ps-10 pe-4 text-sm focus:outline-none"
           />
         </label>
       </div>
@@ -67,7 +70,9 @@ export function GuidesBrowser({
           ))}
         </ul>
       ) : (
-        <p className="rounded-2xl border border-border bg-surface p-8 text-center text-muted">{labels.empty}</p>
+        <p className="border-border bg-surface text-muted rounded-2xl border p-8 text-center">
+          {labels.empty}
+        </p>
       )}
     </>
   );

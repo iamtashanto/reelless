@@ -16,16 +16,17 @@ export default async function PricingPage() {
   const f = await getTranslations("features");
   const common = await getTranslations("common");
   const faq = t.raw("faq") as { q: string; a: string }[];
-  const rows = features.filter((x) => x.group !== "later");
+  // Chrome-extension plan details are announced at launch, so it isn't compared here.
+  const rows = features.filter((x) => x.group !== "later" && x.plan !== "chrome");
 
   const cell = (included: boolean) =>
     included ? (
-      <span className="inline-flex items-center gap-1.5 text-calm-text">
+      <span className="text-calm-text inline-flex items-center gap-1.5">
         <CheckIcon className="size-4" strokeWidth={2.5} />
         <span className="sr-only">{common("included")}</span>
       </span>
     ) : (
-      <span className="inline-flex items-center text-muted">
+      <span className="text-muted inline-flex items-center">
         <MinusIcon className="size-4" />
         <span className="sr-only">{common("notIncluded")}</span>
       </span>
@@ -40,25 +41,34 @@ export default async function PricingPage() {
       </PageHero>
       <section aria-label={t("eyebrow")} className="container-page py-14 md:py-20">
         <PlanCards />
-        <div className="mt-6 rounded-2xl border border-border bg-surface p-6">
+        <div className="border-border bg-surface mt-6 rounded-2xl border p-6">
           <h2 className="font-sans text-lg font-semibold tracking-normal">{t("lifetimeTitle")}</h2>
-          <p className="mt-1 text-muted">{t("lifetimeBody")}</p>
+          <p className="text-muted mt-1">{t("lifetimeBody")}</p>
         </div>
       </section>
 
       <section aria-labelledby="compare-plans" className="bg-bg-elev py-14 md:py-20">
         <div className="container-page">
-          <h2 id="compare-plans" className="mb-8 text-h2">{t("compareTitle")}</h2>
-          <div className="-mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
-            <table className="w-full min-w-[560px] border-separate border-spacing-0 rounded-2xl border border-border bg-surface">
+          <h2 id="compare-plans" className="text-h2 mb-8">
+            {t("compareTitle")}
+          </h2>
+          <div className="relative -mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
+            <table className="border-border bg-surface w-full min-w-[560px] border-separate border-spacing-0 rounded-2xl border">
               <caption className="sr-only">{t("compareCaption")}</caption>
               <thead>
                 <tr>
-                  <th scope="col" className="border-b border-border p-4 text-start text-sm font-semibold text-muted">
+                  <th
+                    scope="col"
+                    className="border-border text-muted border-b p-4 text-start text-sm font-semibold"
+                  >
                     <span className="sr-only">{f("eyebrow")}</span>
                   </th>
                   {(["free", "pro", "family"] as const).map((p) => (
-                    <th key={p} scope="col" className="border-b border-border p-4 text-start text-sm font-semibold">
+                    <th
+                      key={p}
+                      scope="col"
+                      className="border-border border-b p-4 text-start text-sm font-semibold"
+                    >
                       {t(`plans.${p}.name`)}
                     </th>
                   ))}
@@ -67,17 +77,23 @@ export default async function PricingPage() {
               <tbody>
                 {rows.map((r, i) => (
                   <tr key={r.id} className={i % 2 ? "bg-bg/40" : undefined}>
-                    <th scope="row" className="p-4 text-start text-[0.95rem] font-normal">{f(`items.${r.id}.title`)}</th>
+                    <th scope="row" className="p-4 text-start text-[0.95rem] font-normal">
+                      {f(`items.${r.id}.title`)}
+                    </th>
                     <td className="p-4">{cell(r.plan === "free")}</td>
                     <td className="p-4">{cell(true)}</td>
                     <td className="p-4">{cell(true)}</td>
                   </tr>
                 ))}
                 <tr>
-                  <th scope="row" className="p-4 text-start text-[0.95rem] font-normal">{f("items.family.title")}</th>
+                  <th scope="row" className="p-4 text-start text-[0.95rem] font-normal">
+                    {f("items.family.title")}
+                  </th>
                   <td className="p-4">{cell(false)}</td>
                   <td className="p-4">{cell(false)}</td>
-                  <td className="p-4"><Badge tone="outline">{common("comingLater")}</Badge></td>
+                  <td className="p-4">
+                    <Badge tone="outline">{common("comingLater")}</Badge>
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -87,8 +103,12 @@ export default async function PricingPage() {
 
       <section aria-labelledby="billing-faq" className="py-14 md:py-20">
         <div className="container-page max-w-4xl">
-          <h2 id="billing-faq" className="mb-8 text-h2">{t("faqTitle")}</h2>
-          <Accordion items={faq.map((x, i) => ({ id: `billing-${i + 1}`, q: x.q, a: <p>{x.a}</p> }))} />
+          <h2 id="billing-faq" className="text-h2 mb-8">
+            {t("faqTitle")}
+          </h2>
+          <Accordion
+            items={faq.map((x, i) => ({ id: `billing-${i + 1}`, q: x.q, a: <p>{x.a}</p> }))}
+          />
           <JsonLd data={faqSchema(faq)} />
         </div>
       </section>

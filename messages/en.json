@@ -2,10 +2,10 @@
   "meta": {
     "siteName": "Reelless",
     "defaultTitle": "Reelless — Keep the apps. Lose the scroll.",
-    "defaultDescription": "Reelless blocks Reels, Shorts and endless feeds inside the apps you already use — so you can still message friends, search YouTube and post photos.",
+    "defaultDescription": "Reelless blocks Reels, Shorts and endless feeds — in the Android apps you already use and in Chrome on your computer — so you can still message friends, search YouTube and post photos.",
     "home": {
       "title": "Reelless — Block Reels & Shorts, keep your apps",
-      "description": "Block Reels, Shorts and endless feeds inside YouTube, Instagram, Facebook and more — while messages, search and posting keep working. On-device, no ads."
+      "description": "Block Reels, Shorts and endless feeds on Android and in Chrome — while messages, search and posting keep working. On-device, no ads."
     },
     "features": {
       "title": "Features — Block, control and measure short video",
@@ -17,19 +17,19 @@
     },
     "platforms": {
       "title": "Supported apps — YouTube, Instagram, TikTok and more",
-      "description": "What Reelless blocks in YouTube, Facebook, Instagram, TikTok, Snapchat, X, Reddit, LinkedIn, Pinterest and mobile browsers — app by app."
+      "description": "What Reelless blocks in YouTube, Facebook, Instagram, TikTok, Snapchat, X, Reddit, LinkedIn, Pinterest — on Android and in Chrome on your computer."
     },
     "pricing": {
       "title": "Pricing — Free, Pro and Family plans",
       "description": "Reelless plans: Free with basic blocking on two apps, Pro with every feature (monthly, yearly or lifetime), and Family coming later. Prices announced at launch."
     },
     "download": {
-      "title": "Download Reelless for Android — Early access",
-      "description": "Reelless for Android is in development. Join early access to get it first. Requires Android 8.0 or newer."
+      "title": "Get Reelless for Android and Chrome — Early access",
+      "description": "Reelless is coming to Android phones and to Chrome on your computer. Join early access to get it first. Android 8.0+ or a recent version of desktop Chrome."
     },
     "faq": {
       "title": "FAQ — Questions about Reelless, answered",
-      "description": "Answers about Reelless: privacy, supported apps, pricing, battery, Android settings, and why it can’t work inside iPhone apps."
+      "description": "Answers about Reelless for Android and Chrome: privacy, supported apps and sites, pricing, battery, and why there’s no iPhone version."
     },
     "about": {
       "title": "About Reelless — Why it exists",
@@ -147,11 +147,12 @@
     "included": "Included",
     "notIncluded": "Not included",
     "relatedGuides": "Related guides",
-    "keepReading": "Keep reading"
+    "keepReading": "Keep reading",
+    "chrome": "Chrome extension"
   },
   "waitlist": {
     "title": "Get Reelless first",
-    "subtitle": "Join early access. We’ll email you once when the Android app is ready — no spam, no sharing your address.",
+    "subtitle": "Join early access. We’ll email you when the Android app or the Chrome extension is ready — no spam, no sharing your address.",
     "emailLabel": "Email address",
     "emailPlaceholder": "you@example.com",
     "platformsLabel": "Which apps pull you in most? (optional)",
@@ -170,7 +171,12 @@
       "title": "Check your inbox",
       "body": "We sent a confirmation link to {email}. Click it to secure your spot."
     },
-    "already": "You’re already on the list — thank you! If you never confirmed, we just resent the email."
+    "already": "You’re already on the list — thank you! If you never confirmed, we just resent the email.",
+    "productsLabel": "Get early access for",
+    "products": {
+      "android": "Android app",
+      "chrome": "Chrome extension"
+    }
   },
   "confirm": {
     "eyebrow": "Almost there",
@@ -220,9 +226,9 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Android app · Early access",
+      "eyebrow": "Android app + Chrome extension · Early access",
       "title": "Keep the apps. Lose the scroll.",
-      "subtitle": "Reelless blocks Reels, Shorts and endless feeds inside the apps you already use — so you can still message friends, search YouTube and post photos, without getting pulled into hours of scrolling.",
+      "subtitle": "Reelless blocks Reels, Shorts and endless feeds inside the apps you already use — on your Android phone and in Chrome on your computer — so you can still message friends, search YouTube and post photos, without getting pulled into hours of scrolling.",
       "primary": "Join early access",
       "secondary": "See how it works",
       "trust": {
@@ -255,11 +261,11 @@
       "steps": {
         "choose": {
           "title": "Choose your apps",
-          "body": "Pick which apps to protect and what to block in each — Shorts, Reels, Spotlight, suggested posts."
+          "body": "Pick which apps and sites to protect and what to block in each — Shorts, Reels, Spotlight, suggested posts."
         },
         "protect": {
           "title": "Turn on protection",
-          "body": "Allow Reelless in Android’s Accessibility settings. We walk you through it, and explain exactly what that permission is used for."
+          "body": "On Android, allow Reelless in Accessibility settings — we walk you through it and explain exactly what that permission is for. In Chrome, just add the extension."
         },
         "use": {
           "title": "Use your apps normally",
@@ -270,7 +276,7 @@
     "pillars": {
       "eyebrow": "What it does",
       "title": "Block the feed. Control the rest. See the difference.",
-      "subtitle": "Three kinds of tools, all running on your phone.",
+      "subtitle": "Three kinds of tools — on your phone and in your browser.",
       "tabsLabel": "Feature groups",
       "block": {
         "tab": "Block",
@@ -346,9 +352,11 @@
     "platforms": {
       "eyebrow": "Platforms",
       "title": "Works where the scroll happens",
-      "subtitle": "Native Android apps and mobile browsers. Beta platforms are supported but still being tuned.",
+      "subtitle": "Android apps, mobile browsers, and Chrome on your computer. Beta platforms are supported but still being tuned.",
       "browsersTitle": "Mobile browsers too",
-      "browsersBody": "Open a short-video site in your browser? Same rules apply."
+      "browsersBody": "Open a short-video site in your browser? Same rules apply.",
+      "chromeTitle": "Chrome on your computer",
+      "chromeBody": "The Reelless Chrome extension brings the same blocking to YouTube, Facebook, Instagram and more on your desktop or laptop."
     },
     "language": {
       "eyebrow": "Every language",
@@ -367,15 +375,7 @@
       "shortForm": "Short-form minutes per day",
       "byPlatform": "By app",
       "heatmap": "When you reach for the scroll",
-      "days": [
-        "Mon",
-        "Tue",
-        "Wed",
-        "Thu",
-        "Fri",
-        "Sat",
-        "Sun"
-      ],
+      "days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
       "hours": "h",
       "minutes": "min"
     },
@@ -397,8 +397,8 @@
           "body": "The app has no ads and no analytics SDKs. Your attention isn’t our product."
         },
         {
-          "title": "Narrow permission",
-          "body": "Accessibility is used only to spot short-video screens and press back or cover them."
+          "title": "Narrow permissions",
+          "body": "On Android, Accessibility is used only to spot short-video screens. In Chrome, the extension runs only on supported sites."
         }
       ],
       "animLabel": "Animation: data particles try to leave a locked phone and bounce back inside."
@@ -413,7 +413,7 @@
         "reelless": "Reelless",
         "delete": "Deleting the app",
         "screenTime": "Screen time limits",
-        "extensions": "Browser extensions"
+        "extensions": "Website blockers"
       },
       "rows": {
         "keepMessaging": "Keep messaging, search and posting",
@@ -427,9 +427,9 @@
         "free": "Free",
         "freePro": "Free & Pro",
         "lockedOut": "Locks the whole app",
-        "desktopOnly": "Mostly desktop",
         "timeOnly": "Time only",
-        "varies": "Varies"
+        "varies": "Varies",
+        "wholeSite": "Blocks the whole site"
       }
     },
     "pricing": {
@@ -443,13 +443,13 @@
     },
     "final": {
       "title": "Get your evenings back.",
-      "body": "Join early access and be first to try Reelless on Android."
+      "body": "Join early access and be first to try Reelless on Android and in Chrome."
     }
   },
   "features": {
     "eyebrow": "Features",
     "title": "Everything Reelless does",
-    "intro": "Three groups of tools — Block, Control, Measure — plus what’s planned next. Plan labels show where each feature is expected to land; they may change before launch.",
+    "intro": "Three groups of tools — Block, Control, Measure — on your Android phone and in Chrome on your computer, plus what’s planned next. Plan labels show where each feature is expected to land; they may change before launch.",
     "jumpTo": "Jump to",
     "howItHelps": "How it helps",
     "groups": {
@@ -500,6 +500,11 @@
         "title": "Works in mobile browsers",
         "body": "Short-video pages in Chrome, Samsung Internet, Firefox, Brave, Edge and Opera get the same treatment as the apps.",
         "helps": "Closes the loophole of opening the website instead of the app."
+      },
+      "chromeExtension": {
+        "title": "Chrome extension for your computer",
+        "body": "Hide Shorts, Reels and recommendation feeds on YouTube, Facebook, Instagram and more in Chrome on your desktop or laptop — with the same controls as the app: Search-only mode, Friends-first, keyword filters, schedules and allowances.",
+        "helps": "The scroll doesn’t just move from your phone to your laptop when you block it on one."
       },
       "searchOnly": {
         "title": "YouTube Search-only mode",
@@ -590,8 +595,8 @@
         "body": "Manage short-video rules for your family’s devices with care and transparency."
       },
       "extension": {
-        "title": "Browser extension with sync",
-        "body": "Bring the same rules to desktop browsers, synced with your phone."
+        "title": "Sync between phone and Chrome",
+        "body": "Optionally sign in to keep your rules and stats in sync between the Android app and the Chrome extension. Both will always work fully without an account."
       },
       "smartFilter": {
         "title": "On-device smart topic filter",
@@ -602,13 +607,14 @@
   "howItWorks": {
     "eyebrow": "How it works",
     "title": "How Reelless works, in plain language",
-    "intro": "Reelless uses one Android permission — the Accessibility Service — to notice when a short-video screen opens, and to press back or cover it. Here is exactly what that means.",
+    "intro": "On Android, Reelless uses one permission — the Accessibility Service — to notice when a short-video screen opens, and to press back or cover it. In Chrome, the extension hides short-video sections of supported websites. Here is exactly what that means.",
     "toc": {
       "what": "What the Accessibility Service is",
       "reads": "What Reelless reads — and what it doesn’t",
       "actions": "What Reelless does on your screen",
       "setup": "Setting it up",
       "battery": "Keeping it running on your phone",
+      "chrome": "The Chrome extension",
       "iphone": "Why not iPhone?"
     },
     "what": {
@@ -699,19 +705,33 @@
     "iphone": {
       "title": "Why not iPhone?",
       "p1": "Apple doesn’t allow any app to observe or act inside other apps on iPhone. Screen Time can limit how long you use an app, but nothing can remove the Reels tab while leaving the rest of Instagram working. That’s an iOS rule, not something we can engineer around.",
-      "p2": "We’re exploring a Safari extension for short-video websites on iPhone. If that ships, we’ll announce it in the changelog."
+      "p2": "Reelless is built for two places: Android phones and Chrome on your computer. If you use an iPhone, the Chrome extension can still help on your laptop or desktop."
+    },
+    "chrome": {
+      "title": "The Chrome extension",
+      "p1": "On a computer, Reelless works as a Chrome extension. It doesn’t need the Accessibility Service: it only runs on the supported sites you choose (like YouTube, Facebook and Instagram), and hides short-video sections of those pages — the Shorts shelf, Reels, recommendation feeds — as they load.",
+      "p2": "Like the app, it does everything inside your browser. It doesn’t collect your browsing history, doesn’t read pages on other sites, doesn’t load remote code, and doesn’t block ads.",
+      "points": [
+        "Runs only on supported sites you enable",
+        "Hides short-video sections instantly, without flicker",
+        "Search-only YouTube, Friends-first Facebook, keyword filters, schedules and allowances",
+        "Works without an account"
+      ]
     }
   },
   "platformsPage": {
     "eyebrow": "Platforms",
     "title": "What Reelless blocks, app by app",
-    "intro": "Every app hides its short videos differently. Here’s what Reelless handles in each — in plain words, with no logos, because we’re not affiliated with any of them.",
+    "intro": "Every app hides its short videos differently. Here’s what Reelless handles in each — on Android and in Chrome on your computer — in plain words, with no logos, because we’re not affiliated with any of them.",
     "blocks": "What’s blocked",
     "keeps": "What still works",
     "guide": "Detailed guide",
     "browsersTitle": "Mobile browsers",
     "browsersIntro": "Short-video pages opened in these browsers are handled the same way as the apps:",
-    "betaNote": "Beta means the platform is supported but we’re still tuning detection across app versions."
+    "betaNote": "Beta means the platform is supported but we’re still tuning detection across app versions.",
+    "chromeTitle": "Chrome on your computer",
+    "chromeIntro": "The Reelless Chrome extension hides short-video sections and recommendation feeds on these sites (planned for launch):",
+    "chromeSites": ["YouTube", "Facebook", "Instagram", "TikTok", "X", "Reddit", "LinkedIn"]
   },
   "platformData": {
     "youtube": {
@@ -722,12 +742,7 @@
         "Shorts tab",
         "Home feed recommendations (Search-only mode)"
       ],
-      "keeps": [
-        "Search",
-        "Subscriptions",
-        "Watching long videos",
-        "Comments and playlists"
-      ]
+      "keeps": ["Search", "Subscriptions", "Watching long videos", "Comments and playlists"]
     },
     "facebook": {
       "name": "Facebook",
@@ -738,27 +753,12 @@
         "Video / Reels tab",
         "Suggested posts and reels (Friends-first)"
       ],
-      "keeps": [
-        "Friends’ posts",
-        "Groups and events",
-        "Marketplace",
-        "Messenger links"
-      ]
+      "keeps": ["Friends’ posts", "Groups and events", "Marketplace", "Messenger links"]
     },
     "instagram": {
       "name": "Instagram",
-      "blocks": [
-        "Reels player",
-        "Reels tab",
-        "Explore grid",
-        "Suggested reels in feed"
-      ],
-      "keeps": [
-        "Direct messages",
-        "Stories",
-        "Your feed",
-        "Posting photos and stories"
-      ]
+      "blocks": ["Reels player", "Reels tab", "Explore grid", "Suggested reels in feed"],
+      "keeps": ["Direct messages", "Stories", "Your feed", "Posting photos and stories"]
     },
     "tiktok": {
       "name": "TikTok",
@@ -767,86 +767,39 @@
         "Following video feed",
         "Swipe-to-next in shared videos (One and done)"
       ],
-      "keeps": [
-        "Messages",
-        "Watching a video someone sent you",
-        "Your profile"
-      ]
+      "keeps": ["Messages", "Watching a video someone sent you", "Your profile"]
     },
     "snapchat": {
       "name": "Snapchat",
-      "blocks": [
-        "Spotlight",
-        "Discover stories feed"
-      ],
-      "keeps": [
-        "Snaps and chat",
-        "Friends’ stories",
-        "Camera",
-        "Map"
-      ]
+      "blocks": ["Spotlight", "Discover stories feed"],
+      "keeps": ["Snaps and chat", "Friends’ stories", "Camera", "Map"]
     },
     "x": {
       "name": "X",
       "beta": true,
-      "blocks": [
-        "Vertical video feed",
-        "Autoplaying video timeline"
-      ],
-      "keeps": [
-        "Following timeline",
-        "Posts and replies",
-        "Messages"
-      ]
+      "blocks": ["Vertical video feed", "Autoplaying video timeline"],
+      "keeps": ["Following timeline", "Posts and replies", "Messages"]
     },
     "reddit": {
       "name": "Reddit",
       "beta": true,
-      "blocks": [
-        "Full-screen vertical video player",
-        "Swipe-to-next video"
-      ],
-      "keeps": [
-        "Communities",
-        "Posts and comments",
-        "Search"
-      ]
+      "blocks": ["Full-screen vertical video player", "Swipe-to-next video"],
+      "keeps": ["Communities", "Posts and comments", "Search"]
     },
     "linkedin": {
       "name": "LinkedIn",
       "beta": true,
-      "blocks": [
-        "Video feed",
-        "Short-video player"
-      ],
-      "keeps": [
-        "Feed posts",
-        "Jobs",
-        "Messaging"
-      ]
+      "blocks": ["Video feed", "Short-video player"],
+      "keeps": ["Feed posts", "Jobs", "Messaging"]
     },
     "pinterest": {
       "name": "Pinterest",
       "beta": true,
-      "blocks": [
-        "Full-screen idea / video player",
-        "Swipe-to-next video"
-      ],
-      "keeps": [
-        "Search",
-        "Boards and pins",
-        "Saving ideas"
-      ]
+      "blocks": ["Full-screen idea / video player", "Swipe-to-next video"],
+      "keeps": ["Search", "Boards and pins", "Saving ideas"]
     }
   },
-  "browsers": [
-    "Chrome",
-    "Samsung Internet",
-    "Firefox",
-    "Brave",
-    "Edge",
-    "Opera"
-  ],
+  "browsers": ["Chrome", "Samsung Internet", "Firefox", "Brave", "Edge", "Opera"],
   "pricing": {
     "eyebrow": "Pricing",
     "title": "Simple plans, honest prices",
@@ -874,7 +827,7 @@
         "name": "Pro",
         "description": "Every feature, every supported app.",
         "features": [
-          "All supported apps and browsers",
+          "All supported apps, sites and browsers",
           "One and done",
           "YouTube Search-only & Facebook Friends-first",
           "Keyword and topic filters",
@@ -887,11 +840,7 @@
       "family": {
         "name": "Family",
         "description": "Pro for the whole household, with family controls.",
-        "features": [
-          "Everything in Pro",
-          "Multiple devices",
-          "Family / parental mode"
-        ],
+        "features": ["Everything in Pro", "Multiple devices", "Family / parental mode"],
         "cta": "Coming later"
       }
     },
@@ -903,11 +852,11 @@
     "faq": [
       {
         "q": "How will I pay?",
-        "a": "All purchases go through Google Play billing, using the payment method on your Google account. We never see your card details."
+        "a": "On Android, purchases go through Google Play billing, using the payment method on your Google account — we never see your card details. How Pro works in the Chrome extension will be announced at launch."
       },
       {
         "q": "Can I cancel anytime?",
-        "a": "Yes. Cancel in the Play Store under Payments & subscriptions → Subscriptions. You keep Pro until the end of the period you paid for."
+        "a": "Yes. On Android, cancel in the Play Store under Payments & subscriptions → Subscriptions. You keep Pro until the end of the period you paid for."
       },
       {
         "q": "Will there be a free trial?",
@@ -925,13 +874,13 @@
   },
   "download": {
     "eyebrow": "Download",
-    "title": "Reelless for Android",
+    "title": "Get Reelless",
     "statusTitle": "Current status: early access",
-    "statusBody": "The Android app is in active development and testing. It isn’t on Google Play yet. Join the waitlist and we’ll email you the moment it’s ready.",
-    "liveTitle": "Available on Google Play",
+    "statusBody": "Both the Android app and the Chrome extension are in active development. Neither is in a store yet. Join the waitlist and we’ll email you the moment each one is ready.",
+    "liveTitle": "Available now",
     "liveBody": "Install Reelless from Google Play and set it up in about a minute.",
     "playBadgeAlt": "Get it on Google Play",
-    "notOnPlay": "Not on Play yet? Join the waitlist.",
+    "notOnPlay": "Not in the store yet — join the waitlist below.",
     "requirementsTitle": "System requirements",
     "requirements": [
       "Android 8.0 (Oreo) or newer",
@@ -940,9 +889,19 @@
       "No account required"
     ],
     "iphoneTitle": "On iPhone?",
-    "iphoneBody": "Apple doesn’t allow apps to act inside other apps on iPhone, so Reelless can’t work in native iPhone apps. We’re exploring a Safari option for short-video websites.",
-    "extensionTitle": "Browser extension",
-    "extensionBody": "A desktop browser extension is planned. Join the waitlist to hear when it’s ready."
+    "iphoneBody": "Apple doesn’t allow apps to act inside other apps on iPhone, so there’s no iPhone version of Reelless. If you use a computer, the Chrome extension can still help there.",
+    "intro": "Reelless is coming to two places: your Android phone and Chrome on your computer. Both are in active development.",
+    "androidTitle": "Android app",
+    "chromeTitle": "Chrome extension",
+    "chromeStatus": "In development",
+    "chromeLiveBody": "Add Reelless to Chrome from the Chrome Web Store.",
+    "chromeStoreCta": "Add to Chrome",
+    "chromeRequirements": [
+      "Google Chrome on Windows, macOS, Linux or ChromeOS",
+      "A recent version of Chrome",
+      "No account required"
+    ],
+    "waitlistTitle": "Join early access"
   },
   "faqPage": {
     "eyebrow": "FAQ",
@@ -962,11 +921,11 @@
     "general": {
       "what": {
         "q": "What is Reelless?",
-        "a": "Reelless is an Android app that blocks Reels, Shorts and other short-video feeds inside social apps, while the rest of each app keeps working. You can still message friends, search YouTube and post photos — you just don’t get pulled into the endless scroll."
+        "a": "Reelless blocks Reels, Shorts and other short-video feeds inside social apps, while the rest of each app keeps working. It comes as an Android app for your phone and a Chrome extension for your computer. You can still message friends, search YouTube and post photos — you just don’t get pulled into the endless scroll."
       },
       "available": {
         "q": "Is Reelless available yet?",
-        "a": "Not yet. The Android app is in development. Join early access and we’ll email you when it’s ready to install."
+        "a": "Not yet. The Android app and the Chrome extension are both in development. Join early access and we’ll email you when each one is ready to install."
       },
       "whyNotDelete": {
         "q": "Why not just delete the apps?",
@@ -979,12 +938,16 @@
       "control": {
         "q": "Can I still watch a reel a friend sends me?",
         "a": "Yes. With “One and done”, you can watch the specific reel or short someone shared with you. When you swipe to the next one, Reelless closes the player."
+      },
+      "desktop": {
+        "q": "Does Reelless work on my computer?",
+        "a": "Yes — through the Reelless Chrome extension. It hides Shorts, Reels and recommendation feeds on sites like YouTube, Facebook and Instagram in Chrome on Windows, macOS, Linux and ChromeOS."
       }
     },
     "privacy": {
       "dataCollected": {
         "q": "What data does Reelless collect?",
-        "a": "None about your screen. Recognition happens on your phone; no screen content is collected, stored or sent. Your stats are stored locally on your device. The app contains no ads and no analytics SDKs."
+        "a": "None about your screen or the pages you visit. Recognition happens on your phone or inside your browser; no content is collected, stored or sent. Your stats are stored locally. There are no ads and no analytics SDKs."
       },
       "accessibility": {
         "q": "Why does Reelless need the Accessibility Service?",
@@ -997,12 +960,16 @@
       "account": {
         "q": "Do I need an account?",
         "a": "No. Reelless works without an account. If we add optional features like an accountability partner later, they’ll be opt-in."
+      },
+      "extension": {
+        "q": "What can the Chrome extension see?",
+        "a": "Only the supported sites you enable, such as YouTube or Facebook. It hides short-video sections inside your browser, doesn’t collect your browsing history, doesn’t read other sites, and doesn’t load remote code."
       }
     },
     "platforms": {
       "which": {
         "q": "Which apps does Reelless support?",
-        "a": "YouTube (Shorts), Facebook (Reels, including Facebook Lite), Instagram (Reels and Explore), TikTok, Snapchat (Spotlight), and in beta X, Reddit, LinkedIn and Pinterest. It also works in mobile browsers like Chrome, Samsung Internet, Firefox, Brave, Edge and Opera."
+        "a": "YouTube (Shorts), Facebook (Reels, including Facebook Lite), Instagram (Reels and Explore), TikTok, Snapchat (Spotlight), and in beta X, Reddit, LinkedIn and Pinterest. On Android it also works in mobile browsers like Chrome, Samsung Internet, Firefox, Brave, Edge and Opera. On computers, the Chrome extension covers YouTube, Facebook, Instagram, TikTok, X, Reddit and LinkedIn."
       },
       "beta": {
         "q": "What does “Beta” mean for a platform?",
@@ -1024,7 +991,7 @@
       },
       "lifetime": {
         "q": "Is there a lifetime option?",
-        "a": "Yes, Pro is planned as monthly, yearly, or a one-time lifetime purchase, all through Google Play."
+        "a": "Yes, Pro is planned as monthly, yearly, or a one-time lifetime purchase. On Android, all of these go through Google Play."
       },
       "cancel": {
         "q": "How do I cancel?",
@@ -1046,7 +1013,7 @@
       },
       "vpn": {
         "q": "Does Reelless use a VPN?",
-        "a": "No. Reelless doesn’t route or inspect your internet traffic. It works entirely through the Accessibility Service on your device."
+        "a": "No. Reelless doesn’t route or inspect your internet traffic. On Android it works through the Accessibility Service on your device; in Chrome, the extension works only inside the supported pages you enable."
       },
       "turnOff": {
         "q": "Can I turn it off quickly if I need to?",
@@ -1056,11 +1023,11 @@
     "iphone": {
       "ios": {
         "q": "Is there an iPhone version?",
-        "a": "Not for native apps. Apple doesn’t allow apps to see or act inside other apps on iPhone, so no app can remove Reels from Instagram while keeping the rest. We’re exploring a Safari extension for short-video websites."
+        "a": "No. Apple doesn’t allow apps to see or act inside other apps on iPhone, so no app can remove Reels from Instagram while keeping the rest. Reelless is available for Android phones and as a Chrome extension for computers."
       },
       "screenTime": {
         "q": "What can I do on iPhone today?",
-        "a": "iOS Screen Time can set time limits for whole apps, and some apps have settings to reduce recommendations. Our guides cover what each app allows."
+        "a": "iOS Screen Time can set time limits for whole apps, and some apps have settings to reduce recommendations — our guides cover what each app allows. On your computer, the Reelless Chrome extension works with any phone."
       }
     }
   },
@@ -1069,7 +1036,7 @@
     "setupTitle": "How to set it up",
     "faqTitle": "Questions",
     "ctaTitle": "Try Reelless early",
-    "ctaBody": "Join early access and be first to install Reelless on Android.",
+    "ctaBody": "Join early access and be first to install Reelless on Android or in Chrome.",
     "learnMoreTitle": "Learn more",
     "features": "All features",
     "howItWorks": "How it works",
@@ -1097,7 +1064,7 @@
     "copyLink": "Copy link",
     "copied": "Link copied",
     "authorBy": "Written by",
-    "authorBio": "TA Shanto designs and builds Reelless. He writes about attention, habits and building calmer software.",
+    "authorBio": "TA Shanto designs and builds Reelless, and writes about attention, habits and building calmer software.",
     "authorSite": "Visit tashanto.com",
     "related": "Related guides",
     "breadcrumbHome": "Home",
@@ -1121,7 +1088,7 @@
   "about": {
     "eyebrow": "About",
     "title": "Why Reelless exists",
-    "lead": "Social apps are where our friends, families and communities live. Short-video feeds turned them into something else. Reelless is an attempt to get the useful part back.",
+    "lead": "Social apps are where our friends, families and communities live. Short-video feeds turned them into something else. Reelless — an Android app and a Chrome extension — is an attempt to get the useful part back.",
     "storyTitle": "The story",
     "todo": "TODO: Personal story — replace this placeholder before launch.",
     "storyP1": "[TODO — write your own story here: the moment you noticed how much time short videos were taking, what you tried first, and why none of it worked.]",

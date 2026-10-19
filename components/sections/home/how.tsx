@@ -12,7 +12,13 @@ export async function HowItWorks() {
   return (
     <Section id="how-it-works" labelledBy="how-title">
       <div className="container-page">
-        <SectionHeading id="how-title" eyebrow={t("eyebrow")} title={t("title")} subtitle={t("subtitle")} align="center" />
+        <SectionHeading
+          id="how-title"
+          eyebrow={t("eyebrow")}
+          title={t("title")}
+          subtitle={t("subtitle")}
+          align="center"
+        />
         <Stepper steps={steps} />
       </div>
     </Section>

@@ -9,16 +9,21 @@ export type AccordionItem = { id: string; q: string; a: React.ReactNode };
  */
 export function Accordion({ items, className }: { items: AccordionItem[]; className?: string }) {
   return (
-    <div className={cn("divide-y divide-border rounded-2xl border border-border bg-surface", className)}>
+    <div
+      className={cn(
+        "divide-border border-border bg-surface divide-y rounded-2xl border",
+        className,
+      )}
+    >
       {items.map((item) => (
         <details key={item.id} id={item.id} data-accordion className="group scroll-mt-28">
-          <summary className="flex min-h-14 cursor-pointer items-center justify-between gap-4 px-5 py-4 text-start font-medium transition-colors hover:text-accent-text sm:px-6">
+          <summary className="hover:text-accent-text flex min-h-14 cursor-pointer items-center justify-between gap-4 px-5 py-4 text-start font-medium transition-colors sm:px-6">
             <h3 className="font-sans text-base font-semibold tracking-normal sm:text-[1.05rem]">
               {item.q}
             </h3>
-            <ChevronDownIcon className="size-5 shrink-0 text-muted transition-transform duration-300 group-open:rotate-180" />
+            <ChevronDownIcon className="text-muted size-5 shrink-0 transition-transform duration-300 group-open:rotate-180" />
           </summary>
-          <div className="px-5 pb-5 text-muted sm:px-6">{item.a}</div>
+          <div className="text-muted px-5 pb-5 sm:px-6">{item.a}</div>
         </details>
       ))}
     </div>

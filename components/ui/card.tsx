@@ -8,7 +8,7 @@ export function Card({
 }: React.HTMLAttributes<HTMLElement> & { as?: "div" | "article" | "li" | "section" }) {
   return (
     <Tag
-      className={cn("rounded-2xl border border-border bg-surface p-6 shadow-card", className)}
+      className={cn("border-border bg-surface shadow-card rounded-2xl border p-6", className)}
       {...props}
     >
       {children}

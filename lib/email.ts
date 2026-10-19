@@ -41,7 +41,10 @@ export async function sendEmail(email: Email): Promise<{ ok: boolean }> {
 }
 
 const escape = (s: string) =>
-  s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
+  s.replace(
+    /[&<>"']/g,
+    (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!,
+  );
 
 /** Minimal, inline-styled transactional template (renders in every mail client). */
 export function renderEmail({
@@ -66,7 +69,13 @@ ${paragraphs.map((p) => `<p style="margin:0 0 16px;font-size:16px;line-height:1.
 ${button ? `<p style="margin:28px 0"><a href="${escape(button.url)}" style="display:inline-block;background:#ff6a4d;color:#16171c;text-decoration:none;font-weight:600;padding:14px 26px;border-radius:999px">${escape(button.label)}</a></p><p style="margin:0 0 16px;font-size:13px;color:#55585f;word-break:break-all">${escape(button.url)}</p>` : ""}
 ${footer ? `<p style="margin:24px 0 0;font-size:13px;line-height:1.5;color:#55585f">${escape(footer)}</p>` : ""}
 </td></tr></table></td></tr></table></body></html>`;
-  const text = [heading, "", ...paragraphs, ...(button ? ["", `${button.label}: ${button.url}`] : []), ...(footer ? ["", footer] : [])].join("\n");
+  const text = [
+    heading,
+    "",
+    ...paragraphs,
+    ...(button ? ["", `${button.label}: ${button.url}`] : []),
+    ...(footer ? ["", footer] : []),
+  ].join("\n");
   return { html, text };
 }
 

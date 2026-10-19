@@ -5,5 +5,5 @@ export default createMiddleware(routing);
 
 export const config = {
   // Everything except API routes, Next internals, metadata files and static assets.
-  matcher: ["/((?!api|og|_next|_vercel|.*\\..*).*)"],
+  matcher: ["/((?!api|og|apple-icon|icon|_next|_vercel|.*\\..*).*)"],
 };

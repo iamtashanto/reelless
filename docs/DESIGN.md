@@ -9,20 +9,20 @@ interface itself is always calm.
 All colors are CSS variables in `app/globals.css` (`:root` = light, `.dark` = dark) and are
 mapped to Tailwind via `@theme inline`. Never hard-code hex values in components.
 
-| Token            | Light       | Dark        | Use                                    |
-| ---------------- | ----------- | ----------- | -------------------------------------- |
-| `--bg`           | `#F6F3EC`   | `#0E1016`   | Page background (warm paper / ink)     |
-| `--bg-elev`      | `#EFEBE2`   | `#13161E`   | Alternate section bands                |
-| `--surface`      | `#FFFFFF`   | `#181B25`   | Cards                                  |
-| `--surface-2`    | `#F1EDE5`   | `#20242F`   | Nested surfaces, inputs                |
-| `--border`       | `#16171C1A` | `#FFFFFF14` | 1px hairlines                          |
-| `--fg`           | `#16171C`   | `#ECEAE4`   | Body text                              |
-| `--muted`        | `#55585F`   | `#A4A6B0`   | Secondary text (≥ 4.5:1 on bg + surface) |
-| `--accent`       | `#FF6A4D`   | `#FF6A4D`   | Signal coral — fills, shield, focus    |
-| `--accent-ink`   | `#16171C`   | `#0E1016`   | Text on coral fills (≈ 6.5:1)            |
-| `--accent-text`  | `#B8381C`   | `#FF8A70`   | Coral used *as text* (≥ 4.5:1)         |
-| `--calm`         | `#3E8C78`   | `#7FC8B4`   | Sage/teal secondary — "calm" states    |
-| `--calm-text`    | `#2C6B5B`   | `#8FD3C0`   | Sage used as text                      |
+| Token           | Light       | Dark        | Use                                      |
+| --------------- | ----------- | ----------- | ---------------------------------------- |
+| `--bg`          | `#F6F3EC`   | `#0E1016`   | Page background (warm paper / ink)       |
+| `--bg-elev`     | `#EFEBE2`   | `#13161E`   | Alternate section bands                  |
+| `--surface`     | `#FFFFFF`   | `#181B25`   | Cards                                    |
+| `--surface-2`   | `#F1EDE5`   | `#20242F`   | Nested surfaces, inputs                  |
+| `--border`      | `#16171C1A` | `#FFFFFF14` | 1px hairlines                            |
+| `--fg`          | `#16171C`   | `#ECEAE4`   | Body text                                |
+| `--muted`       | `#55585F`   | `#A4A6B0`   | Secondary text (≥ 4.5:1 on bg + surface) |
+| `--accent`      | `#FF6A4D`   | `#FF6A4D`   | Signal coral — fills, shield, focus      |
+| `--accent-ink`  | `#16171C`   | `#0E1016`   | Text on coral fills (≈ 6.5:1)            |
+| `--accent-text` | `#B8381C`   | `#FF8A70`   | Coral used _as text_ (≥ 4.5:1)           |
+| `--calm`        | `#3E8C78`   | `#7FC8B4`   | Sage/teal secondary — "calm" states      |
+| `--calm-text`   | `#2C6B5B`   | `#8FD3C0`   | Sage used as text                        |
 
 ### Why signal coral?
 
@@ -41,8 +41,8 @@ Coral is never used for body text on light backgrounds — `--accent-text` exist
 
 ## Typography
 
-- **Display:** Bricolage Grotesque (variable, `opsz` + `wght`). Tight tracking
-  (`-0.035em` at hero size), weight 650–750. It has personality without being a novelty.
+- **Display:** Bricolage Grotesque (static 600 + 700 cuts, ~22 KB each). Tight tracking
+  (`-0.035em` at hero size), weight 700 for headings, 600 for small display text. It has personality without being a novelty.
 - **Text:** Instrument Sans — compact, highly legible at small sizes on low-DPI Android
   screens.
 - **Bengali:** Hind Siliguri, appended to both stacks. Loaded with `preload: false` and the
@@ -63,14 +63,20 @@ Coral is never used for body text on light backgrounds — `--accent-text` exist
 
 ## Motion
 
-- Library: `motion/react` loaded through `LazyMotion` + `domAnimation` (smaller bundle).
-- Durations 200–600 ms; default spring `{ type: "spring", stiffness: 260, damping: 30 }`;
-  default ease `[0.22, 1, 0.36, 1]`.
+- **CSS first.** The hero loop, privacy particles, settings toggle and stats dashboard are CSS
+  keyframes/transitions; the stepper line and the "endless vs intentional" split use CSS
+  scroll-driven animations (`animation-timeline: view()`), falling back to their finished state
+  where unsupported. None of this needs an animation library, which keeps first-load JS small.
+- **`motion/react` only where it earns its place:** the feature micro-animations
+  (`components/illustrations/feature-cards.tsx`). They are lazy-loaded with `next/dynamic` +
+  IntersectionObserver when a card nears the viewport, behind same-size placeholders (no CLS),
+  and wrapped in `MotionScope` (LazyMotion + `domAnimation`).
+- Durations 200–600 ms; default ease `cubic-bezier(0.22, 1, 0.36, 1)` (`--ease-out-soft`).
 - Scroll reveals run **once**.
-- Decorative loops pause when off-screen (`useInView`) and never run when the user prefers
-  reduced motion — every animation has a meaningful static frame.
-- Nothing animates the LCP element (the hero H1 renders immediately, no fade).
-- Magnetic buttons and the hero spotlight are pointer-fine (desktop) only.
+- Decorative loops pause when off-screen (`data-paused`, set from IntersectionObserver) and never
+  run when the user prefers reduced motion — every animation has a meaningful static frame.
+- Nothing animates the LCP element (the hero H1 and intro render immediately, no fade).
+- Magnetic buttons and the hero spotlight are mouse-only.
 
 ## Iconography
 

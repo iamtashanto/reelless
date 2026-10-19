@@ -1,34 +1,36 @@
 "use client";
 
-import { m, useMotionValue, useReducedMotion, useSpring } from "motion/react";
 import { useRef } from "react";
 
-/** Subtle magnetic pull toward the pointer on fine-pointer devices. */
-export function Magnetic({ children, strength = 0.25 }: { children: React.ReactNode; strength?: number }) {
+/**
+ * Subtle magnetic pull toward the pointer (mouse only). Plain transforms + a CSS transition —
+ * no animation library, so it can live in the header on every page for free.
+ */
+export function Magnetic({
+  children,
+  strength = 0.25,
+}: {
+  children: React.ReactNode;
+  strength?: number;
+}) {
   const ref = useRef<HTMLSpanElement>(null);
-  const reduce = useReducedMotion();
-  const x = useSpring(useMotionValue(0), { stiffness: 260, damping: 18, mass: 0.4 });
-  const y = useSpring(useMotionValue(0), { stiffness: 260, damping: 18, mass: 0.4 });
-
-  if (reduce) return <span className="inline-flex">{children}</span>;
-
   return (
-    <m.span
+    <span
       ref={ref}
-      className="inline-flex"
-      style={{ x, y }}
+      className="ease-out-soft inline-flex transition-transform duration-300 motion-reduce:transform-none"
       onPointerMove={(e) => {
-        if (e.pointerType !== "mouse" || !ref.current) return;
-        const r = ref.current.getBoundingClientRect();
-        x.set((e.clientX - (r.left + r.width / 2)) * strength);
-        y.set((e.clientY - (r.top + r.height / 2)) * strength);
+        const el = ref.current;
+        if (e.pointerType !== "mouse" || !el) return;
+        const r = el.getBoundingClientRect();
+        const x = (e.clientX - (r.left + r.width / 2)) * strength;
+        const y = (e.clientY - (r.top + r.height / 2)) * strength;
+        el.style.transform = `translate(${x}px, ${y}px)`;
       }}
       onPointerLeave={() => {
-        x.set(0);
-        y.set(0);
+        if (ref.current) ref.current.style.transform = "";
       }}
     >
       {children}
-    </m.span>
+    </span>
   );
 }

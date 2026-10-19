@@ -7,7 +7,6 @@ import { Analytics } from "@/components/layout/analytics";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { ThemeProvider } from "@/components/layout/theme-provider";
-import { MotionProvider } from "@/components/motion/motion-provider";
 import { isRtl, localeTags, routing, type Locale } from "@/i18n/routing";
 import { fontVariables } from "@/lib/fonts";
 import { JsonLd, organizationSchema, websiteSchema } from "@/lib/schema";
@@ -50,15 +49,9 @@ export default async function LocaleLayout({ children }: LayoutProps<"/[locale]"
   const locale = await rootLocale();
   if (!hasLocale(routing.locales, locale)) notFound();
   const t = await getTranslations("nav");
-  // Only ship the namespaces client components actually use — not the whole site's copy.
-  const all = await getMessages();
-  const clientMessages = {
-    waitlist: all.waitlist,
-    contact: all.contact,
-    confirm: all.confirm,
-    error: all.error,
-    platformData: all.platformData,
-  };
+  // Client components receive pre-translated props, so no message formatter ships to the
+  // browser. The error boundary can't receive props, so its copy is embedded as JSON.
+  const errorCopy = (await getMessages()).error;
 
   return (
     <html
@@ -70,21 +63,24 @@ export default async function LocaleLayout({ children }: LayoutProps<"/[locale]"
       <body className="flex min-h-dvh flex-col">
         <a
           href="#main"
-          className="sr-only z-[60] rounded-full bg-accent px-5 py-3 font-medium text-accent-ink focus:not-sr-only focus:fixed focus:start-4 focus:top-3"
+          className="bg-accent text-accent-ink sr-only z-[60] rounded-full px-5 py-3 font-medium focus:not-sr-only focus:fixed focus:start-4 focus:top-3"
         >
           {t("skip")}
         </a>
-        <NextIntlClientProvider messages={clientMessages}>
+        <NextIntlClientProvider locale={locale} messages={{}}>
           <ThemeProvider>
-            <MotionProvider>
-              <Header />
-              <main id="main" tabIndex={-1} className="flex-1 focus:outline-none">
-                {children}
-              </main>
-              <Footer />
-            </MotionProvider>
+            <Header />
+            <main id="main" tabIndex={-1} className="flex-1 focus:outline-none">
+              {children}
+            </main>
+            <Footer />
           </ThemeProvider>
         </NextIntlClientProvider>
+        <script
+          id="error-copy"
+          type="application/json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(errorCopy).replace(/</g, "\\u003c") }}
+        />
         <JsonLd data={[organizationSchema(), websiteSchema(locale)]} />
         <Analytics />
       </body>

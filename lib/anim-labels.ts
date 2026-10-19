@@ -7,7 +7,11 @@ export async function getAnimLabels(): Promise<AnimLabels> {
   const common = await getTranslations("common");
   return {
     shelf: { label: t("shelf.label"), hidden: t("shelf.hidden") },
-    friendsFirst: { label: t("friendsFirst.label"), suggested: t("friendsFirst.suggested"), friend: t("friendsFirst.friend") },
+    friendsFirst: {
+      label: t("friendsFirst.label"),
+      suggested: t("friendsFirst.suggested"),
+      friend: t("friendsFirst.friend"),
+    },
     searchOnly: { label: t("searchOnly.label") },
     keywords: { label: t("keywords.label"), tag: t("keywords.tag") },
     limits: { label: t("limits.label"), left: t("limits.left") },

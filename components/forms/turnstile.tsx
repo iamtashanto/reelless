@@ -9,7 +9,11 @@ export function Turnstile() {
   return (
     <>
       <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" strategy="lazyOnload" />
-      <div className="cf-turnstile mt-4" data-sitekey={siteConfig.turnstileSiteKey} data-theme="auto" />
+      <div
+        className="cf-turnstile mt-4"
+        data-sitekey={siteConfig.turnstileSiteKey}
+        data-theme="auto"
+      />
     </>
   );
 }

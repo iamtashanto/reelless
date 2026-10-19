@@ -12,8 +12,8 @@ export async function Problem() {
           <h2 id="problem-title" className="text-h2">
             {t("title")}
           </h2>
-          <p className="mt-6 text-lead text-muted">{t("body1")}</p>
-          <p className="mt-4 text-muted">{t("body2")}</p>
+          <p className="text-lead text-muted mt-6">{t("body1")}</p>
+          <p className="text-muted mt-4">{t("body2")}</p>
         </div>
         <div className="lg:col-span-7">
           <ScrollSplit

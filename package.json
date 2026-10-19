@@ -15,7 +15,9 @@
     "db:migrate:dev": "prisma migrate dev",
     "waitlist:export": "tsx scripts/export-waitlist.ts",
     "lhci": "pnpm dlx @lhci/cli@0.15.1 autorun",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate",
+    "standalone:prepare": "sh scripts/prepare-standalone.sh",
+    "start:standalone": "node --env-file=.env .next/standalone/server.js"
   },
   "dependencies": {
     "@prisma/adapter-pg": "7.10.1",
@@ -29,7 +31,6 @@
     "next-mdx-remote": "^6.0.0",
     "next-themes": "^0.4.6",
     "pg": "^8.23.1",
-    "radix-ui": "^1.8.1",
     "react": "19.3.0",
     "react-dom": "19.3.0",
     "rehype-slug": "^6.0.0",

@@ -1,0 +1,73 @@
+# /etc/nginx/sites-available/reelless.app  — example server block for the Hetzner VPS.
+# TLS via certbot: sudo certbot --nginx -d reelless.app -d www.reelless.app
+
+upstream reelless_next {
+    server 127.0.0.1:3000;
+    keepalive 32;
+}
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name reelless.app www.reelless.app;
+    return 301 https://reelless.app$request_uri;
+}
+
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    http2 on;
+    server_name www.reelless.app;
+    ssl_certificate     /etc/letsencrypt/live/reelless.app/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/reelless.app/privkey.pem;
+    return 301 https://reelless.app$request_uri;
+}
+
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    http2 on;
+    server_name reelless.app;
+
+    ssl_certificate     /etc/letsencrypt/live/reelless.app/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/reelless.app/privkey.pem;
+
+    # Compression. Brotli needs the ngx_brotli module (libnginx-mod-http-brotli-filter on Debian/Ubuntu);
+    # remove the brotli lines if it isn't installed.
+    gzip on;
+    gzip_vary on;
+    gzip_comp_level 6;
+    gzip_min_length 1024;
+    gzip_types text/plain text/css application/javascript application/json image/svg+xml application/xml text/xml application/manifest+json;
+    brotli on;
+    brotli_comp_level 5;
+    brotli_types text/plain text/css application/javascript application/json image/svg+xml application/xml text/xml application/manifest+json;
+
+    client_max_body_size 1m;
+
+    # Hashed build assets never change — cache for a year.
+    location /_next/static/ {
+        proxy_pass http://reelless_next;
+        add_header Cache-Control "public, max-age=31536000, immutable";
+        access_log off;
+    }
+
+    # Files from /public (icons, etc.)
+    location ~* \.(?:ico|svg|png|webp|avif|woff2?)$ {
+        proxy_pass http://reelless_next;
+        add_header Cache-Control "public, max-age=604800";
+        access_log off;
+    }
+
+    location / {
+        proxy_pass http://reelless_next;
+        proxy_http_version 1.1;
+        proxy_set_header Connection "";
+        proxy_set_header Host $host;
+        # The app reads X-Real-IP for rate limiting.
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_read_timeout 30s;
+    }
+}

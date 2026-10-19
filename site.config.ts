@@ -18,8 +18,10 @@ export const siteConfig = {
   playStoreUrl:
     process.env.NEXT_PUBLIC_PLAY_STORE_URL ??
     "https://play.google.com/store/apps/details?id=app.reelless",
+  chromeStoreUrl: process.env.NEXT_PUBLIC_CHROME_STORE_URL ?? "",
   flags: {
     PLAY_STORE_LIVE: flag(process.env.NEXT_PUBLIC_PLAY_STORE_LIVE),
+    CHROME_STORE_LIVE: flag(process.env.NEXT_PUBLIC_CHROME_STORE_LIVE),
     SHOW_WAITLIST_COUNT: flag(process.env.NEXT_PUBLIC_SHOW_WAITLIST_COUNT),
     ANALYTICS_ENABLED: flag(process.env.NEXT_PUBLIC_ANALYTICS_ENABLED),
   },

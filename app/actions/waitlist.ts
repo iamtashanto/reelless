@@ -21,10 +21,19 @@ export type WaitlistState =
   | { status: "error"; error: "email" | "rateLimited" | "captcha" | "server" };
 
 const schema = z.object({
-  email: z.email().max(254).transform((v) => v.trim().toLowerCase()),
+  email: z
+    .email()
+    .max(254)
+    .transform((v) => v.trim().toLowerCase()),
+  products: z.array(z.enum(["android", "chrome"])).max(2),
   platforms: z.array(z.enum(platformIds as [string, ...string[]])).max(platformIds.length),
   locale: z.enum(routing.locales as unknown as [string, ...string[]]).catch(routing.defaultLocale),
-  source: z.string().trim().max(60).regex(/^[\w/-]*$/).catch("website"),
+  source: z
+    .string()
+    .trim()
+    .max(60)
+    .regex(/^[\w/-]*$/)
+    .catch("website"),
 });
 
 const newToken = () => randomBytes(32).toString("base64url");
@@ -42,7 +51,10 @@ async function sendConfirmation(email: string, locale: string, token: string) {
   return sendEmail({ to: email, subject: t("confirmSubject"), html, text });
 }
 
-export async function joinWaitlist(_prev: WaitlistState, formData: FormData): Promise<WaitlistState> {
+export async function joinWaitlist(
+  _prev: WaitlistState,
+  formData: FormData,
+): Promise<WaitlistState> {
   // Honeypot: bots fill every field. Pretend it worked and store nothing.
   if (String(formData.get("website") ?? "").length > 0) {
     return { status: "success", email: String(formData.get("email") ?? "") };
@@ -54,6 +66,7 @@ export async function joinWaitlist(_prev: WaitlistState, formData: FormData): Pr
 
   const parsed = schema.safeParse({
     email: formData.get("email"),
+    products: formData.getAll("products"),
     platforms: formData.getAll("platforms"),
     locale: formData.get("locale"),
     source: formData.get("source") ?? "website",
@@ -66,11 +79,17 @@ export async function joinWaitlist(_prev: WaitlistState, formData: FormData): Pr
   );
   if (!captchaOk) return { status: "error", error: "captcha" };
 
-  const { email, platforms, locale, source } = parsed.data;
+  const { email, products, platforms, locale, source } = parsed.data;
 
   if (!hasDatabase) {
     if (process.env.NODE_ENV !== "production") {
-      console.info("[waitlist:dev] No DATABASE_URL — would store:", { email, platforms, locale, source });
+      console.info("[waitlist:dev] No DATABASE_URL — would store:", {
+        email,
+        products,
+        platforms,
+        locale,
+        source,
+      });
       await sendConfirmation(email, locale, "dev-token");
       return { status: "success", email };
     }
@@ -84,13 +103,18 @@ export async function joinWaitlist(_prev: WaitlistState, formData: FormData): Pr
     if (existing) {
       if (!existing.confirmedAt) {
         const token = newToken();
-        await db.waitlistEntry.update({ where: { email }, data: { confirmToken: token, locale } });
+        await db.waitlistEntry.update({
+          where: { email },
+          data: { confirmToken: token, locale, products },
+        });
         await sendConfirmation(email, locale, token);
       }
       return { status: "already" };
     }
     const token = newToken();
-    await db.waitlistEntry.create({ data: { email, platforms, locale, source, confirmToken: token } });
+    await db.waitlistEntry.create({
+      data: { email, products, platforms, locale, source, confirmToken: token },
+    });
     await sendConfirmation(email, locale, token);
     return { status: "success", email };
   } catch (err) {
@@ -101,7 +125,10 @@ export async function joinWaitlist(_prev: WaitlistState, formData: FormData): Pr
 
 export type ConfirmState = { status: "idle" } | { status: "invalid" };
 
-export async function confirmWaitlist(_prev: ConfirmState, formData: FormData): Promise<ConfirmState> {
+export async function confirmWaitlist(
+  _prev: ConfirmState,
+  formData: FormData,
+): Promise<ConfirmState> {
   const token = String(formData.get("token") ?? "");
   const locale = z
     .enum(routing.locales as unknown as [string, ...string[]])

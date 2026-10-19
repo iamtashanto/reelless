@@ -13,17 +13,17 @@ export async function Hero() {
       <div aria-hidden className="bg-grid absolute inset-0 -z-20 opacity-60" />
       <div className="container-page grid items-center gap-14 pt-14 pb-20 md:pt-20 lg:grid-cols-12 lg:gap-8 lg:pt-24 lg:pb-28">
         <div className="lg:col-span-7">
-          <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-surface/70 px-3 py-1.5 text-sm font-medium text-muted backdrop-blur">
+          <p className="border-border bg-surface/70 text-muted mb-6 inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-sm font-medium backdrop-blur">
             <span className="relative flex size-2">
-              <span className="absolute inline-flex size-full rounded-full bg-accent opacity-60 motion-safe:animate-ping" />
-              <span className="relative inline-flex size-2 rounded-full bg-accent" />
+              <span className="bg-accent absolute inline-flex size-full rounded-full opacity-60 motion-safe:animate-ping" />
+              <span className="bg-accent relative inline-flex size-2 rounded-full" />
             </span>
             {t("eyebrow")}
           </p>
-          <h1 id="hero-title" className="text-display max-w-[14ch] font-[720]">
+          <h1 id="hero-title" className="text-display max-w-[14ch] font-bold">
             {t("title")}
           </h1>
-          <p className="mt-6 max-w-[56ch] text-lead text-muted">{t("subtitle")}</p>
+          <p className="text-lead text-muted mt-6 max-w-[56ch]">{t("subtitle")}</p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <Magnetic>
               <ButtonLink href="#waitlist" size="lg" className="w-full sm:w-auto">
@@ -35,14 +35,14 @@ export async function Hero() {
               {t("secondary")}
             </ButtonLink>
           </div>
-          <ul className="mt-9 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted">
+          <ul className="text-muted mt-9 flex flex-wrap gap-x-6 gap-y-2 text-sm">
             {[
               { Icon: LockIcon, label: t("trust.onDevice") },
               { Icon: ShieldIcon, label: t("trust.noAds") },
               { Icon: GlobeIcon, label: t("trust.languages") },
             ].map(({ Icon, label }) => (
               <li key={label} className="inline-flex items-center gap-2">
-                <Icon className="size-4 text-calm-text" />
+                <Icon className="text-calm-text size-4" />
                 {label}
               </li>
             ))}

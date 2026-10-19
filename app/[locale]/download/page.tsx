@@ -1,65 +1,130 @@
 import { getTranslations } from "next-intl/server";
-import { CheckIcon, PhoneIcon } from "@/components/icons";
+import { CheckIcon, MonitorIcon, PhoneIcon } from "@/components/icons";
 import { WaitlistForm } from "@/components/forms/waitlist-form";
 import { PageHero } from "@/components/sections/page-hero";
 import { Badge } from "@/components/ui/badge";
+import { buttonClasses } from "@/components/ui/button";
 import { pageMetadata } from "@/lib/page";
 import { siteConfig } from "@/site.config";
 
 export const generateMetadata = () => pageMetadata("download", "/download");
 
+function Requirements({ items }: { items: string[] }) {
+  return (
+    <ul className="mt-4 space-y-2.5">
+      {items.map((r) => (
+        <li key={r} className="flex gap-2.5">
+          <CheckIcon className="text-calm-text mt-1 size-4 shrink-0" strokeWidth={2.5} />
+          {r}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 export default async function DownloadPage() {
   const t = await getTranslations("download");
-  const live = siteConfig.flags.PLAY_STORE_LIVE;
-  const reqs = t.raw("requirements") as string[];
+  const { PLAY_STORE_LIVE, CHROME_STORE_LIVE } = siteConfig.flags;
+  const bothLive = PLAY_STORE_LIVE && CHROME_STORE_LIVE;
 
   return (
     <>
-      <PageHero eyebrow={t("eyebrow")} title={t("title")} />
-      <div className="container-page grid gap-6 py-14 md:py-20 lg:grid-cols-12">
-        <section id="waitlist" aria-labelledby="status-title" className="scroll-mt-24 rounded-3xl border border-border bg-surface p-6 shadow-card sm:p-8 lg:col-span-7">
-          {live ? (
-            <>
-              <h2 id="status-title" className="text-h3">{t("liveTitle")}</h2>
-              <p className="mt-3 text-muted">{t("liveBody")}</p>
-              {/* Official badge — only rendered when the listing is live (PLAY_STORE_LIVE). */}
-              <a href={siteConfig.playStoreUrl} className="mt-6 inline-block" rel="noopener">
+      <PageHero eyebrow={t("eyebrow")} title={t("title")} intro={t("intro")} />
+      <div className="container-page py-14 md:py-20">
+        <div className="grid gap-6 md:grid-cols-2">
+          {/* Android */}
+          <section
+            aria-labelledby="android-title"
+            className="border-border bg-surface shadow-card flex flex-col rounded-3xl border p-6 sm:p-8"
+          >
+            <div className="flex items-center justify-between gap-3">
+              <span className="bg-accent-soft text-accent-text grid size-12 place-items-center rounded-xl">
+                <PhoneIcon className="size-6" />
+              </span>
+              <Badge tone={PLAY_STORE_LIVE ? "calm" : "accent"}>
+                {PLAY_STORE_LIVE ? t("liveTitle") : t("chromeStatus")}
+              </Badge>
+            </div>
+            <h2 id="android-title" className="text-h3 mt-5">
+              {t("androidTitle")}
+            </h2>
+            <p className="text-muted mt-2">{PLAY_STORE_LIVE ? t("liveBody") : t("notOnPlay")}</p>
+            <h3 className="mt-6 font-sans text-sm font-semibold tracking-normal">
+              {t("requirementsTitle")}
+            </h3>
+            <Requirements items={t.raw("requirements") as string[]} />
+            {PLAY_STORE_LIVE ? (
+              /* Official badge — only rendered when the listing is live (PLAY_STORE_LIVE). */
+              <a
+                href={siteConfig.playStoreUrl}
+                className="mt-auto inline-block pt-6"
+                rel="noopener"
+              >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src="/google-play-badge.png" alt={t("playBadgeAlt")} width={200} height={59} />
               </a>
-            </>
-          ) : (
-            <>
-              <Badge tone="accent">{t("statusTitle")}</Badge>
-              <h2 id="status-title" className="mt-4 text-h3">{t("notOnPlay")}</h2>
-              <p className="mt-3 text-muted">{t("statusBody")}</p>
-              <WaitlistForm source="download" className="mt-8" />
-            </>
-          )}
-        </section>
-        <div className="space-y-6 lg:col-span-5">
-          <section aria-labelledby="req-title" className="rounded-3xl border border-border bg-surface p-6 sm:p-8">
-            <h2 id="req-title" className="flex items-center gap-2 font-sans text-lg font-semibold tracking-normal">
-              <PhoneIcon className="size-5 text-calm-text" /> {t("requirementsTitle")}
+            ) : null}
+          </section>
+
+          {/* Chrome */}
+          <section
+            aria-labelledby="chrome-title"
+            className="border-border bg-surface shadow-card flex flex-col rounded-3xl border p-6 sm:p-8"
+          >
+            <div className="flex items-center justify-between gap-3">
+              <span className="bg-calm-soft text-calm-text grid size-12 place-items-center rounded-xl">
+                <MonitorIcon className="size-6" />
+              </span>
+              <Badge tone={CHROME_STORE_LIVE ? "calm" : "accent"}>
+                {CHROME_STORE_LIVE ? t("liveTitle") : t("chromeStatus")}
+              </Badge>
+            </div>
+            <h2 id="chrome-title" className="text-h3 mt-5">
+              {t("chromeTitle")}
             </h2>
-            <ul className="mt-4 space-y-2.5">
-              {reqs.map((r) => (
-                <li key={r} className="flex gap-2.5">
-                  <CheckIcon className="mt-1 size-4 shrink-0 text-calm-text" strokeWidth={2.5} />
-                  {r}
-                </li>
-              ))}
-            </ul>
-          </section>
-          <section aria-labelledby="iphone-title" className="rounded-3xl border border-border bg-surface p-6 sm:p-8">
-            <h2 id="iphone-title" className="font-sans text-lg font-semibold tracking-normal">{t("iphoneTitle")}</h2>
-            <p className="mt-2 text-muted">{t("iphoneBody")}</p>
-          </section>
-          <section aria-labelledby="ext-title" className="rounded-3xl border border-border bg-surface p-6 sm:p-8">
-            <h2 id="ext-title" className="font-sans text-lg font-semibold tracking-normal">{t("extensionTitle")}</h2>
-            <p className="mt-2 text-muted">{t("extensionBody")}</p>
+            <p className="text-muted mt-2">
+              {CHROME_STORE_LIVE ? t("chromeLiveBody") : t("notOnPlay")}
+            </p>
+            <h3 className="mt-6 font-sans text-sm font-semibold tracking-normal">
+              {t("requirementsTitle")}
+            </h3>
+            <Requirements items={t.raw("chromeRequirements") as string[]} />
+            {CHROME_STORE_LIVE && siteConfig.chromeStoreUrl ? (
+              <a
+                href={siteConfig.chromeStoreUrl}
+                rel="noopener"
+                className={buttonClasses("primary", "md", "mt-auto self-start")}
+              >
+                {t("chromeStoreCta")}
+              </a>
+            ) : null}
           </section>
         </div>
+
+        {!bothLive ? (
+          <section
+            id="waitlist"
+            aria-labelledby="status-title"
+            className="border-border bg-surface shadow-card mt-6 scroll-mt-24 rounded-3xl border p-6 sm:p-8"
+          >
+            <Badge tone="accent">{t("statusTitle")}</Badge>
+            <h2 id="status-title" className="text-h3 mt-4">
+              {t("waitlistTitle")}
+            </h2>
+            <p className="text-muted mt-3 max-w-2xl">{t("statusBody")}</p>
+            <WaitlistForm source="download" className="mt-8 max-w-2xl" />
+          </section>
+        ) : null}
+
+        <section
+          aria-labelledby="iphone-title"
+          className="border-border bg-surface mt-6 rounded-3xl border p-6 sm:p-8"
+        >
+          <h2 id="iphone-title" className="font-sans text-lg font-semibold tracking-normal">
+            {t("iphoneTitle")}
+          </h2>
+          <p className="text-muted mt-2 max-w-3xl">{t("iphoneBody")}</p>
+        </section>
       </div>
     </>
   );

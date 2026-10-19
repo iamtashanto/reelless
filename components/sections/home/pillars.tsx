@@ -15,14 +15,32 @@ export async function Pillars() {
   return (
     <Section id="features" band labelledBy="pillars-title">
       <div className="container-page">
-        <SectionHeading id="pillars-title" eyebrow={t("eyebrow")} title={t("title")} subtitle={t("subtitle")} />
+        <SectionHeading
+          id="pillars-title"
+          eyebrow={t("eyebrow")}
+          title={t("title")}
+          subtitle={t("subtitle")}
+        />
         <PillarTabs
           tabsLabel={t("tabsLabel")}
           seeAll={common("seeAllFeatures")}
-          pillars={{ block: pillar("block"), control: pillar("control"), measure: pillar("measure") }}
+          pillars={{
+            block: pillar("block"),
+            control: pillar("control"),
+            measure: pillar("measure"),
+          }}
           cards={{
-            shelf: { title: t("cards.shelf.title"), body: t("cards.shelf.body"), label: t("cards.shelf.label"), hidden: t("cards.shelf.hidden") },
-            searchOnly: { title: t("cards.searchOnly.title"), body: t("cards.searchOnly.body"), label: t("cards.searchOnly.label") },
+            shelf: {
+              title: t("cards.shelf.title"),
+              body: t("cards.shelf.body"),
+              label: t("cards.shelf.label"),
+              hidden: t("cards.shelf.hidden"),
+            },
+            searchOnly: {
+              title: t("cards.searchOnly.title"),
+              body: t("cards.searchOnly.body"),
+              label: t("cards.searchOnly.label"),
+            },
             friendsFirst: {
               title: t("cards.friendsFirst.title"),
               body: t("cards.friendsFirst.body"),
@@ -30,9 +48,25 @@ export async function Pillars() {
               suggested: t("cards.friendsFirst.suggested"),
               friend: t("cards.friendsFirst.friend"),
             },
-            keywords: { title: t("cards.keywords.title"), body: t("cards.keywords.body"), label: t("cards.keywords.label"), tag: t("cards.keywords.tag") },
-            limits: { title: t("cards.limits.title"), body: t("cards.limits.body"), label: t("cards.limits.label"), left: t("cards.limits.left") },
-            stats: { title: t("cards.stats.title"), body: t("cards.stats.body"), label: t("cards.stats.label"), example: common("example"), days: s.raw("days") as string[] },
+            keywords: {
+              title: t("cards.keywords.title"),
+              body: t("cards.keywords.body"),
+              label: t("cards.keywords.label"),
+              tag: t("cards.keywords.tag"),
+            },
+            limits: {
+              title: t("cards.limits.title"),
+              body: t("cards.limits.body"),
+              label: t("cards.limits.label"),
+              left: t("cards.limits.left"),
+            },
+            stats: {
+              title: t("cards.stats.title"),
+              body: t("cards.stats.body"),
+              label: t("cards.stats.label"),
+              example: common("example"),
+              days: s.raw("days") as string[],
+            },
           }}
         />
       </div>

@@ -1,4 +1,5 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getMessages, getTranslations } from "next-intl/server";
+import { flattenMessages } from "@/lib/messages";
 import { MailIcon } from "@/components/icons";
 import { ContactForm } from "@/components/forms/contact-form";
 import { PageHero } from "@/components/sections/page-hero";
@@ -12,12 +13,15 @@ export default async function ContactPage() {
   return (
     <>
       <PageHero eyebrow={t("eyebrow")} title={t("title")} intro={t("intro")}>
-        <p className="mt-6 inline-flex items-center gap-2 text-muted">
+        <p className="text-muted mt-6 inline-flex items-center gap-2">
           <MailIcon className="size-4" />
           {t.rich("emailDirect", {
             email: siteConfig.contactEmail,
             link: (chunks) => (
-              <a href={`mailto:${siteConfig.contactEmail}`} className="font-medium text-fg underline underline-offset-2">
+              <a
+                href={`mailto:${siteConfig.contactEmail}`}
+                className="text-fg font-medium underline underline-offset-2"
+              >
                 {chunks}
               </a>
             ),
@@ -25,8 +29,11 @@ export default async function ContactPage() {
         </p>
       </PageHero>
       <div className="container-page max-w-3xl py-14 md:py-20">
-        <div className="rounded-3xl border border-border bg-surface p-6 shadow-card sm:p-8">
-          <ContactForm />
+        <div className="border-border bg-surface shadow-card rounded-3xl border p-6 sm:p-8">
+          <ContactForm
+            labels={flattenMessages((await getMessages()).contact)}
+            locale={await getLocale()}
+          />
         </div>
       </div>
     </>

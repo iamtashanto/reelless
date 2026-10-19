@@ -13,7 +13,11 @@ export type ContactField = "name" | "email" | "message";
 export type ContactState =
   | { status: "idle" }
   | { status: "success" }
-  | { status: "error"; fields?: Partial<Record<ContactField, true>>; error?: "rateLimited" | "captcha" | "server" };
+  | {
+      status: "error";
+      fields?: Partial<Record<ContactField, true>>;
+      error?: "rateLimited" | "captcha" | "server";
+    };
 
 const TOPICS = ["general", "feedback", "press", "partnership", "other"] as const;
 
@@ -41,7 +45,9 @@ export async function sendContact(_prev: ContactState, formData: FormData): Prom
     return { status: "error", fields };
   }
 
-  if (!(await verifyTurnstile((formData.get("cf-turnstile-response") as string | null) ?? null, ip))) {
+  if (
+    !(await verifyTurnstile((formData.get("cf-turnstile-response") as string | null) ?? null, ip))
+  ) {
     return { status: "error", error: "captcha" };
   }
 

@@ -6,7 +6,12 @@ import { MonitorIcon, MoonIcon, SunIcon } from "@/components/icons";
 import { cn } from "@/lib/utils";
 
 const subscribe = () => () => {};
-const useMounted = () => useSyncExternalStore(subscribe, () => true, () => false);
+const useMounted = () =>
+  useSyncExternalStore(
+    subscribe,
+    () => true,
+    () => false,
+  );
 
 /** Header button: flips between light and dark (based on what's currently shown). */
 export function ThemeToggle({ label }: { label: string }) {
@@ -18,7 +23,7 @@ export function ThemeToggle({ label }: { label: string }) {
       type="button"
       onClick={() => setTheme(isDark ? "light" : "dark")}
       aria-label={label}
-      className="inline-flex size-11 items-center justify-center rounded-full text-muted transition-colors hover:bg-surface-2 hover:text-fg"
+      className="text-muted hover:bg-surface-2 hover:text-fg inline-flex size-11 items-center justify-center rounded-full transition-colors"
     >
       {/* Both icons render; CSS shows the right one so there's no hydration flash. */}
       <SunIcon className="hidden size-5 dark:block" />
@@ -44,12 +49,12 @@ export function ThemeSegmented({
   return (
     <fieldset>
       <legend className="sr-only">{labels.legend}</legend>
-      <div className="inline-flex rounded-full border border-border bg-surface p-1">
+      <div className="border-border bg-surface inline-flex rounded-full border p-1">
         {options.map(({ value, label, Icon }) => (
           <label
             key={value}
             className={cn(
-              "inline-flex min-h-10 cursor-pointer items-center gap-1.5 rounded-full px-3 text-sm text-muted transition-colors has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-accent",
+              "text-muted has-[:focus-visible]:outline-accent inline-flex min-h-10 cursor-pointer items-center gap-1.5 rounded-full px-3 text-sm transition-colors has-[:focus-visible]:outline-2",
               current === value && "bg-surface-2 text-fg",
             )}
           >

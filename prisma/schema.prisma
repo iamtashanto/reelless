@@ -13,6 +13,8 @@ model WaitlistEntry {
   id           String    @id @default(cuid())
   email        String    @unique
   locale       String    @default("en")
+  /// Which products the person wants: "android", "chrome".
+  products     String[]  @default([])
   platforms    String[]
   source       String    @default("website")
   createdAt    DateTime  @default(now())

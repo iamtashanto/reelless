@@ -2,10 +2,14 @@ import localFont from "next/font/local";
 
 // Self-hosted (see app/fonts/README.md). next/font generates size-adjusted fallbacks,
 // so swapping in the web font causes no layout shift.
+// Static 600/700 cuts (~22 KB each) instead of the 129 KB variable font — headings only use
+// these weights, and the smaller files keep mobile LCP low.
 export const display = localFont({
-  src: "../app/fonts/bricolage-grotesque-latin-wght.woff2",
+  src: [
+    { path: "../app/fonts/bricolage-grotesque-latin-600-normal.woff2", weight: "600" },
+    { path: "../app/fonts/bricolage-grotesque-latin-700-normal.woff2", weight: "700" },
+  ],
   variable: "--font-bricolage",
-  weight: "200 800",
   display: "swap",
   fallback: ["ui-sans-serif", "system-ui", "sans-serif"],
 });
@@ -30,7 +34,13 @@ export const bengali = localFont({
   variable: "--font-hind",
   display: "swap",
   preload: false,
-  declarations: [{ prop: "unicode-range", value: "U+0951-0952, U+0964-0965, U+0980-09FE, U+1CD0-1CF9, U+200C-200D, U+20B9, U+25CC, U+A8F1" }],
+  declarations: [
+    {
+      prop: "unicode-range",
+      value:
+        "U+0951-0952, U+0964-0965, U+0980-09FE, U+1CD0-1CF9, U+200C-200D, U+20B9, U+25CC, U+A8F1",
+    },
+  ],
 });
 
 export const fontVariables = `${display.variable} ${text.variable} ${bengali.variable}`;

@@ -34,10 +34,12 @@ export async function LegalPage({ slug }: { slug: string }) {
         <div className="mt-6 flex flex-wrap items-center gap-3 text-sm">
           {doc.updated ? (
             <span className="text-muted">
-              {common("lastUpdated", { date: format.dateTime(new Date(doc.updated), { dateStyle: "long" }) })}
+              {common("lastUpdated", {
+                date: format.dateTime(new Date(doc.updated), { dateStyle: "long" }),
+              })}
             </span>
           ) : null}
-          <span className="rounded-full border border-dashed border-accent/60 bg-accent-soft px-3 py-1 font-medium text-accent-text">
+          <span className="border-accent/60 bg-accent-soft text-accent-text rounded-full border border-dashed px-3 py-1 font-medium">
             {common("reviewNotice")}
           </span>
         </div>
@@ -45,14 +47,20 @@ export async function LegalPage({ slug }: { slug: string }) {
       <div className="container-page grid gap-12 py-14 md:py-20 lg:grid-cols-12">
         {doc.headings.length > 2 ? (
           <aside className="lg:order-2 lg:col-span-4">
-            <nav aria-label={common("onThisPage")} className="rounded-2xl border border-border bg-surface p-5 lg:sticky lg:top-24">
+            <nav
+              aria-label={common("onThisPage")}
+              className="border-border bg-surface rounded-2xl border p-5 lg:sticky lg:top-24"
+            >
               <p className="mb-3 text-sm font-semibold">{common("onThisPage")}</p>
               <ol className="space-y-1 text-sm">
                 {doc.headings
                   .filter((h) => h.level === 2)
                   .map((h) => (
                     <li key={h.id}>
-                      <a href={`#${h.id}`} className="inline-flex min-h-8 items-center text-muted hover:text-fg">
+                      <a
+                        href={`#${h.id}`}
+                        className="text-muted hover:text-fg inline-flex min-h-8 items-center"
+                      >
                         {h.text}
                       </a>
                     </li>

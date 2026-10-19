@@ -1,6 +1,12 @@
 import { cn } from "@/lib/utils";
 
-export function Container({ className, children }: { className?: string; children: React.ReactNode }) {
+export function Container({
+  className,
+  children,
+}: {
+  className?: string;
+  children: React.ReactNode;
+}) {
   return <div className={cn("container-page", className)}>{children}</div>;
 }
 
@@ -28,15 +34,21 @@ export function Section({
   );
 }
 
-export function Eyebrow({ children, className }: { children: React.ReactNode; className?: string }) {
+export function Eyebrow({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
   return (
     <p
       className={cn(
-        "mb-4 inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-accent-text",
+        "text-accent-text mb-4 inline-flex items-center gap-2 text-sm font-semibold tracking-wide",
         className,
       )}
     >
-      <span aria-hidden className="size-1.5 rounded-full bg-accent" />
+      <span aria-hidden className="bg-accent size-1.5 rounded-full" />
       {children}
     </p>
   );
@@ -72,7 +84,7 @@ export function SectionHeading({
       <Tag id={id} className={Tag === "h1" ? "text-h1" : "text-h2"}>
         {title}
       </Tag>
-      {subtitle ? <p className="mt-5 text-lead text-muted">{subtitle}</p> : null}
+      {subtitle ? <p className="text-lead text-muted mt-5">{subtitle}</p> : null}
     </div>
   );
 }

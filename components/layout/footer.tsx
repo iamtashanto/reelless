@@ -52,7 +52,7 @@ export async function Footer() {
   const social = Object.entries(siteConfig.social).filter(([, url]) => url);
 
   return (
-    <footer className="border-t border-border bg-bg-elev">
+    <footer className="border-border bg-bg-elev border-t">
       <div className="container-page py-14 md:py-16">
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-4">
@@ -60,7 +60,7 @@ export async function Footer() {
               <LogoMark className="size-7" />
               <span className="font-display text-lg font-bold tracking-tight">Reelless</span>
             </Link>
-            <p className="mt-3 max-w-xs text-muted">{t("tagline")}</p>
+            <p className="text-muted mt-3 max-w-xs">{t("tagline")}</p>
             <div className="mt-6 flex flex-wrap items-center gap-3">
               <LanguageSwitcher label={nav("changeLanguage")} align="start" />
               <ThemeSegmented
@@ -76,7 +76,12 @@ export async function Footer() {
               <ul className="mt-6 flex gap-4 text-sm" aria-label={t("social")}>
                 {social.map(([name, url]) => (
                   <li key={name}>
-                    <a href={url} rel="noopener me" target="_blank" className="text-muted capitalize hover:text-fg">
+                    <a
+                      href={url}
+                      rel="noopener me"
+                      target="_blank"
+                      className="text-muted hover:text-fg capitalize"
+                    >
                       {name}
                     </a>
                   </li>
@@ -93,7 +98,7 @@ export async function Footer() {
                     <li key={link.href}>
                       <Link
                         href={link.href}
-                        className="inline-flex min-h-9 items-center text-sm text-muted transition-colors hover:text-fg"
+                        className="text-muted hover:text-fg inline-flex min-h-9 items-center text-sm transition-colors"
                       >
                         {link.label}
                       </Link>
@@ -105,9 +110,9 @@ export async function Footer() {
           </div>
         </div>
 
-        <p className="mt-12 max-w-3xl text-xs leading-relaxed text-muted">{t("disclaimer")}</p>
+        <p className="text-muted mt-12 max-w-3xl text-xs leading-relaxed">{t("disclaimer")}</p>
 
-        <div className="mt-6 flex flex-col gap-3 border-t border-border pt-6 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
+        <div className="border-border text-muted mt-6 flex flex-col gap-3 border-t pt-6 text-sm sm:flex-row sm:items-center sm:justify-between">
           <p>{t("copyright", { year: YEAR })}</p>
           <p>
             {t("credit")}{" "}
@@ -115,13 +120,13 @@ export async function Footer() {
               href={siteConfig.developer.url}
               target="_blank"
               rel="noopener"
-              className="group relative inline-flex items-center gap-0.5 font-medium text-fg"
+              className="group text-fg relative inline-flex items-center gap-0.5 font-medium"
             >
               {siteConfig.developer.name}
-              <ArrowUpRightIcon className="size-3.5 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+              <ArrowUpRightIcon className="size-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               <span
                 aria-hidden
-                className="absolute inset-x-0 -bottom-0.5 h-px origin-left scale-x-0 bg-accent transition-transform duration-300 ease-out-soft group-hover:scale-x-100 rtl:origin-right"
+                className="bg-accent ease-out-soft absolute inset-x-0 -bottom-0.5 h-px origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100 rtl:origin-right"
               />
               <span className="sr-only">{t("opensNewTab")}</span>
             </a>

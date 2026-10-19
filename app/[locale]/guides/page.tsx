@@ -41,7 +41,10 @@ export default async function GuidesPage() {
       <PageHero eyebrow={t("eyebrow")} title={t("title")} intro={t("intro")} />
       <div className="container-page py-14 md:py-20">
         {guides.some((g) => g.fallback) ? (
-          <p role="note" className="mb-8 rounded-xl border border-border bg-surface-2 px-4 py-3 text-sm text-muted">
+          <p
+            role="note"
+            className="border-border bg-surface-2 text-muted mb-8 rounded-xl border px-4 py-3 text-sm"
+          >
             {(await getTranslations("common"))("translationFallback")}
           </p>
         ) : null}

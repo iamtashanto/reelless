@@ -1,6 +1,6 @@
 Self-hosted fonts (SIL Open Font License 1.1), copied from Fontsource:
 
-- Bricolage Grotesque (variable wght, Latin) — display
+- Bricolage Grotesque 600/700 (static, Latin) — display
 - Instrument Sans (variable wght, Latin) — text
 - Hind Siliguri 400/500/600/700 (Bengali subset only) — Bengali
 

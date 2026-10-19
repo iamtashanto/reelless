@@ -62,19 +62,29 @@ async function Article({ params }: { params: Props["params"] }) {
     <>
       {guide.fallback ? <TranslationNotice text={common("translationFallback")} /> : null}
       <article lang={guide.locale}>
-        <header className="grain relative border-b border-border">
+        <header className="grain border-border relative border-b">
           <div className="container-page max-w-4xl pt-10 pb-12 md:pt-14 md:pb-16">
-            <nav aria-label={t("breadcrumb")} className="mb-8 text-sm text-muted">
+            <nav aria-label={t("breadcrumb")} className="text-muted mb-8 text-sm">
               <ol className="flex flex-wrap items-center gap-2">
-                <li><Link href="/" className="hover:text-fg">{t("breadcrumbHome")}</Link></li>
+                <li>
+                  <Link href="/" className="hover:text-fg">
+                    {t("breadcrumbHome")}
+                  </Link>
+                </li>
                 <li aria-hidden>/</li>
-                <li><Link href="/guides" className="hover:text-fg">{t("breadcrumbGuides")}</Link></li>
+                <li>
+                  <Link href="/guides" className="hover:text-fg">
+                    {t("breadcrumbGuides")}
+                  </Link>
+                </li>
               </ol>
             </nav>
-            <p className="text-sm font-semibold tracking-wide text-accent-text uppercase">{t(`categories.${guide.category}`)}</p>
-            <h1 className="mt-3 text-h1">{guide.title}</h1>
-            <p className="mt-5 text-lead text-muted">{guide.description}</p>
-            <p className="mt-6 flex flex-wrap gap-x-4 gap-y-1 text-sm text-muted">
+            <p className="text-accent-text text-sm font-semibold tracking-wide uppercase">
+              {t(`categories.${guide.category}`)}
+            </p>
+            <h1 className="text-h1 mt-3">{guide.title}</h1>
+            <p className="text-lead text-muted mt-5">{guide.description}</p>
+            <p className="text-muted mt-6 flex flex-wrap gap-x-4 gap-y-1 text-sm">
               <span>{guide.author}</span>
               <span aria-hidden>·</span>
               <time dateTime={guide.updated}>{t("updated", { date: fmt(guide.updated) })}</time>
@@ -88,12 +98,20 @@ async function Article({ params }: { params: Props["params"] }) {
           <aside className="lg:order-2 lg:col-span-4">
             <div className="space-y-6 lg:sticky lg:top-24">
               {toc.length ? (
-                <nav aria-label={t("toc")} className="rounded-2xl border border-border bg-surface p-5">
+                <nav
+                  aria-label={t("toc")}
+                  className="border-border bg-surface rounded-2xl border p-5"
+                >
                   <p className="mb-3 text-sm font-semibold">{t("toc")}</p>
                   <ol className="space-y-1 text-sm">
                     {toc.map((h) => (
                       <li key={h.id}>
-                        <a href={`#${h.id}`} className="inline-flex min-h-8 items-center text-muted hover:text-fg">{h.text}</a>
+                        <a
+                          href={`#${h.id}`}
+                          className="text-muted hover:text-fg inline-flex min-h-8 items-center"
+                        >
+                          {h.text}
+                        </a>
                       </li>
                     ))}
                   </ol>
@@ -120,15 +138,26 @@ async function Article({ params }: { params: Props["params"] }) {
               <Mdx source={guide.body} locale={locale} />
             </div>
 
-            <section aria-label={t("authorBy")} className="mt-14 flex gap-4 rounded-2xl border border-border bg-surface p-6">
-              <span aria-hidden className="grid size-12 shrink-0 place-items-center rounded-full bg-accent font-display text-lg font-bold text-accent-ink">
+            <section
+              aria-label={t("authorBy")}
+              className="border-border bg-surface mt-14 flex gap-4 rounded-2xl border p-6"
+            >
+              <span
+                aria-hidden
+                className="bg-accent font-display text-accent-ink grid size-12 shrink-0 place-items-center rounded-full text-lg font-bold"
+              >
                 TS
               </span>
               <div>
-                <p className="text-sm text-muted">{t("authorBy")}</p>
+                <p className="text-muted text-sm">{t("authorBy")}</p>
                 <p className="font-display text-lg font-semibold">{siteConfig.developer.name}</p>
-                <p className="mt-1 text-sm text-muted">{t("authorBio")}</p>
-                <a href={siteConfig.developer.url} target="_blank" rel="noopener" className="mt-2 inline-flex min-h-10 items-center gap-1 text-sm font-medium text-accent-text underline underline-offset-2">
+                <p className="text-muted mt-1 text-sm">{t("authorBio")}</p>
+                <a
+                  href={siteConfig.developer.url}
+                  target="_blank"
+                  rel="noopener"
+                  className="text-accent-text mt-2 inline-flex min-h-10 items-center gap-1 text-sm font-medium underline underline-offset-2"
+                >
                   {t("authorSite")} <ArrowUpRightIcon className="size-3.5" />
                 </a>
               </div>
@@ -140,11 +169,17 @@ async function Article({ params }: { params: Props["params"] }) {
       {related.length ? (
         <section aria-labelledby="related-title" className="bg-bg-elev py-14 md:py-20">
           <div className="container-page">
-            <h2 id="related-title" className="mb-8 text-h2">{t("related")}</h2>
+            <h2 id="related-title" className="text-h2 mb-8">
+              {t("related")}
+            </h2>
             <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {related.map((g) => (
                 <li key={g.slug}>
-                  <GuideCard guide={g} categoryLabel={t(`categories.${g.category}`)} readingLabel={t("readingTime", { minutes: g.readingMinutes })} />
+                  <GuideCard
+                    guide={g}
+                    categoryLabel={t(`categories.${g.category}`)}
+                    readingLabel={t("readingTime", { minutes: g.readingMinutes })}
+                  />
                 </li>
               ))}
             </ul>

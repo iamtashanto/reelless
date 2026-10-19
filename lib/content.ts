@@ -5,6 +5,7 @@ import GithubSlugger from "github-slugger";
 import matter from "gray-matter";
 import { cacheLife } from "next/cache";
 
+// Content files are bundled via `outputFileTracingIncludes` in next.config.ts.
 const ROOT = path.join(process.cwd(), "content");
 
 export type Heading = { id: string; text: string; level: 2 | 3 };
@@ -43,11 +44,17 @@ export type PageDoc = {
   headings: Heading[];
 };
 
-export type ChangelogEntry = { slug: string; title: string; date: string; summary: string; body: string };
+export type ChangelogEntry = {
+  slug: string;
+  title: string;
+  date: string;
+  summary: string;
+  body: string;
+};
 
 async function exists(file: string) {
   try {
-    await readFile(file);
+    await readFile(/*turbopackIgnore: true*/ file);
     return true;
   } catch {
     return false;
@@ -79,13 +86,14 @@ function extractHeadings(body: string): Heading[] {
   return headings;
 }
 
-const readingMinutes = (body: string) => Math.max(1, Math.round(body.split(/\s+/).filter(Boolean).length / 220));
+const readingMinutes = (body: string) =>
+  Math.max(1, Math.round(body.split(/\s+/).filter(Boolean).length / 220));
 
 const toDate = (v: unknown) => (v instanceof Date ? v.toISOString().slice(0, 10) : String(v ?? ""));
 
 async function slugsIn(dir: string) {
   try {
-    const files = await readdir(path.join(ROOT, dir, "en"));
+    const files = await readdir(/*turbopackIgnore: true*/ path.join(ROOT, dir, "en"));
     return files.filter((f) => f.endsWith(".mdx")).map((f) => f.replace(/\.mdx$/, ""));
   } catch {
     return [];
@@ -97,7 +105,7 @@ export async function getGuide(slug: string, locale: string): Promise<Guide | nu
   cacheLife("max");
   const resolved = await resolveFile("guides", slug, locale);
   if (!resolved) return null;
-  const { data, content } = matter(await readFile(resolved.file, "utf8"));
+  const { data, content } = matter(await readFile(/*turbopackIgnore: true*/ resolved.file, "utf8"));
   return {
     slug,
     locale: resolved.locale,
@@ -144,7 +152,7 @@ export async function getPageDoc(slug: string, locale: string): Promise<PageDoc 
   cacheLife("max");
   const resolved = await resolveFile("pages", slug, locale);
   if (!resolved) return null;
-  const { data, content } = matter(await readFile(resolved.file, "utf8"));
+  const { data, content } = matter(await readFile(/*turbopackIgnore: true*/ resolved.file, "utf8"));
   return {
     slug,
     locale: resolved.locale,
@@ -166,10 +174,12 @@ export async function listChangelog(): Promise<ChangelogEntry[]> {
   "use cache";
   cacheLife("max");
   const dir = path.join(ROOT, "changelog");
-  const files = (await readdir(dir)).filter((f) => f.endsWith(".mdx"));
+  const files = (await readdir(/*turbopackIgnore: true*/ dir)).filter((f) => f.endsWith(".mdx"));
   const entries = await Promise.all(
     files.map(async (f) => {
-      const { data, content } = matter(await readFile(path.join(dir, f), "utf8"));
+      const { data, content } = matter(
+        await readFile(/*turbopackIgnore: true*/ path.join(dir, f), "utf8"),
+      );
       return {
         slug: f.replace(/\.mdx$/, ""),
         title: data.title as string,

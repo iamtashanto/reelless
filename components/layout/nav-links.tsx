@@ -15,7 +15,7 @@ export function NavLinks({ items }: { items: { href: string; label: string }[] }
               href={item.href}
               aria-current={active ? "page" : undefined}
               className={cn(
-                "inline-flex min-h-11 items-center rounded-full px-3.5 text-[0.925rem] text-muted transition-colors hover:text-fg",
+                "text-muted hover:text-fg inline-flex min-h-11 items-center rounded-full px-3.5 text-[0.925rem] transition-colors",
                 active && "text-fg",
               )}
             >

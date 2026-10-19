@@ -13,7 +13,11 @@ export function JsonLd({ data }: { data: Json | Json[] }) {
   );
 }
 
-const founder = { "@type": "Person", name: siteConfig.developer.name, url: siteConfig.developer.url };
+const founder = {
+  "@type": "Person",
+  name: siteConfig.developer.name,
+  url: siteConfig.developer.url,
+};
 
 export function organizationSchema(): Json {
   return {
@@ -49,19 +53,28 @@ export function websiteSchema(locale: string): Json {
   };
 }
 
-export function softwareApplicationSchema(description: string): Json {
+/** The two Reelless products: the Android app and the Chrome extension. */
+export function softwareApplicationSchema(description: string): Json[] {
   // `offers` intentionally omitted until real prices exist.
-  return {
+  const base = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: siteConfig.name,
     applicationCategory: "LifestyleApplication",
-    operatingSystem: "Android",
     description,
     url: siteConfig.url,
     author: founder,
     publisher: { "@id": `${siteConfig.url}/#organization` },
   };
+  return [
+    { ...base, name: `${siteConfig.name} for Android`, operatingSystem: "Android 8.0+" },
+    {
+      ...base,
+      name: `${siteConfig.name} for Chrome`,
+      applicationSubCategory: "Browser extension",
+      operatingSystem: "Windows, macOS, Linux, ChromeOS",
+      browserRequirements: "Requires Google Chrome",
+    },
+  ];
 }
 
 export function faqSchema(items: { q: string; a: string }[]): Json {

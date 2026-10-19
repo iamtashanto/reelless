@@ -16,7 +16,9 @@ const analyticsOrigin =
   process.env.NEXT_PUBLIC_ANALYTICS_ENABLED === "true"
     ? originOf(process.env.NEXT_PUBLIC_ANALYTICS_SRC)
     : "";
-const turnstile = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ? "https://challenges.cloudflare.com" : "";
+const turnstile = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY
+  ? "https://challenges.cloudflare.com"
+  : "";
 const isDev = process.env.NODE_ENV !== "production";
 
 // Pages are statically prerendered, so we can't use per-request nonces without making every
@@ -58,6 +60,9 @@ const nextConfig: NextConfig = {
   // instant navigations; partial (shell-only) prefetching would add a params round-trip.
   partialPrefetching: false,
   poweredByHeader: false,
+  experimental: {
+    globalNotFound: true,
+  },
   pageExtensions: ["ts", "tsx"],
   outputFileTracingIncludes: {
     "/**": ["./content/**/*"],

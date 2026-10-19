@@ -90,6 +90,8 @@
 /* ---------- Base ---------- */
 @layer base {
   html {
+    /* Safety net: decorative glows and sr-only text must never cause sideways scrolling. */
+    overflow-x: clip;
     -webkit-text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
     scroll-padding-top: 5.5rem;
@@ -121,7 +123,7 @@
   h4 {
     font-family: var(--font-display);
     text-wrap: balance;
-    font-weight: 680;
+    font-weight: 700;
   }
   p {
     text-wrap: pretty;
@@ -319,5 +321,431 @@ details[data-accordion] > div {
   }
   to {
     transform: translateY(-50%);
+  }
+}
+
+/* ---------- Mobile menu sheet (native <dialog>) ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .mobile-sheet[open] {
+    animation: sheet-in 250ms var(--ease-out-soft);
+  }
+  .mobile-sheet[open]::backdrop {
+    animation: backdrop-in 200ms ease-out;
+  }
+}
+@keyframes sheet-in {
+  from {
+    opacity: 0;
+    transform: translateY(-12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes backdrop-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ---------- Hero phone: one 8s CSS loop (components/illustrations/hero-phone.tsx) ---------- */
+.hero-glow {
+  background: var(--accent);
+  opacity: 0.25;
+  animation: hero-glow 8s infinite;
+}
+.hero-conveyor {
+  animation: conveyor 1.6s linear infinite;
+}
+.hero-stream {
+  animation: hero-stream 8s var(--ease-out-soft) infinite;
+}
+.hero-shield {
+  opacity: 0;
+  animation: hero-shield 8s infinite;
+}
+.hero-shield-fill {
+  clip-path: circle(0% at 50% 50%);
+  animation: hero-shield-fill 8s var(--ease-out-soft) infinite;
+}
+.hero-shield-icon {
+  animation: hero-shield-icon 8s infinite;
+}
+.hero-shield-check {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: hero-shield-check 8s infinite;
+}
+.hero-calm {
+  opacity: 0;
+  animation: hero-calm 8s var(--ease-out-soft) infinite;
+}
+.hero-calm-message {
+  animation: hero-calm-message 8s var(--ease-out-soft) infinite;
+}
+.hero-calm-status {
+  animation: hero-calm-status 8s var(--ease-out-soft) infinite;
+}
+@keyframes hero-glow {
+  0%,
+  50%,
+  100% {
+    background: var(--accent);
+  }
+  56%,
+  94% {
+    background: var(--calm);
+  }
+}
+@keyframes hero-stream {
+  0%,
+  42% {
+    opacity: 1;
+    filter: blur(0);
+    transform: none;
+  }
+  50% {
+    opacity: 1;
+    filter: blur(3px);
+    transform: none;
+  }
+  56%,
+  97% {
+    opacity: 0;
+    filter: blur(6px);
+    transform: scaleY(0.2);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: none;
+  }
+}
+@keyframes hero-shield {
+  0%,
+  42% {
+    opacity: 0;
+  }
+  44%,
+  54% {
+    opacity: 1;
+  }
+  58%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes hero-shield-fill {
+  0%,
+  42% {
+    clip-path: circle(0% at 50% 50%);
+  }
+  49%,
+  100% {
+    clip-path: circle(75% at 50% 50%);
+  }
+}
+@keyframes hero-shield-icon {
+  0%,
+  43% {
+    transform: scale(0.4) rotate(-12deg);
+    opacity: 0;
+  }
+  48% {
+    transform: scale(1.06) rotate(0);
+    opacity: 1;
+  }
+  50%,
+  100% {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+  }
+}
+@keyframes hero-shield-check {
+  0%,
+  47% {
+    stroke-dashoffset: 1;
+  }
+  52%,
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes hero-calm {
+  0%,
+  55% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  62%,
+  95% {
+    opacity: 1;
+    transform: none;
+  }
+  98%,
+  100% {
+    opacity: 0;
+    transform: none;
+  }
+}
+@keyframes hero-calm-message {
+  0%,
+  59% {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  66%,
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes hero-calm-status {
+  0%,
+  64% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  70%,
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* Reduced motion: a single calm, meaningful frame. */
+@media (prefers-reduced-motion: reduce) {
+  .hero-stream,
+  .hero-shield {
+    display: none;
+  }
+  .hero-calm,
+  .hero-calm-message,
+  .hero-calm-status {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
+  .hero-glow {
+    animation: none !important;
+    background: var(--calm);
+  }
+}
+
+/* ---------- Stepper: scroll-driven line + dots (components/illustrations/stepper.tsx) ---------- */
+.step-line-y {
+  transform-origin: top;
+}
+.step-line-x {
+  transform-origin: left;
+}
+:dir(rtl) .step-line-x,
+[dir="rtl"] .step-line-x {
+  transform-origin: right;
+}
+.step-dot {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-color: transparent;
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .stepper {
+      view-timeline: --stepper block;
+    }
+    .step-line-y {
+      animation: step-draw-y linear both;
+      animation-timeline: --stepper;
+      animation-range: entry 30% cover 55%;
+    }
+    .step-line-x {
+      animation: step-draw-x linear both;
+      animation-timeline: --stepper;
+      animation-range: entry 40% cover 55%;
+    }
+    .step-dot {
+      animation: step-dot linear both;
+      animation-timeline: view();
+      animation-range: entry 60% cover 45%;
+    }
+  }
+}
+@keyframes step-draw-y {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+@keyframes step-draw-x {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes step-dot {
+  0%,
+  70% {
+    background: var(--surface);
+    color: var(--fg);
+    border-color: var(--border-strong);
+  }
+  100% {
+    background: var(--accent);
+    color: var(--accent-ink);
+    border-color: transparent;
+  }
+}
+
+/* ---------- Scroll split (components/illustrations/scroll-split.tsx) ---------- */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .split {
+      view-timeline: --split block;
+    }
+    .split-conveyor {
+      /* ease-in → the feed accelerates as you scroll */
+      animation: split-conveyor cubic-bezier(0.55, 0, 1, 0.45) both;
+      animation-timeline: --split;
+      animation-range: cover 0% cover 100%;
+    }
+    .split-calm {
+      animation: split-calm linear both;
+      animation-timeline: --split;
+      animation-range: entry 20% cover 50%;
+    }
+  }
+}
+@keyframes split-conveyor {
+  0% {
+    transform: translateY(0);
+    filter: blur(0);
+  }
+  60% {
+    filter: blur(0.5px);
+  }
+  100% {
+    transform: translateY(-50%);
+    filter: blur(2.5px);
+  }
+}
+@keyframes split-calm {
+  from {
+    transform: scale(0.9);
+    opacity: 0.35;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+/* ---------- Privacy phone particles (components/illustrations/privacy-phone.tsx) ---------- */
+.privacy-particle {
+  opacity: 0;
+  animation: privacy-bounce 2.6s infinite;
+}
+.privacy-boundary {
+  opacity: 0.35;
+  animation: privacy-pulse 2.4s ease-in-out infinite;
+}
+@keyframes privacy-bounce {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    opacity: 1;
+  }
+  45% {
+    transform: translate(var(--dx), var(--dy));
+    opacity: 1;
+    animation-timing-function: ease-in;
+  }
+  85% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+}
+@keyframes privacy-pulse {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .privacy-particle {
+    display: none;
+  }
+  .privacy-boundary {
+    animation: none !important;
+    opacity: 0.5;
+  }
+}
+
+/* ---------- Settings toggle (components/illustrations/settings-toggle.tsx) ---------- */
+.settings-switch {
+  background: var(--border-strong);
+  transition: background-color 300ms 600ms;
+}
+.settings-knob {
+  inset-inline-start: 2px;
+  transition: inset-inline-start 350ms var(--ease-out-soft) 600ms;
+}
+.settings-toggle[data-on="true"] .settings-switch {
+  background: var(--calm);
+}
+.settings-toggle[data-on="true"] .settings-knob {
+  inset-inline-start: 18px;
+}
+
+/* ---------- Stats dashboard (components/illustrations/stats-dashboard.tsx) ---------- */
+.stats-bar {
+  height: 0;
+  transition: height 800ms var(--ease-out-soft);
+}
+.stats-hbar {
+  width: 0;
+  transition: width 800ms var(--ease-out-soft);
+}
+.stats-cell {
+  opacity: 0;
+  transition: opacity 400ms;
+}
+.stats[data-play="true"] .stats-bar {
+  height: var(--h);
+}
+.stats[data-play="true"] .stats-hbar {
+  width: var(--w);
+}
+.stats[data-play="true"] .stats-cell {
+  opacity: var(--o);
+}
+
+.fade-up {
+  animation: fade-up 300ms var(--ease-out-soft) both;
+}
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
   }
 }

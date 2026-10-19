@@ -22,8 +22,8 @@ export async function PlanCards() {
           <li
             key={plan}
             className={cn(
-              "relative flex flex-col rounded-3xl border bg-surface p-6 shadow-card sm:p-7",
-              highlight ? "border-accent/60 ring-1 ring-accent/30" : "border-border",
+              "bg-surface shadow-card relative flex flex-col rounded-3xl border p-6 sm:p-7",
+              highlight ? "border-accent/60 ring-accent/30 ring-1" : "border-border",
             )}
           >
             <div className="flex items-center justify-between gap-2">
@@ -31,26 +31,38 @@ export async function PlanCards() {
               {highlight ? <Badge tone="accent">{t("mostPopular")}</Badge> : null}
               {later ? <Badge tone="outline">{common("comingLater")}</Badge> : null}
             </div>
-            <p className="mt-2 text-muted">{t(`plans.${plan}.description`)}</p>
-            <p className="mt-6 font-display text-2xl font-bold">
+            <p className="text-muted mt-2">{t(`plans.${plan}.description`)}</p>
+            <p className="font-display mt-6 text-2xl font-bold">
               {plan === "free" ? t("plans.free.price") : t("priceTba")}
             </p>
-            {plan === "pro" ? <p className="mt-1 text-sm text-muted">{t("billingOptions")}</p> : null}
+            {plan === "pro" ? (
+              <p className="text-muted mt-1 text-sm">{t("billingOptions")}</p>
+            ) : null}
             <p className="mt-6 text-sm font-semibold">{t("perks")}</p>
             <ul className="mt-3 mb-8 space-y-2.5">
               {features.map((f) => (
                 <li key={f} className="flex gap-2.5 text-[0.95rem]">
-                  <CheckIcon className="mt-1 size-4 shrink-0 text-calm-text" />
+                  <CheckIcon className="text-calm-text mt-1 size-4 shrink-0" />
                   <span>{f}</span>
                 </li>
               ))}
             </ul>
             {later ? (
-              <span className={buttonClasses("secondary", "md", "mt-auto pointer-events-none opacity-70")} aria-disabled="true">
+              <span
+                className={buttonClasses(
+                  "secondary",
+                  "md",
+                  "pointer-events-none mt-auto opacity-70",
+                )}
+                aria-disabled="true"
+              >
                 {t(`plans.${plan}.cta`)}
               </span>
             ) : (
-              <Link href={waitlistHref} className={buttonClasses(highlight ? "primary" : "secondary", "md", "mt-auto")}>
+              <Link
+                href={waitlistHref}
+                className={buttonClasses(highlight ? "primary" : "secondary", "md", "mt-auto")}
+              >
                 {t(`plans.${plan}.cta`)}
               </Link>
             )}

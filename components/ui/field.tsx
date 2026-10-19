@@ -3,7 +3,15 @@ import { cn } from "@/lib/utils";
 export const inputClasses =
   "block w-full min-h-12 rounded-xl border border-border-strong bg-surface px-4 py-3 text-base text-fg placeholder:text-muted/80 transition-colors focus:border-accent focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 aria-[invalid=true]:border-accent-text";
 
-export function Label({ htmlFor, children, className }: { htmlFor: string; children: React.ReactNode; className?: string }) {
+export function Label({
+  htmlFor,
+  children,
+  className,
+}: {
+  htmlFor: string;
+  children: React.ReactNode;
+  className?: string;
+}) {
   return (
     <label htmlFor={htmlFor} className={cn("mb-2 block text-sm font-medium", className)}>
       {children}
@@ -13,7 +21,7 @@ export function Label({ htmlFor, children, className }: { htmlFor: string; child
 
 export function FieldError({ id, message }: { id: string; message?: string }) {
   return (
-    <p id={id} className="mt-2 min-h-5 text-sm text-accent-text" aria-live="polite">
+    <p id={id} className="text-accent-text mt-2 min-h-5 text-sm" aria-live="polite">
       {message ?? ""}
     </p>
   );
@@ -28,7 +36,9 @@ export function Textarea(props: React.ComponentProps<"textarea">) {
 }
 
 export function Select(props: React.ComponentProps<"select">) {
-  return <select {...props} className={cn(inputClasses, "appearance-none pe-10", props.className)} />;
+  return (
+    <select {...props} className={cn(inputClasses, "appearance-none pe-10", props.className)} />
+  );
 }
 
 /** Visually hidden honeypot field — real people never see or fill it. */
