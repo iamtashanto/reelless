@@ -13,7 +13,8 @@ export async function PlanCards() {
   const common = await getTranslations("common");
 
   return (
-    <ul className="grid gap-4 md:grid-cols-3">
+    <>
+      <ul className="grid gap-4 md:grid-cols-3">
       {PLANS.map((plan) => {
         const features = t.raw(`plans.${plan}.features`) as string[];
         const highlight = plan === "pro";
@@ -36,7 +37,13 @@ export async function PlanCards() {
               {plan === "free" ? t("plans.free.price") : t("priceTba")}
             </p>
             {plan === "pro" ? (
-              <p className="text-muted mt-1 text-sm">{t("billingOptions")}</p>
+              <div className="mt-2.5 inline-flex items-center gap-1.5 self-start rounded-full bg-calm-soft px-3 py-1 text-xs font-semibold text-calm-text">
+                <CheckIcon className="size-3.5" />
+                <span>{t("proTrialNotice")}</span>
+              </div>
+            ) : null}
+            {plan === "pro" ? (
+              <p className="text-muted mt-2 text-sm">{t("billingOptions")}</p>
             ) : null}
             <p className="mt-6 text-sm font-semibold">{t("perks")}</p>
             <ul className="mt-3 mb-8 space-y-2.5">
@@ -70,5 +77,44 @@ export async function PlanCards() {
         );
       })}
     </ul>
+    {/* Manual Purchase & Instant Key Activation */}
+    <div className="mt-8 rounded-3xl border border-border/80 bg-surface/90 p-6 shadow-card backdrop-blur-xl sm:p-8">
+      <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+        <div className="max-w-xl">
+          <span className="inline-flex items-center gap-2 rounded-full bg-accent-soft px-3 py-1 text-xs font-semibold text-accent-text">
+            <span className="relative flex size-2">
+              <span className="absolute inline-flex size-full animate-ping rounded-full bg-accent opacity-75" />
+              <span className="relative inline-flex size-2 rounded-full bg-accent" />
+            </span>
+            {t("manualBuyBadge")}
+          </span>
+          <h4 className="mt-3 font-display text-lg font-bold sm:text-xl">
+            {t("manualBuyTitle")}
+          </h4>
+          <p className="mt-1 text-sm text-muted leading-relaxed">
+            {t("manualBuyDesc")}
+          </p>
+        </div>
+        <div className="flex flex-wrap items-center gap-3">
+          <a
+            href="https://wa.me/8801614081441"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={buttonClasses("primary", "md")}
+          >
+            WhatsApp (+8801614081441)
+          </a>
+          <a
+            href="https://t.me/tashanto"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={buttonClasses("secondary", "md")}
+          >
+            Telegram (@tashanto)
+          </a>
+        </div>
+      </div>
+    </div>
+    </>
   );
 }

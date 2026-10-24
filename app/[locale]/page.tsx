@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Hero } from "@/components/sections/home/hero";
 import { HowItWorks } from "@/components/sections/home/how";
+import { BrainrotScoreSection } from "@/components/sections/home/brain-score";
 import {
   BuiltInPublic,
   CompareSection,
@@ -31,6 +32,7 @@ export default async function Home() {
     <>
       <Hero />
       <Problem />
+      <BrainrotScoreSection />
       <HowItWorks />
       <Pillars />
       <PlatformsSection />

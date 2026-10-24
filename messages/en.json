@@ -2,34 +2,34 @@
   "meta": {
     "siteName": "Reelless",
     "defaultTitle": "Reelless — Keep the apps. Lose the scroll.",
-    "defaultDescription": "Reelless blocks Reels, Shorts and endless feeds — in the Android apps you already use and in Chrome on your computer — so you can still message friends, search YouTube and post photos.",
+    "defaultDescription": "Reelless blocks Reels, Shorts and endless feeds — on Android, iPhone (iOS) and desktop browsers — so you can still message friends, search YouTube and post photos.",
     "home": {
       "title": "Reelless — Block Reels & Shorts, keep your apps",
-      "description": "Block Reels, Shorts and endless feeds on Android and in Chrome — while messages, search and posting keep working. On-device, no ads."
+      "description": "Block Reels, Shorts and endless feeds on Android, iPhone and desktop browsers — while messages, search and posting keep working. On-device, no ads."
     },
     "features": {
       "title": "Features — Block, control and measure short video",
-      "description": "Every Reelless feature: auto-exit Shorts and Reels, YouTube search-only mode, Facebook friends-first, keyword filters, time limits, schedules and on-device stats."
+      "description": "Every Reelless feature: auto-exit Shorts and Reels, 5-tier Brainrot Clarity Score, mindful breathing breaks, Pomodoro focus sprints, and on-device stats."
     },
     "howItWorks": {
-      "title": "How Reelless works — Accessibility Service, explained",
-      "description": "A plain-language look at how Reelless uses Android’s Accessibility Service to spot short-video screens, what it reads, what it never reads, and how to set it up."
+      "title": "How Reelless works — Accessibility Service & Screen Time",
+      "description": "A plain-language look at how Reelless works on Android and iPhone via official APIs to spot short-video screens, what it reads, and how to set it up."
     },
     "platforms": {
       "title": "Supported apps — YouTube, Instagram, TikTok and more",
-      "description": "What Reelless blocks in YouTube, Facebook, Instagram, TikTok, Snapchat, X, Reddit, LinkedIn, Pinterest — on Android and in Chrome on your computer."
+      "description": "What Reelless blocks in YouTube, Facebook, Instagram, TikTok, Snapchat, X, Reddit, LinkedIn, Pinterest — on Android, iPhone and desktop browsers."
     },
     "pricing": {
-      "title": "Pricing — Free, Pro and Family plans",
-      "description": "Reelless plans: Free with basic blocking on two apps, Pro with every feature (monthly, yearly or lifetime), and Family coming later. Prices announced at launch."
+      "title": "Pricing — 30-Day Free Trial, Pro and Lifetime plans",
+      "description": "Reelless plans: Instant 30-Day Free Pro Trial, Pro with every feature (monthly, yearly or lifetime), and direct manual license keys."
     },
     "download": {
-      "title": "Get Reelless for Android and Chrome — Early access",
-      "description": "Reelless is coming to Android phones and to Chrome on your computer. Join early access to get it first. Android 8.0+ or a recent version of desktop Chrome."
+      "title": "Get Reelless for Android, iPhone and Chrome",
+      "description": "Install Reelless on Android, iPhone (iOS Screen Time) and desktop browsers. Instant 30-Day Free Pro Trial included."
     },
     "faq": {
       "title": "FAQ — Questions about Reelless, answered",
-      "description": "Answers about Reelless for Android and Chrome: privacy, supported apps and sites, pricing, battery, and why there’s no iPhone version."
+      "description": "Answers about Reelless for Android, iPhone and desktop: privacy, supported apps and sites, Screen Time, pricing, and battery."
     },
     "about": {
       "title": "About Reelless — Why it exists",
@@ -309,11 +309,75 @@
       }
     ]
   },
+  "brainScore": {
+    "eyebrow": "Dopamine Friction & Clarity",
+    "title": "Meet the 5-Tier Brainrot Clarity System",
+    "subtitle": "Reeless monitors your compulsive swipe frequency and app triggers in real time, calculating a 100% on-device clarity score to keep you out of mindless autopilot trance.",
+    "clarityIndex": "Brain Clarity Index",
+    "liveScoreHint": "Calculated privately on-device based on daily reel swipes and intervention adherence.",
+    "interventionTitle": "Intervention Engine",
+    "habitGoalTitle": "Mindful Habit Goal",
+    "breathingBadge": "Autopilot Loop Breaker",
+    "breathingTitle": "Mindful 4-7-8 Breathing",
+    "breathingSubtitle": "When Reeless detects compulsive reel triggers, it introduces a calming 4-7-8 breath pacer before the app opens.",
+    "inhale": "Inhale",
+    "exhale": "Exhale",
+    "toggleBreathing": "Tap to toggle breath rhythm",
+    "breathingFootnote": "A simple 5-second pause resets the prefrontal cortex, transforming unconscious muscle memory into intentional choice.",
+    "focusBadge": "Deep Work Shield",
+    "focusTitle": "Quick Focus Sprints",
+    "focusSubtitle": "Activate a quick Pomodoro shield session that locks down all short-video algorithms while leaving work & communications intact.",
+    "sprintDuration": "Sprint Duration",
+    "sprintShieldInfo": "Work tools & messaging apps stay 100% accessible.",
+    "focusFootnote": "Enforces strict distraction shielding with zero willpower fatigue.",
+    "tiers": {
+      "peak": {
+        "name": "Peak Clarity",
+        "badge": "Flow State Active",
+        "title": "Peak Clarity (85–100%)",
+        "desc": "Zero algorithmic doomscrolling. Your mind is sharp, focused, and in deep control of your attention.",
+        "intervention": "Passive shield monitoring. Reels & Shorts shelves stay completely covered.",
+        "goal": "Maintain focus streaks and deep work sessions without friction."
+      },
+      "calm": {
+        "name": "Calm & Present",
+        "badge": "Intentional Mind",
+        "title": "Calm & Present (65–84%)",
+        "desc": "Balanced digital hygiene. You open apps for intentional messaging and search, avoiding short-video rabbit holes.",
+        "intervention": "Gentle shield: closes vertical video reels after 1 video ('One and Done').",
+        "goal": "Prevent evening doomscroll creep and preserve creative focus."
+      },
+      "dopamine": {
+        "name": "Dopamine Burn",
+        "badge": "Warning Zone",
+        "title": "Dopamine Burn (45–64%)",
+        "desc": "Warning territory: compulsive habit loops are surfacing, pulling you into 10–20 minute reels binges.",
+        "intervention": "Mindful breathing pause activated on app launch to break compulsive reflex.",
+        "goal": "Apply daily limits and schedule focus blocks to recover clarity."
+      },
+      "rotting": {
+        "name": "Rotting Brain",
+        "badge": "Algorithmic Trance",
+        "title": "Rotting Brain (20–44%)",
+        "desc": "Heavy dopamine fatigue. You are caught in rapid 15-second swipe loops that drain attention and willpower.",
+        "intervention": "Strict shield lock: auto-exits reels immediately and enforces strict cooldown.",
+        "goal": "Engage 25-minute Focus Sprint and step away from the screen."
+      },
+      "zombie": {
+        "name": "Zombie Mode",
+        "badge": "Urgent Reset Needed",
+        "title": "Zombie Mode (0–19%)",
+        "desc": "Total autopilot binge. Hours lost to algorithmic feeds with severe cognitive brain fog and attention fragmentation.",
+        "intervention": "Emergency lockdown: all short-form feeds blocked across all devices.",
+        "goal": "Perform a full digital detox reset: take deep breaths and disconnect."
+      }
+    }
+  },
   "home": {
     "hero": {
-      "eyebrow": "Android app + Chrome extension · Early access",
+      "eyebrow": "Android · iPhone (iOS) · Desktop Browser · 30-Day Free Pro Trial",
       "title": "Keep the apps. Lose the scroll.",
-      "subtitle": "Reelless blocks Reels, Shorts and endless feeds inside the apps you already use — on your Android phone and in Chrome on your computer — so you can still message friends, search YouTube and post photos, without getting pulled into hours of scrolling.",
+      "subtitle": "Reelless blocks Reels, Shorts and endless feeds inside the apps you already use — on Android, iPhone (iOS) and desktop browsers — so you can still message friends, search YouTube and post photos, without getting pulled into hours of scrolling.",
       "primary": "Join early access",
       "secondary": "See how it works",
       "trust": {

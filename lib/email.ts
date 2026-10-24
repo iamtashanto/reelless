@@ -3,7 +3,7 @@ import { Resend } from "resend";
 
 type Email = { to: string; subject: string; html: string; text: string; replyTo?: string };
 
-const from = process.env.EMAIL_FROM ?? "Reelless <hello@tashanto.com>";
+const from = process.env.EMAIL_FROM ?? "Reelless <hello@iamtashanto.com>";
 
 /**
  * Sends email through Resend. Without RESEND_API_KEY the email is logged to the console

@@ -59,7 +59,7 @@ docs/                  DESIGN.md, DEPLOY.md, PROGRESS.md
   (lawyer review; add address and jurisdiction)
 - `messages/bn.json` (machine-assisted Bengali)
 - The About page story (`about.storyP1/2` in messages)
-- `NEXT_PUBLIC_CONTACT_EMAIL` (default `hello@tashanto.com` is a placeholder)
+- `NEXT_PUBLIC_CONTACT_EMAIL` (default `hello@iamtashanto.com` is a placeholder)
 
 Deployment: see [docs/DEPLOY.md](docs/DEPLOY.md). Design system: [docs/DESIGN.md](docs/DESIGN.md).
 
