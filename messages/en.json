@@ -39,6 +39,10 @@
       "title": "Contact — Get in touch with Reelless",
       "description": "Questions, feedback, press or partnership ideas? Send a message to the Reelless team."
     },
+    "uninstallFeedback": {
+      "title": "Uninstall Feedback — Help us improve Reelless",
+      "description": "We're sorry to see you go. Help us improve by letting us know why you uninstalled Reelless."
+    },
     "changelog": {
       "title": "Changelog — Reelless, built in public",
       "description": "Progress updates on Reelless as it’s built: what shipped, what changed, and what’s next."
@@ -221,6 +225,37 @@
       "rateLimited": "Too many messages. Please wait a minute.",
       "captcha": "Please complete the verification and try again.",
       "server": "We couldn’t send your message. Please email us directly."
+    },
+    "honeypot": "Leave this field empty"
+  },
+  "uninstallFeedback": {
+    "eyebrow": "We're sorry to see you go",
+    "title": "Help us improve Reelless",
+    "intro": "Your feedback helps us understand what went wrong and how we can make Reelless better. No account required.",
+    "reasonTitle": "Why did you uninstall Reelless?",
+    "reasons": {
+      "broken": "Something was broken on a website",
+      "restrictive": "Too restrictive or got in my way",
+      "not_working": "Didn't block what I wanted",
+      "temporary": "Temporary / troubleshooting",
+      "alternative": "Found a better alternative",
+      "other": "Other reason"
+    },
+    "detailsLabel": "What went wrong? (optional)",
+    "detailsPlaceholder": "Which site had an issue? What feature were you expecting?",
+    "emailLabel": "Your email (optional)",
+    "emailHint": "Leave your email if you'd like us to let you know once a bug is fixed.",
+    "submit": "Send feedback",
+    "submitting": "Sending…",
+    "successTitle": "Thank you for your feedback",
+    "successMessage": "We take feedback seriously and work hard to make Reelless better every week. If you ever want to give it another shot, we'll be here.",
+    "backHome": "Back to Home",
+    "reinstallCta": "Reinstall Reelless",
+    "errors": {
+      "reason": "Please choose a reason.",
+      "rateLimited": "Too many requests. Please wait a minute.",
+      "captcha": "Please complete the verification and try again.",
+      "server": "Could not send feedback. Please try again later."
     },
     "honeypot": "Leave this field empty"
   },
