@@ -310,6 +310,35 @@ export const BackIcon = (p: IconProps) => (
   </Base>
 );
 
+export const DiscordIcon = (p: IconProps) => (
+  <Base {...p}>
+    <path d="M18.8 6.5A16.8 16.8 0 0 0 14.8 5.2a.1.1 0 0 0-.1.1 11.5 11.5 0 0 0-.5 1.1 15.5 15.5 0 0 0-4.4 0 11.5 11.5 0 0 0-.5-1.1.1.1 0 0 0-.1-.1 16.8 16.8 0 0 0-4 1.3.1.1 0 0 0 0 .1c-2.5 3.8-3.2 7.5-2.9 11.2a.1.1 0 0 0 .1.1 16.9 16.9 0 0 0 5.1 2.6.1.1 0 0 0 .1 0 12.1 12.1 0 0 0 1.1-1.7.1.1 0 0 0 0-.1 11 11 0 0 1-1.7-.8.1.1 0 0 1 0-.1c.1-.1.2-.2.3-.3a.1.1 0 0 1 .1 0 12.1 12.1 0 0 0 10.4 0 .1.1 0 0 1 .1 0c.1.1.2.2.3.3a.1.1 0 0 1 0 .1 11.2 11.2 0 0 1-1.7.8.1.1 0 0 0 0 .1c.3.6.7 1.2 1.1 1.7a.1.1 0 0 0 .1 0 16.8 16.8 0 0 0 5.1-2.6.1.1 0 0 0 .1-.1c.4-4.3-.7-8-2.9-11.2a.1.1 0 0 0 0-.1ZM9.3 14.8c-.8 0-1.4-.7-1.4-1.6s.6-1.6 1.4-1.6c.8 0 1.5.7 1.4 1.6 0 .9-.6 1.6-1.4 1.6Zm5.4 0c-.8 0-1.4-.7-1.4-1.6s.6-1.6 1.4-1.6c.8 0 1.5.7 1.4 1.6 0 .9-.6 1.6-1.4 1.6Z" />
+  </Base>
+);
+
+export const GithubIcon = (p: IconProps) => (
+  <Base {...p}>
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+  </Base>
+);
+
+export const RedditIcon = (p: IconProps) => (
+  <Base {...p}>
+    <circle cx="12" cy="13" r="7.5" />
+    <path d="M12 5.5v3.5l3.5 1" />
+    <circle cx="16.5" cy="10" r="1.5" />
+    <circle cx="9.5" cy="13" r="1" fill="currentColor" />
+    <circle cx="14.5" cy="13" r="1" fill="currentColor" />
+    <path d="M9.5 16.5c1 .8 4 .8 5 0" />
+  </Base>
+);
+
+export const TwitterXIcon = (p: IconProps) => (
+  <Base {...p}>
+    <path d="M4 4l6.5 7.5L4 20h2.5l5.2-6 4.8 6H20l-6.8-7.8L19.5 4H17l-4.7 5.5L7.8 4H4Z" />
+  </Base>
+);
+
 /** Small wordmark glyph used in header/footer — our own shield + stopped-stream mark. */
 export function LogoMark({ className, title }: { className?: string; title?: string }) {
   return (

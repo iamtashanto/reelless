@@ -26,6 +26,7 @@ export async function Footer() {
     {
       title: t("resources"),
       links: [
+        { href: "/community", label: nav("community") },
         { href: "/guides", label: nav("guides") },
         { href: "/faq", label: nav("faq") },
         { href: "/changelog", label: t("changelog") },

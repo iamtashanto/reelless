@@ -43,6 +43,10 @@
       "title": "Uninstall Feedback — Help us improve Reelless",
       "description": "We're sorry to see you go. Help us improve by letting us know why you uninstalled Reelless."
     },
+    "community": {
+      "title": "Community — Join Reelless on Discord, Reddit & GitHub",
+      "description": "Connect with mindful tech users, share screen-time milestones, suggest rules for new short-form players, and chat directly with the team."
+    },
     "changelog": {
       "title": "Changelog — Reelless, built in public",
       "description": "Progress updates on Reelless as it’s built: what shipped, what changed, and what’s next."
@@ -87,6 +91,7 @@
     "howItWorks": "How it works",
     "platforms": "Platforms",
     "pricing": "Pricing",
+    "community": "Community",
     "guides": "Guides",
     "faq": "FAQ",
     "cta": "Join early access",
@@ -258,6 +263,51 @@
       "server": "Could not send feedback. Please try again later."
     },
     "honeypot": "Leave this field empty"
+  },
+  "community": {
+    "eyebrow": "Built with you, for you",
+    "title": "Join the Reelless Community",
+    "lead": "Thousands of people are taking their time and focus back from algorithmically addicted feeds. Connect, share milestones, report new feed surfaces, and help shape our roadmap.",
+    "channelsTitle": "Where we hang out",
+    "discord": {
+      "title": "Discord Community",
+      "description": "Real-time chat, accountability channels, digital detox challenges, and beta tester channels with direct developer access.",
+      "cta": "Join Discord Server",
+      "href": "https://discord.gg/reelless"
+    },
+    "github": {
+      "title": "GitHub & Open Rules",
+      "description": "Inspect and contribute to open-source feed blocking rules. Report broken sites, submit rule PRs, or check our engineering roadmap.",
+      "cta": "Explore GitHub",
+      "href": "https://github.com/iamtashanto/reelless-admin"
+    },
+    "reddit": {
+      "title": "Reddit / r/Reelless",
+      "description": "Long-form habit discussions, weekly screen time reduction wins, and mindful technology tips from our growing community.",
+      "cta": "Join Subreddit",
+      "href": "https://reddit.com/r/Reelless"
+    },
+    "x": {
+      "title": "X (Twitter) & Announcements",
+      "description": "Product updates, rule engine releases, and bite-sized tips for beating the dopamine loop without abandoning essential apps.",
+      "cta": "Follow @ReellessApp",
+      "href": "https://x.com/ReellessApp"
+    },
+    "valuesTitle": "Community Principles",
+    "values": [
+      {
+        "title": "Privacy First",
+        "body": "Zero screen telemetry or browsing history is ever transmitted or stored. We build tools that respect user autonomy."
+      },
+      {
+        "title": "Habit Building over Guilt",
+        "body": "We don't shame anyone for scrolling. We build physical barriers and mindful interventions to gently break compulsive loops."
+      },
+      {
+        "title": "Open & Independent",
+        "body": "No investor-driven dark patterns, no ads, and no selling data. Built independently by TA Shanto for everyday people."
+      }
+    ]
   },
   "home": {
     "hero": {
