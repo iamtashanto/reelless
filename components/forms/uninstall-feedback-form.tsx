@@ -3,10 +3,9 @@
 import { useActionState, useState } from "react";
 import {
   sendUninstallFeedback,
-  UNINSTALL_REASONS,
-  type UninstallReason,
   type UninstallState,
 } from "@/app/actions/uninstall-feedback";
+import { UNINSTALL_REASONS, type UninstallReason } from "@/lib/uninstall-reasons";
 import { Button } from "@/components/ui/button";
 import { FieldError, Honeypot, Input, Label, Textarea } from "@/components/ui/field";
 import { Toast } from "@/components/ui/toast";

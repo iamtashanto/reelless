@@ -9,16 +9,9 @@ import { getClientIp } from "@/lib/request";
 import { verifyTurnstile } from "@/lib/turnstile";
 import { siteConfig } from "@/site.config";
 
-export const UNINSTALL_REASONS = [
-  "broken",
-  "restrictive",
-  "not_working",
-  "temporary",
-  "alternative",
-  "other",
-] as const;
+import { UNINSTALL_REASONS, type UninstallReason } from "@/lib/uninstall-reasons";
 
-export type UninstallReason = (typeof UNINSTALL_REASONS)[number];
+export { UNINSTALL_REASONS, type UninstallReason };
 
 export type UninstallState =
   | { status: "idle" }
