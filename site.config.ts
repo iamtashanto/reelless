@@ -4,7 +4,7 @@ export const siteConfig = {
   name: "Reelless",
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, ""),
   tagline: "Keep the apps. Lose the scroll.",
-  contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "hello@reelless.app",
+  contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "hello@tashanto.com",
   developer: {
     name: "TA Shanto",
     url: "https://tashanto.com",
