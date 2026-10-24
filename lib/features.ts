@@ -60,6 +60,7 @@ export const features: Feature[] = [
   { id: "shortFormTime", group: "measure", plan: "free", Icon: TimerIcon },
   { id: "reelsCount", group: "measure", plan: "free", Icon: PlayIcon },
   { id: "blocks", group: "measure", plan: "free", Icon: ShieldIcon },
+  { id: "brainScore", group: "measure", plan: "free", Icon: SparkIcon },
   { id: "heatmap", group: "measure", plan: "pro", Icon: CalendarIcon },
   { id: "weekly", group: "measure", plan: "pro", Icon: FlameIcon },
   { id: "partner", group: "later", plan: "later", Icon: HeartHandIcon },

@@ -725,6 +725,11 @@
         "body": "How many times Reelless stepped in, and an estimate of the time that saved you.",
         "helps": "See the benefit, not just the restriction."
       },
+      "brainScore": {
+        "title": "5-Tier Brainrot Clarity Score",
+        "body": "Real-time on-device score from Peak Clarity (85–100%) to Zombie Mode (0–19%) calculated from compulsive triggers and scroll frequency.",
+        "helps": "Instant self-awareness that turns unconscious doomscrolling into intentional choices."
+      },
       "heatmap": {
         "title": "Hourly heatmap",
         "body": "Find the hours you reach for the scroll most — late nights, lunch breaks, right after waking up.",
@@ -764,7 +769,7 @@
       "setup": "Setting it up",
       "battery": "Keeping it running on your phone",
       "chrome": "The Chrome extension",
-      "iphone": "Why not iPhone?"
+      "iphone": "iPhone (iOS)"
     },
     "what": {
       "title": "What the Accessibility Service is",
@@ -852,9 +857,9 @@
       ]
     },
     "iphone": {
-      "title": "Why not iPhone?",
-      "p1": "Apple doesn’t allow any app to observe or act inside other apps on iPhone. Screen Time can limit how long you use an app, but nothing can remove the Reels tab while leaving the rest of Instagram working. That’s an iOS rule, not something we can engineer around.",
-      "p2": "Reelless is built for two places: Android phones and Chrome on your computer. If you use an iPhone, the Chrome extension can still help on your laptop or desktop."
+      "title": "Reeless for iPhone (iOS)",
+      "p1": "On iPhone, Reeless works natively using Apple’s official Screen Time API (FamilyControls & ManagedSettings) and a high-performance Safari Content Blocker extension. It blocks addictive short-form feeds, enables mindful breathing breaks, and enforces Deep Focus Sprints without needing access to your private messages or media.",
+      "p2": "Everything runs 100% on-device with zero battery drain, zero external VPN routing, and zero tracking. You get seamless digital focus across Android, iPhone, and desktop browsers."
     },
     "chrome": {
       "title": "The Chrome extension",
@@ -952,12 +957,16 @@
   "pricing": {
     "eyebrow": "Pricing",
     "title": "Simple plans, honest prices",
-    "intro": "Reelless will have a free plan that’s genuinely useful, and a Pro plan for everything else. Final prices will be announced at launch — no surprise pricing, no dark patterns.",
-    "planned": "Planned pricing — final prices at launch",
-    "priceTba": "Announced at launch",
+    "intro": "Reelless features a 30-Day Instant Free Trial of Pro with 1-tap activation, no credit card required. Keep the apps you love, lose the addictive scroll.",
+    "planned": "Instant 30-Day Free Pro Trial Included",
+    "priceTba": "Free 30-Day Trial Included",
     "perks": "Includes",
     "mostPopular": "Recommended",
-    "billingOptions": "Monthly, yearly or lifetime",
+    "billingOptions": "Monthly, yearly, lifetime or manual license key",
+    "proTrialNotice": "30-Day Free Trial · 1-Tap No Card Required",
+    "manualBuyBadge": "Manual Payment & Instant Key",
+    "manualBuyTitle": "Want to Pay via bKash, Nagad, Crypto, Bank Transfer or Card?",
+    "manualBuyDesc": "Need manual activation or local payment options? Message us directly on WhatsApp (+8801614081441) or Telegram (@tashanto). We will instantly generate your Pro license key from our admin dashboard!",
     "plans": {
       "free": {
         "name": "Free",
@@ -974,17 +983,18 @@
       },
       "pro": {
         "name": "Pro",
-        "description": "Every feature, every supported app.",
+        "description": "Every feature, every supported app and platform.",
         "features": [
-          "All supported apps, sites and browsers",
-          "One and done",
+          "All supported apps on Android, iPhone & Desktop",
+          "5-Tier Brainrot Clarity Score system",
+          "Mindful 4-7-8 Breathing intervention",
+          "Pomodoro Deep Focus Sprints (15m, 25m, 45m)",
           "YouTube Search-only & Facebook Friends-first",
-          "Keyword and topic filters",
-          "Time limits, allowances, open limits",
-          "Schedules, Deep Focus and Strict mode",
+          "One and done & keyword topic filters",
+          "Time limits, allowances, open limits & schedules",
           "Full stats history, heatmap, weekly report"
         ],
-        "cta": "Join early access"
+        "cta": "Start 30-Day Free Trial"
       },
       "family": {
         "name": "Family",
@@ -996,58 +1006,63 @@
     "compareTitle": "Compare plans",
     "compareCaption": "Feature comparison of the Free, Pro and Family plans",
     "lifetimeTitle": "A lifetime option",
-    "lifetimeBody": "Not a fan of subscriptions? Pro will also be available as a one-time lifetime purchase.",
-    "faqTitle": "Billing questions",
+    "lifetimeBody": "Not a fan of subscriptions? Pro is also available as a one-time lifetime license key.",
+    "faqTitle": "Billing & Activation questions",
     "faq": [
       {
-        "q": "How will I pay?",
-        "a": "On Android, purchases go through Google Play billing, using the payment method on your Google account — we never see your card details. How Pro works in the Chrome extension will be announced at launch."
+        "q": "How can I pay or activate manually?",
+        "a": "You can purchase directly via WhatsApp (+8801614081441) or Telegram (@tashanto) using bKash, Nagad, Crypto (USDT), Bank Transfer, or card. We instantly generate an active license key from our admin dashboard for you to redeem."
+      },
+      {
+        "q": "How does the Free Trial work?",
+        "a": "You get full Pro access for 30 days instantly with one tap inside the app or extension. No credit card or payment info is ever asked upfront."
       },
       {
         "q": "Can I cancel anytime?",
-        "a": "Yes. On Android, cancel in the Play Store under Payments & subscriptions → Subscriptions. You keep Pro until the end of the period you paid for."
+        "a": "Yes. Subscriptions can be managed or canceled in Google Play or App Store anytime with zero cancellation fees."
       },
       {
-        "q": "Will there be a free trial?",
-        "a": "We plan to offer a free trial of Pro at launch. Details will be on this page when prices are announced."
-      },
-      {
-        "q": "Do early-access members get anything?",
-        "a": "Early-access members will be the first to know about launch pricing. We won’t promise discounts we haven’t finalized."
-      },
-      {
-        "q": "What happens if I stop paying?",
-        "a": "You drop back to the Free plan. Your settings stay on your phone, and Pro-only features pause until you resubscribe."
+        "q": "What happens if my trial or plan expires?",
+        "a": "You simply drop back to the Free plan. Your settings stay safely on your device, and you can re-activate or renew anytime."
       }
     ]
   },
   "download": {
     "eyebrow": "Download",
     "title": "Get Reelless",
-    "statusTitle": "Current status: early access",
-    "statusBody": "Both the Android app and the Chrome extension are in active development. Neither is in a store yet. Join the waitlist and we’ll email you the moment each one is ready.",
+    "statusTitle": "Current status: early access & beta",
+    "statusBody": "Reelless is available for Android, iPhone (iOS Screen Time), and desktop browsers. Join early access or test the beta builds now.",
     "liveTitle": "Available now",
     "liveBody": "Install Reelless from Google Play and set it up in about a minute.",
     "playBadgeAlt": "Get it on Google Play",
-    "notOnPlay": "Not in the store yet — join the waitlist below.",
+    "notOnPlay": "Early access live — join below to test on your Android device.",
     "requirementsTitle": "System requirements",
     "requirements": [
       "Android 8.0 (Oreo) or newer",
-      "About 15 MB of free storage",
-      "Permission to use the Accessibility Service (explained during setup)",
+      "Accessibility Service permission",
+      "Master Shield with auto-exit protection",
       "No account required"
     ],
-    "iphoneTitle": "On iPhone?",
-    "iphoneBody": "Apple doesn’t allow apps to act inside other apps on iPhone, so there’s no iPhone version of Reelless. If you use a computer, the Chrome extension can still help there.",
-    "intro": "Reelless is coming to two places: your Android phone and Chrome on your computer. Both are in active development.",
+    "iosStatus": "TestFlight Beta",
+    "iosTitle": "iPhone & iPad (iOS)",
+    "iosBody": "Built natively using Apple Screen Time API & Safari Content Blocker. Zero battery drain.",
+    "iosRequirements": [
+      "iOS 16.0 or newer",
+      "Screen Time & FamilyControls permission",
+      "Safari Content Blocker extension",
+      "100% on-device & private"
+    ],
+    "iosCta": "Join TestFlight Beta",
+    "intro": "Protect your attention on all your devices: Android phone, iPhone, and desktop browsers.",
     "androidTitle": "Android app",
-    "chromeTitle": "Chrome extension",
-    "chromeStatus": "In development",
-    "chromeLiveBody": "Add Reelless to Chrome from the Chrome Web Store.",
-    "chromeStoreCta": "Add to Chrome",
+    "chromeTitle": "Desktop Extension",
+    "chromeStatus": "Live in Store",
+    "chromeLiveBody": "Add Reelless to your browser from the Chrome Web Store.",
+    "chromeStoreCta": "Add to Browser",
     "chromeRequirements": [
-      "Google Chrome on Windows, macOS, Linux or ChromeOS",
-      "A recent version of Chrome",
+      "Chrome, Brave, Edge, Firefox, Opera",
+      "Works on Windows, macOS, Linux, ChromeOS",
+      "1-tap 30-day Free Pro trial included",
       "No account required"
     ],
     "waitlistTitle": "Join early access"
@@ -1172,11 +1187,11 @@
     "iphone": {
       "ios": {
         "q": "Is there an iPhone version?",
-        "a": "No. Apple doesn’t allow apps to see or act inside other apps on iPhone, so no app can remove Reels from Instagram while keeping the rest. Reelless is available for Android phones and as a Chrome extension for computers."
+        "a": "Yes! Reeless for iPhone is powered natively by Apple’s Screen Time API (FamilyControls & ManagedSettings) and a dedicated Safari Content Blocker. It blocks doomscrolling reels and shorts, prompts mindful breathing breaks, and runs 100% on-device with zero battery drain."
       },
       "screenTime": {
-        "q": "What can I do on iPhone today?",
-        "a": "iOS Screen Time can set time limits for whole apps, and some apps have settings to reduce recommendations — our guides cover what each app allows. On your computer, the Reelless Chrome extension works with any phone."
+        "q": "How does Reeless work on iOS?",
+        "a": "Reeless utilizes Apple’s official Screen Time frameworks alongside a native Safari Content Blocker. It restricts addictive short-video web feeds and app sessions securely on your iPhone without ever accessing or reading your private personal messages or photos."
       }
     }
   },
