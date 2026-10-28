@@ -2,9 +2,9 @@ const flag = (value: string | undefined) => value === "true" || value === "1";
 
 export const siteConfig = {
   name: "Reelless",
-  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, ""),
+  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://reelless.tashanto.com").replace(/\/$/, ""),
   tagline: "Keep the apps. Lose the scroll.",
-  contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "hello@iamtashanto.com",
+  contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "hello@tashanto.com",
   developer: {
     name: "TA Shanto",
     url: "https://tashanto.com",
@@ -17,7 +17,7 @@ export const siteConfig = {
   },
   playStoreUrl:
     process.env.NEXT_PUBLIC_PLAY_STORE_URL ??
-    "https://play.google.com/store/apps/details?id=app.reelless",
+    "https://play.google.com/store/apps/details?id=com.tashanto.reelless",
   chromeStoreUrl: process.env.NEXT_PUBLIC_CHROME_STORE_URL ?? "",
   testflightUrl:
     process.env.NEXT_PUBLIC_TESTFLIGHT_URL ?? "https://testflight.apple.com/join/reelless",

@@ -339,24 +339,47 @@ export const TwitterXIcon = (p: IconProps) => (
   </Base>
 );
 
-/** Small wordmark glyph used in header/footer — our own shield + stopped-stream mark. */
+/** Small wordmark glyph used in header/footer — official Reelless shield + slashed-play mark. */
 export function LogoMark({ className, title }: { className?: string; title?: string }) {
   return (
     <svg
-      viewBox="0 0 32 32"
+      viewBox="0 0 128 128"
       className={className}
       role={title ? "img" : undefined}
       aria-hidden={title ? undefined : true}
       focusable="false"
     >
       {title ? <title>{title}</title> : null}
+      <defs>
+        <linearGradient id="reellessShieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#8b5cf6" />
+          <stop offset="100%" stopColor="#4c1d95" />
+        </linearGradient>
+        <linearGradient id="reellessSlashGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#ffffff" />
+          <stop offset="100%" stopColor="#cbd5e1" />
+        </linearGradient>
+      </defs>
       <path
-        d="M16 2.5 5 6.8v8.1C5 22 9.8 27.6 16 29.5c6.2-1.9 11-7.5 11-14.6V6.8L16 2.5Z"
-        fill="var(--accent)"
+        d="M64 12 C92 12 112 24 112 48 C112 86 64 116 64 116 C64 116 16 86 16 48 C16 24 36 12 64 12 Z"
+        fill="url(#reellessShieldGrad)"
       />
-      <rect x="11" y="9.5" width="10" height="3" rx="1.5" fill="var(--accent-ink)" opacity=".35" />
-      <rect x="11" y="14.5" width="10" height="3" rx="1.5" fill="var(--accent-ink)" />
-      <rect x="11" y="19.5" width="10" height="3" rx="1.5" fill="var(--accent-ink)" opacity=".35" />
+      <path
+        d="M64 18 C88 18 106 28 106 50 C106 82 64 108 64 108 C64 108 22 82 22 50 C22 28 40 18 64 18 Z"
+        fill="none"
+        stroke="rgba(255,255,255,0.22)"
+        strokeWidth="2"
+      />
+      <path d="M52 42 L84 64 L52 86 Z" fill="#ffffff" opacity=".92" />
+      <line
+        x1="38"
+        y1="90"
+        x2="90"
+        y2="38"
+        stroke="url(#reellessSlashGrad)"
+        strokeWidth="7"
+        strokeLinecap="round"
+      />
     </svg>
   );
 }
