@@ -1021,8 +1021,9 @@
     "liveTitle": "এখন পাওয়া যাচ্ছে",
     "liveBody": "Google Play থেকে Reelless ইনস্টল করে প্রায় এক মিনিটে চালু করুন।",
     "playBadgeAlt": "Google Play-তে পান",
-    "notOnPlay": "Android অ্যাপটি বর্তমানে Google Play টেস্টিং ফেজে আছে — আপনার ফোনে ইনস্টল ও টেস্ট করতে নিচের বাটনে ক্লিক করুন।",
-    "androidTestingStatus": "টেস্টিং ফেজ",
+    "notOnPlay": "কোনো ইনভাইট ছাড়াই সরাসরি অফিসিয়াল APK ডাউনলোড করে ইনস্টল করুন, অথবা নিচের Google Play টেস্টিং ট্র্যাকে যোগ দিন।",
+    "androidTestingStatus": "ডিরেক্ট APK ও টেস্টিং",
+    "androidApkCta": "ডিরেক্ট APK ডাউনলোড করুন (v1.1.1)",
     "androidTestingCta": "Google Play টেস্টিং-এ যোগ দিন",
     "requirementsTitle": "সিস্টেমের প্রয়োজনীয়তা",
     "requirements": [

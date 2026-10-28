@@ -61,6 +61,16 @@ export async function Hero() {
                 <span>Firefox Add-ons</span>
               </a>
             ) : null}
+            {siteConfig.androidApkUrl ? (
+              <a
+                href={siteConfig.androidApkUrl}
+                download="Reelless-v1.1.1.apk"
+                className={buttonClasses("secondary", "md", "text-xs px-3.5 min-h-9")}
+              >
+                <PhoneIcon className="size-3.5 text-calm-text" />
+                <span>{dl("androidApkCta")}</span>
+              </a>
+            ) : null}
             {siteConfig.playTestingUrl ? (
               <a
                 href={siteConfig.playTestingUrl}

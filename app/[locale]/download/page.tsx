@@ -63,18 +63,29 @@ export default async function DownloadPage() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src="/google-play-badge.png" alt={t("playBadgeAlt")} width={180} height={53} />
               </a>
-            ) : PLAY_TESTING_LIVE && siteConfig.playTestingUrl ? (
-              <div className="mt-auto pt-6">
-                <a
-                  href={siteConfig.playTestingUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={buttonClasses("primary", "md", "w-full text-center")}
-                >
-                  {t("androidTestingCta")}
-                </a>
+            ) : (
+              <div className="mt-auto flex flex-col gap-2.5 pt-6">
+                {siteConfig.androidApkUrl ? (
+                  <a
+                    href={siteConfig.androidApkUrl}
+                    download="Reelless-v1.1.1.apk"
+                    className={buttonClasses("primary", "md", "w-full text-center")}
+                  >
+                    {t("androidApkCta")}
+                  </a>
+                ) : null}
+                {PLAY_TESTING_LIVE && siteConfig.playTestingUrl ? (
+                  <a
+                    href={siteConfig.playTestingUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={buttonClasses("secondary", "md", "w-full text-center")}
+                  >
+                    {t("androidTestingCta")}
+                  </a>
+                ) : null}
               </div>
-            ) : null}
+            )}
           </section>
 
           {/* iPhone / iOS */}

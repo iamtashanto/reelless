@@ -21,6 +21,8 @@ export const siteConfig = {
   playTestingUrl:
     process.env.NEXT_PUBLIC_PLAY_TESTING_URL ??
     "https://play.google.com/apps/internaltest/4699428505534656309",
+  androidApkUrl:
+    process.env.NEXT_PUBLIC_ANDROID_APK_URL ?? "/Reelless-v1.1.1.apk",
   chromeStoreUrl:
     process.env.NEXT_PUBLIC_CHROME_STORE_URL ??
     "https://chromewebstore.google.com/detail/eliabhnmbmgadeccebahllnbghhlpbob?utm_source=item-share-cb",

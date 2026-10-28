@@ -1035,8 +1035,9 @@
     "liveTitle": "Available now",
     "liveBody": "Install Reelless from Google Play and set it up in about a minute.",
     "playBadgeAlt": "Get it on Google Play",
-    "notOnPlay": "Android app is currently in Google Play testing phase — join the official testing track below to install it on your phone.",
-    "androidTestingStatus": "Testing Phase",
+    "notOnPlay": "Download the official signed APK directly (no invite needed) or join our Google Play testing track below.",
+    "androidTestingStatus": "Direct APK & Testing",
+    "androidApkCta": "Download APK (v1.1.1 · No Invite Needed)",
     "androidTestingCta": "Join Google Play Testing",
     "requirementsTitle": "System requirements",
     "requirements": [
