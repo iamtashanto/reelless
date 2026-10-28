@@ -1,12 +1,14 @@
 import { getTranslations } from "next-intl/server";
-import { ArrowRightIcon, GlobeIcon, LockIcon, ShieldIcon } from "@/components/icons";
+import { ArrowRightIcon, GlobeIcon, LockIcon, MonitorIcon, PhoneIcon, ShieldIcon } from "@/components/icons";
 import { HeroPhone } from "@/components/illustrations/hero-phone";
 import { Magnetic } from "@/components/motion/magnetic";
 import { Spotlight } from "@/components/motion/spotlight";
-import { ButtonLink } from "@/components/ui/button";
+import { ButtonLink, buttonClasses } from "@/components/ui/button";
+import { siteConfig } from "@/site.config";
 
 export async function Hero() {
   const t = await getTranslations("home.hero");
+  const dl = await getTranslations("download");
   return (
     <section aria-labelledby="hero-title" className="grain relative overflow-hidden">
       <Spotlight />
@@ -24,10 +26,10 @@ export async function Hero() {
             {t("title")}
           </h1>
           <p className="text-lead text-muted mt-6 max-w-[56ch]">{t("subtitle")}</p>
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Magnetic>
-              <ButtonLink href="#waitlist" size="lg" className="w-full sm:w-auto">
-                {t("primary")}
+              <ButtonLink href="/download" size="lg" className="w-full sm:w-auto">
+                {dl("title")}
                 <ArrowRightIcon className="size-4" />
               </ButtonLink>
             </Magnetic>
@@ -35,7 +37,43 @@ export async function Hero() {
               {t("secondary")}
             </ButtonLink>
           </div>
-          <ul className="text-muted mt-9 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+          {/* Quick Direct Store Links */}
+          <div className="mt-5 flex flex-wrap items-center gap-2.5">
+            {siteConfig.chromeStoreUrl ? (
+              <a
+                href={siteConfig.chromeStoreUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={buttonClasses("secondary", "md", "text-xs px-3.5 min-h-9")}
+              >
+                <MonitorIcon className="size-3.5 text-calm-text" />
+                <span>Chrome Web Store</span>
+              </a>
+            ) : null}
+            {siteConfig.firefoxAddonUrl ? (
+              <a
+                href={siteConfig.firefoxAddonUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={buttonClasses("secondary", "md", "text-xs px-3.5 min-h-9")}
+              >
+                <MonitorIcon className="size-3.5 text-accent-text" />
+                <span>Firefox Add-ons</span>
+              </a>
+            ) : null}
+            {siteConfig.playTestingUrl ? (
+              <a
+                href={siteConfig.playTestingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={buttonClasses("secondary", "md", "text-xs px-3.5 min-h-9")}
+              >
+                <PhoneIcon className="size-3.5 text-accent-text" />
+                <span>{dl("androidTestingCta")}</span>
+              </a>
+            ) : null}
+          </div>
+          <ul className="text-muted mt-7 flex flex-wrap gap-x-6 gap-y-2 text-sm">
             {[
               { Icon: LockIcon, label: t("trust.onDevice") },
               { Icon: ShieldIcon, label: t("trust.noAds") },

@@ -18,7 +18,15 @@ export const siteConfig = {
   playStoreUrl:
     process.env.NEXT_PUBLIC_PLAY_STORE_URL ??
     "https://play.google.com/store/apps/details?id=com.tashanto.reelless",
-  chromeStoreUrl: process.env.NEXT_PUBLIC_CHROME_STORE_URL ?? "",
+  playTestingUrl:
+    process.env.NEXT_PUBLIC_PLAY_TESTING_URL ??
+    "https://play.google.com/apps/internaltest/4699428505534656309",
+  chromeStoreUrl:
+    process.env.NEXT_PUBLIC_CHROME_STORE_URL ??
+    "https://chromewebstore.google.com/detail/eliabhnmbmgadeccebahllnbghhlpbob?utm_source=item-share-cb",
+  firefoxAddonUrl:
+    process.env.NEXT_PUBLIC_FIREFOX_ADDON_URL ??
+    "https://addons.mozilla.org/en-GB/firefox/addon/reeless-block-shorts-reels/",
   testflightUrl:
     process.env.NEXT_PUBLIC_TESTFLIGHT_URL ?? "https://testflight.apple.com/join/reelless",
   whatsappUrl: "https://wa.me/8801614081441",
@@ -27,7 +35,9 @@ export const siteConfig = {
   telegramUsername: "@iamtashanto",
   flags: {
     PLAY_STORE_LIVE: flag(process.env.NEXT_PUBLIC_PLAY_STORE_LIVE),
-    CHROME_STORE_LIVE: flag(process.env.NEXT_PUBLIC_CHROME_STORE_LIVE),
+    PLAY_TESTING_LIVE: process.env.NEXT_PUBLIC_PLAY_TESTING_LIVE ? flag(process.env.NEXT_PUBLIC_PLAY_TESTING_LIVE) : true,
+    CHROME_STORE_LIVE: process.env.NEXT_PUBLIC_CHROME_STORE_LIVE ? flag(process.env.NEXT_PUBLIC_CHROME_STORE_LIVE) : true,
+    FIREFOX_ADDON_LIVE: process.env.NEXT_PUBLIC_FIREFOX_ADDON_LIVE ? flag(process.env.NEXT_PUBLIC_FIREFOX_ADDON_LIVE) : true,
     SHOW_WAITLIST_COUNT: flag(process.env.NEXT_PUBLIC_SHOW_WAITLIST_COUNT),
     ANALYTICS_ENABLED: flag(process.env.NEXT_PUBLIC_ANALYTICS_ENABLED),
   },

@@ -25,7 +25,7 @@ function Requirements({ items }: { items: string[] }) {
 export default async function DownloadPage() {
   const t = await getTranslations("download");
   const pricing = await getTranslations("pricing");
-  const { PLAY_STORE_LIVE, CHROME_STORE_LIVE } = siteConfig.flags;
+  const { PLAY_STORE_LIVE, PLAY_TESTING_LIVE, CHROME_STORE_LIVE, FIREFOX_ADDON_LIVE } = siteConfig.flags;
   const bothLive = PLAY_STORE_LIVE && CHROME_STORE_LIVE;
 
   return (
@@ -43,7 +43,7 @@ export default async function DownloadPage() {
                 <PhoneIcon className="size-6" />
               </span>
               <Badge tone={PLAY_STORE_LIVE ? "calm" : "accent"}>
-                {PLAY_STORE_LIVE ? t("liveTitle") : t("chromeStatus")}
+                {PLAY_STORE_LIVE ? t("liveTitle") : t("androidTestingStatus")}
               </Badge>
             </div>
             <h2 id="android-title" className="text-h3 mt-5">
@@ -63,6 +63,17 @@ export default async function DownloadPage() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src="/google-play-badge.png" alt={t("playBadgeAlt")} width={180} height={53} />
               </a>
+            ) : PLAY_TESTING_LIVE && siteConfig.playTestingUrl ? (
+              <div className="mt-auto pt-6">
+                <a
+                  href={siteConfig.playTestingUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={buttonClasses("primary", "md", "w-full text-center")}
+                >
+                  {t("androidTestingCta")}
+                </a>
+              </div>
             ) : null}
           </section>
 
@@ -97,7 +108,7 @@ export default async function DownloadPage() {
             </div>
           </section>
 
-          {/* Chrome / Desktop Extension */}
+          {/* Chrome & Firefox / Desktop Extension */}
           <section
             aria-labelledby="chrome-title"
             className="border-border bg-surface shadow-card flex flex-col rounded-3xl border p-6 sm:p-7"
@@ -106,29 +117,42 @@ export default async function DownloadPage() {
               <span className="bg-calm-soft text-calm-text grid size-12 place-items-center rounded-2xl">
                 <MonitorIcon className="size-6" />
               </span>
-              <Badge tone={CHROME_STORE_LIVE ? "calm" : "accent"}>
-                {CHROME_STORE_LIVE ? t("liveTitle") : t("chromeStatus")}
+              <Badge tone={CHROME_STORE_LIVE || FIREFOX_ADDON_LIVE ? "calm" : "accent"}>
+                {CHROME_STORE_LIVE || FIREFOX_ADDON_LIVE ? t("chromeStatus") : t("liveTitle")}
               </Badge>
             </div>
             <h2 id="chrome-title" className="text-h3 mt-5">
               {t("chromeTitle")}
             </h2>
             <p className="text-muted mt-2 text-sm">
-              {CHROME_STORE_LIVE ? t("chromeLiveBody") : t("notOnPlay")}
+              {CHROME_STORE_LIVE || FIREFOX_ADDON_LIVE ? t("chromeLiveBody") : t("notOnPlay")}
             </p>
             <h3 className="mt-6 font-sans text-xs font-semibold uppercase tracking-wider text-muted">
               {t("requirementsTitle")}
             </h3>
             <Requirements items={t.raw("chromeRequirements") as string[]} />
-            {CHROME_STORE_LIVE && siteConfig.chromeStoreUrl ? (
-              <a
-                href={siteConfig.chromeStoreUrl}
-                rel="noopener"
-                className={buttonClasses("primary", "md", "mt-auto self-start")}
-              >
-                {t("chromeStoreCta")}
-              </a>
-            ) : null}
+            <div className="mt-auto flex flex-col gap-2.5 pt-6">
+              {CHROME_STORE_LIVE && siteConfig.chromeStoreUrl ? (
+                <a
+                  href={siteConfig.chromeStoreUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={buttonClasses("primary", "md", "w-full text-center")}
+                >
+                  {t("chromeStoreCta")}
+                </a>
+              ) : null}
+              {FIREFOX_ADDON_LIVE && siteConfig.firefoxAddonUrl ? (
+                <a
+                  href={siteConfig.firefoxAddonUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={buttonClasses("secondary", "md", "w-full text-center")}
+                >
+                  {t("firefoxAddonCta")}
+                </a>
+              ) : null}
+            </div>
           </section>
         </div>
 

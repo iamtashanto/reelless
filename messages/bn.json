@@ -95,7 +95,7 @@
     "community": "কমিউনিটি",
     "guides": "গাইড",
     "faq": "প্রশ্নোত্তর",
-    "cta": "আর্লি অ্যাক্সেস নিন",
+    "cta": "ডাউনলোড",
     "openMenu": "মেনু খুলুন",
     "closeMenu": "মেনু বন্ধ করুন",
     "menu": "মেনু",
@@ -1016,12 +1016,14 @@
   "download": {
     "eyebrow": "ডাউনলোড",
     "title": "Reelless নিন",
-    "statusTitle": "বর্তমান অবস্থা: আর্লি অ্যাক্সেস ও বেটা",
-    "statusBody": "Reelless এখন Android, iPhone (iOS Screen Time) এবং ডেস্কটপ ব্রাউজারে উপলব্ধ। লাইভ বেটা সংস্করণ এখনই পরীক্ষা করতে পারেন।",
+    "statusTitle": "বর্তমান অবস্থা: ব্রাউজারে লাইভ ও Android টেস্টিং ফেজ",
+    "statusBody": "Reelless এখন Chrome Web Store ও Firefox Add-ons-এ লাইভ এবং Android অ্যাপটি Google Play টেস্টিং ফেজে রয়েছে। এখনই ইনস্টল করুন।",
     "liveTitle": "এখন পাওয়া যাচ্ছে",
     "liveBody": "Google Play থেকে Reelless ইনস্টল করে প্রায় এক মিনিটে চালু করুন।",
     "playBadgeAlt": "Google Play-তে পান",
-    "notOnPlay": "আর্লি অ্যাক্সেস চালু — আপনার Android ফোনে টেস্ট করতে নিচে যোগ দিন।",
+    "notOnPlay": "Android অ্যাপটি বর্তমানে Google Play টেস্টিং ফেজে আছে — আপনার ফোনে ইনস্টল ও টেস্ট করতে নিচের বাটনে ক্লিক করুন।",
+    "androidTestingStatus": "টেস্টিং ফেজ",
+    "androidTestingCta": "Google Play টেস্টিং-এ যোগ দিন",
     "requirementsTitle": "সিস্টেমের প্রয়োজনীয়তা",
     "requirements": [
       "Android 8.0 (Oreo) বা নতুন",
@@ -1043,8 +1045,9 @@
     "androidTitle": "Android অ্যাপ",
     "chromeTitle": "ডেস্কটপ ব্রাউজার এক্সটেনশন",
     "chromeStatus": "স্টোরে লাইভ",
-    "chromeLiveBody": "Chrome Web Store থেকে ব্রাউজারে Reeless যোগ করুন।",
-    "chromeStoreCta": "ব্রাউজারে যোগ করুন",
+    "chromeLiveBody": "অফিসিয়াল Chrome Web Store অথবা Firefox Add-ons থেকে ব্রাউজারে Reelless যোগ করুন।",
+    "chromeStoreCta": "Chrome / Brave / Edge-এ যোগ করুন",
+    "firefoxAddonCta": "Firefox-এ যোগ করুন",
     "chromeRequirements": [
       "Chrome, Brave, Edge, Firefox, Opera",
       "Windows, macOS, Linux, ChromeOS-এ চলে",
@@ -1075,7 +1078,7 @@
       },
       "available": {
         "q": "Reelless কি এখন পাওয়া যাচ্ছে?",
-        "a": "এখনো না। Android অ্যাপ ও Chrome এক্সটেনশন দুটোই তৈরি হচ্ছে। আর্লি অ্যাক্সেসে যোগ দিন, প্রতিটি ইনস্টলের জন্য প্রস্তুত হলে আমরা ইমেইল করব।"
+        "a": "হ্যাঁ! ডেস্কটপ ব্রাউজার এক্সটেনশনটি এখন Chrome Web Store ও Firefox Add-ons-এ লাইভ। Android অ্যাপটি বর্তমানে Google Play টেস্টিং ফেজে রয়েছে (আমাদের ডাউনলোড পেজ থেকে যুক্ত হতে পারবেন) এবং iPhone অ্যাপটি TestFlight বেটাতে আছে।"
       },
       "desktop": {
         "q": "Reelless কি আমার কম্পিউটারে কাজ করে?",

@@ -66,13 +66,27 @@ export function softwareApplicationSchema(description: string): Json[] {
     publisher: { "@id": `${siteConfig.url}/#organization` },
   };
   return [
-    { ...base, name: `${siteConfig.name} for Android`, operatingSystem: "Android 8.0+" },
+    {
+      ...base,
+      name: `${siteConfig.name} for Android`,
+      operatingSystem: "Android 8.0+",
+      downloadUrl: siteConfig.playTestingUrl || siteConfig.playStoreUrl,
+    },
     {
       ...base,
       name: `${siteConfig.name} for Chrome`,
       applicationSubCategory: "Browser extension",
       operatingSystem: "Windows, macOS, Linux, ChromeOS",
-      browserRequirements: "Requires Google Chrome",
+      browserRequirements: "Requires Google Chrome, Brave, or Edge",
+      downloadUrl: siteConfig.chromeStoreUrl,
+    },
+    {
+      ...base,
+      name: `${siteConfig.name} for Firefox`,
+      applicationSubCategory: "Browser extension",
+      operatingSystem: "Windows, macOS, Linux",
+      browserRequirements: "Requires Mozilla Firefox",
+      downloadUrl: siteConfig.firefoxAddonUrl,
     },
   ];
 }

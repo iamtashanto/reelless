@@ -9,5 +9,5 @@ export const mainNav = [
 
 export type NavKey = (typeof mainNav)[number]["key"];
 
-/** Where every "Join early access" CTA points. The home page hosts the main form. */
-export const waitlistHref = "/#waitlist";
+/** Where primary download / early access CTAs point. */
+export const waitlistHref = "/download";

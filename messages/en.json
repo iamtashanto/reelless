@@ -94,7 +94,7 @@
     "community": "Community",
     "guides": "Guides",
     "faq": "FAQ",
-    "cta": "Join early access",
+    "cta": "Download",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "menu": "Menu",
@@ -1030,12 +1030,14 @@
   "download": {
     "eyebrow": "Download",
     "title": "Get Reelless",
-    "statusTitle": "Current status: early access & beta",
-    "statusBody": "Reelless is available for Android, iPhone (iOS Screen Time), and desktop browsers. Join early access or test the beta builds now.",
+    "statusTitle": "Current status: Live on Browsers & Android Testing",
+    "statusBody": "Reelless is live on Chrome Web Store & Firefox Add-ons, and currently in Google Play Testing for Android. Install now or join the mailing list for major updates.",
     "liveTitle": "Available now",
     "liveBody": "Install Reelless from Google Play and set it up in about a minute.",
     "playBadgeAlt": "Get it on Google Play",
-    "notOnPlay": "Early access live — join below to test on your Android device.",
+    "notOnPlay": "Android app is currently in Google Play testing phase — join the official testing track below to install it on your phone.",
+    "androidTestingStatus": "Testing Phase",
+    "androidTestingCta": "Join Google Play Testing",
     "requirementsTitle": "System requirements",
     "requirements": [
       "Android 8.0 (Oreo) or newer",
@@ -1057,15 +1059,16 @@
     "androidTitle": "Android app",
     "chromeTitle": "Desktop Extension",
     "chromeStatus": "Live in Store",
-    "chromeLiveBody": "Add Reelless to your browser from the Chrome Web Store.",
-    "chromeStoreCta": "Add to Browser",
+    "chromeLiveBody": "Add Reelless directly from the official Chrome Web Store or Mozilla Firefox Add-ons.",
+    "chromeStoreCta": "Add to Chrome / Brave / Edge",
+    "firefoxAddonCta": "Add to Firefox",
     "chromeRequirements": [
       "Chrome, Brave, Edge, Firefox, Opera",
       "Works on Windows, macOS, Linux, ChromeOS",
       "1-tap 30-day Free Pro trial included",
       "No account required"
     ],
-    "waitlistTitle": "Join early access"
+    "waitlistTitle": "Join early access & updates"
   },
   "faqPage": {
     "eyebrow": "FAQ",
@@ -1089,7 +1092,7 @@
       },
       "available": {
         "q": "Is Reelless available yet?",
-        "a": "Not yet. The Android app and the Chrome extension are both in development. Join early access and we’ll email you when each one is ready to install."
+        "a": "Yes! The desktop browser extension is live now on the Chrome Web Store and Firefox Add-ons. The Android app is currently in Google Play testing phase (you can join from our Download page), and the iPhone app is in TestFlight beta."
       },
       "whyNotDelete": {
         "q": "Why not just delete the apps?",
