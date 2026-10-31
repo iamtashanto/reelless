@@ -52,6 +52,14 @@ export default async function CommunityPage() {
       color: "hover:border-fg/40 hover:shadow-fg/5",
       accentBg: "bg-fg/10 text-fg",
     },
+    {
+      key: "support",
+      icon: HeartHandIcon,
+      badge: "Support",
+      badgeTone: "accent" as const,
+      color: "hover:border-accent/50 hover:shadow-accent/10",
+      accentBg: "bg-accent-soft text-accent-text",
+    },
   ];
 
   const valuesIcons = [ShieldIcon, HeartHandIcon, SparkIcon];

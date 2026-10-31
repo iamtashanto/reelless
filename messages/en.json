@@ -293,6 +293,12 @@
       "cta": "Follow @ReellessApp",
       "href": "https://x.com/ReellessApp"
     },
+    "support": {
+      "title": "Support via Support Kori",
+      "description": "Support independent development directly via bKash, Nagad, cards or local payments.",
+      "cta": "Support on Support Kori",
+      "href": "https://www.supportkori.com/iamtashanto"
+    },
     "valuesTitle": "Community Principles",
     "values": [
       {
@@ -966,7 +972,8 @@
     "proTrialNotice": "30-Day Free Trial · 1-Tap No Card Required",
     "manualBuyBadge": "Manual Payment & Instant Key",
     "manualBuyTitle": "Want to Pay via bKash, Nagad, Crypto, Bank Transfer or Card?",
-    "manualBuyDesc": "Need manual activation or local payment options? Message us directly on WhatsApp (+8801614081441) or Telegram (@tashanto). We will instantly generate your Pro license key from our admin dashboard!",
+    "manualBuyDesc": "Need manual activation or local payment options? Support directly on Support Kori or message us on WhatsApp / Telegram. We will instantly activate your Pro license!",
+    "supportKoriCta": "Pay via Support Kori (bKash/Nagad/Cards)",
     "plans": {
       "free": {
         "name": "Free",

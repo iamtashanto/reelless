@@ -35,6 +35,7 @@ export const siteConfig = {
   whatsappNumber: "+8801614081441",
   telegramUrl: "https://t.me/iamtashanto",
   telegramUsername: "@iamtashanto",
+  supportKoriUrl: "https://www.supportkori.com/iamtashanto",
   flags: {
     PLAY_STORE_LIVE: flag(process.env.NEXT_PUBLIC_PLAY_STORE_LIVE),
     PLAY_TESTING_LIVE: process.env.NEXT_PUBLIC_PLAY_TESTING_LIVE ? flag(process.env.NEXT_PUBLIC_PLAY_TESTING_LIVE) : true,

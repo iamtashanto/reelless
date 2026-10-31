@@ -51,6 +51,22 @@ export default async function AboutPage() {
             </a>
             <hr className="border-border my-6" />
             <h2 className="font-sans text-base font-semibold tracking-normal">
+              Support the Project
+            </h2>
+            <p className="text-muted mt-2 text-sm leading-relaxed">
+              Want to support independent open development or buy a coffee?
+            </p>
+            <a
+              href={siteConfig.supportKoriUrl}
+              target="_blank"
+              rel="noopener"
+              className="text-accent-text mt-3 inline-flex items-center gap-1.5 font-medium underline underline-offset-2"
+            >
+              supportkori.com/iamtashanto
+              <ArrowUpRightIcon className="size-4" />
+            </a>
+            <hr className="border-border my-6" />
+            <h2 className="font-sans text-base font-semibold tracking-normal">
               {t("contactTitle")}
             </h2>
             <p className="text-muted mt-2 flex items-center gap-2">

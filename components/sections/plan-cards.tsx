@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { buttonClasses } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 import { waitlistHref } from "@/lib/nav";
+import { siteConfig } from "@/site.config";
 import { cn } from "@/lib/utils";
 
 const PLANS = ["free", "pro", "family"] as const;
@@ -97,20 +98,28 @@ export async function PlanCards() {
         </div>
         <div className="flex flex-wrap items-center gap-3">
           <a
-            href="https://wa.me/8801614081441"
+            href={siteConfig.supportKoriUrl}
             target="_blank"
             rel="noopener noreferrer"
             className={buttonClasses("primary", "md")}
           >
-            WhatsApp (+8801614081441)
+            {t("supportKoriCta")}
           </a>
           <a
-            href="https://t.me/tashanto"
+            href={siteConfig.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
             className={buttonClasses("secondary", "md")}
           >
-            Telegram (@tashanto)
+            WhatsApp (+8801614081441)
+          </a>
+          <a
+            href={siteConfig.telegramUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={buttonClasses("secondary", "md")}
+          >
+            Telegram (@iamtashanto)
           </a>
         </div>
       </div>
