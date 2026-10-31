@@ -530,7 +530,15 @@
       "shortForm": "Short-form minutes per day",
       "byPlatform": "By app",
       "heatmap": "When you reach for the scroll",
-      "days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
       "hours": "h",
       "minutes": "min"
     },
@@ -891,7 +899,15 @@
     "betaNote": "Beta means the platform is supported but we’re still tuning detection across app versions.",
     "chromeTitle": "Chrome on your computer",
     "chromeIntro": "The Reelless Chrome extension hides short-video sections and recommendation feeds on these sites (planned for launch):",
-    "chromeSites": ["YouTube", "Facebook", "Instagram", "TikTok", "X", "Reddit", "LinkedIn"]
+    "chromeSites": [
+      "YouTube",
+      "Facebook",
+      "Instagram",
+      "TikTok",
+      "X",
+      "Reddit",
+      "LinkedIn"
+    ]
   },
   "platformData": {
     "youtube": {
@@ -902,7 +918,12 @@
         "Shorts tab",
         "Home feed recommendations (Search-only mode)"
       ],
-      "keeps": ["Search", "Subscriptions", "Watching long videos", "Comments and playlists"]
+      "keeps": [
+        "Search",
+        "Subscriptions",
+        "Watching long videos",
+        "Comments and playlists"
+      ]
     },
     "facebook": {
       "name": "Facebook",
@@ -913,12 +934,27 @@
         "Video / Reels tab",
         "Suggested posts and reels (Friends-first)"
       ],
-      "keeps": ["Friends’ posts", "Groups and events", "Marketplace", "Messenger links"]
+      "keeps": [
+        "Friends’ posts",
+        "Groups and events",
+        "Marketplace",
+        "Messenger links"
+      ]
     },
     "instagram": {
       "name": "Instagram",
-      "blocks": ["Reels player", "Reels tab", "Explore grid", "Suggested reels in feed"],
-      "keeps": ["Direct messages", "Stories", "Your feed", "Posting photos and stories"]
+      "blocks": [
+        "Reels player",
+        "Reels tab",
+        "Explore grid",
+        "Suggested reels in feed"
+      ],
+      "keeps": [
+        "Direct messages",
+        "Stories",
+        "Your feed",
+        "Posting photos and stories"
+      ]
     },
     "tiktok": {
       "name": "TikTok",
@@ -927,39 +963,86 @@
         "Following video feed",
         "Swipe-to-next in shared videos (One and done)"
       ],
-      "keeps": ["Messages", "Watching a video someone sent you", "Your profile"]
+      "keeps": [
+        "Messages",
+        "Watching a video someone sent you",
+        "Your profile"
+      ]
     },
     "snapchat": {
       "name": "Snapchat",
-      "blocks": ["Spotlight", "Discover stories feed"],
-      "keeps": ["Snaps and chat", "Friends’ stories", "Camera", "Map"]
+      "blocks": [
+        "Spotlight",
+        "Discover stories feed"
+      ],
+      "keeps": [
+        "Snaps and chat",
+        "Friends’ stories",
+        "Camera",
+        "Map"
+      ]
     },
     "x": {
       "name": "X",
       "beta": true,
-      "blocks": ["Vertical video feed", "Autoplaying video timeline"],
-      "keeps": ["Following timeline", "Posts and replies", "Messages"]
+      "blocks": [
+        "Vertical video feed",
+        "Autoplaying video timeline"
+      ],
+      "keeps": [
+        "Following timeline",
+        "Posts and replies",
+        "Messages"
+      ]
     },
     "reddit": {
       "name": "Reddit",
       "beta": true,
-      "blocks": ["Full-screen vertical video player", "Swipe-to-next video"],
-      "keeps": ["Communities", "Posts and comments", "Search"]
+      "blocks": [
+        "Full-screen vertical video player",
+        "Swipe-to-next video"
+      ],
+      "keeps": [
+        "Communities",
+        "Posts and comments",
+        "Search"
+      ]
     },
     "linkedin": {
       "name": "LinkedIn",
       "beta": true,
-      "blocks": ["Video feed", "Short-video player"],
-      "keeps": ["Feed posts", "Jobs", "Messaging"]
+      "blocks": [
+        "Video feed",
+        "Short-video player"
+      ],
+      "keeps": [
+        "Feed posts",
+        "Jobs",
+        "Messaging"
+      ]
     },
     "pinterest": {
       "name": "Pinterest",
       "beta": true,
-      "blocks": ["Full-screen idea / video player", "Swipe-to-next video"],
-      "keeps": ["Search", "Boards and pins", "Saving ideas"]
+      "blocks": [
+        "Full-screen idea / video player",
+        "Swipe-to-next video"
+      ],
+      "keeps": [
+        "Search",
+        "Boards and pins",
+        "Saving ideas"
+      ]
     }
   },
-  "browsers": ["Chrome", "Samsung Internet", "Firefox", "Brave", "Edge", "Opera"],
+  "browsers": [
+    "Chrome",
+    "Samsung Internet",
+    "Firefox",
+    "Brave",
+    "Edge",
+    "Opera"
+  ],
   "pricing": {
     "eyebrow": "Pricing",
     "title": "Simple plans, honest prices",
@@ -972,8 +1055,7 @@
     "proTrialNotice": "30-Day Free Trial · 1-Tap No Card Required",
     "manualBuyBadge": "Manual Payment & Instant Key",
     "manualBuyTitle": "Want to Pay via bKash, Nagad, Crypto, Bank Transfer or Card?",
-    "manualBuyDesc": "Need manual activation or local payment options? Support directly on Support Kori or message us on WhatsApp / Telegram. We will instantly activate your Pro license!",
-    "supportKoriCta": "Pay via Support Kori (bKash/Nagad/Cards)",
+    "manualBuyDesc": "Need manual activation or local payment options? Message us directly on WhatsApp (+8801614081441) or Telegram (@tashanto). We will instantly generate your Pro license key from our admin dashboard!",
     "plans": {
       "free": {
         "name": "Free",
@@ -1006,7 +1088,11 @@
       "family": {
         "name": "Family",
         "description": "Pro for the whole household, with family controls.",
-        "features": ["Everything in Pro", "Multiple devices", "Family / parental mode"],
+        "features": [
+          "Everything in Pro",
+          "Multiple devices",
+          "Family / parental mode"
+        ],
         "cta": "Coming later"
       }
     },

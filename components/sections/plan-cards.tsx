@@ -98,18 +98,10 @@ export async function PlanCards() {
         </div>
         <div className="flex flex-wrap items-center gap-3">
           <a
-            href={siteConfig.supportKoriUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={buttonClasses("primary", "md")}
-          >
-            {t("supportKoriCta")}
-          </a>
-          <a
             href={siteConfig.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className={buttonClasses("secondary", "md")}
+            className={buttonClasses("primary", "md")}
           >
             WhatsApp (+8801614081441)
           </a>

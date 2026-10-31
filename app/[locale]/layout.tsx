@@ -4,6 +4,7 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import { locale as rootLocale } from "next/root-params";
 import { Analytics } from "@/components/layout/analytics";
+import { FloatingSupport } from "@/components/layout/floating-support";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { ThemeProvider } from "@/components/layout/theme-provider";
@@ -74,6 +75,7 @@ export default async function LocaleLayout({ children }: LayoutProps<"/[locale]"
               {children}
             </main>
             <Footer />
+            <FloatingSupport />
           </ThemeProvider>
         </NextIntlClientProvider>
         <script
